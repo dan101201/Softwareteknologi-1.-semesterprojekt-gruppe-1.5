@@ -11,7 +11,7 @@
 .mtj.tmp/
 
 # fucking intelij
-.idea/*
+./idea
 
 # Package Files #
 *.jar

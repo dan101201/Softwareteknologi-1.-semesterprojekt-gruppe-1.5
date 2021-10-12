@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d3343c8-a973-4643-b73d-1220f3bae50b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/Git projects/worldofzuul/Command.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Git projects/worldofzuul/CommandWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Git projects/worldofzuul/CommandWords.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Git projects/worldofzuul/Game.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Git projects/worldofzuul/Parser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Git projects/worldofzuul/Room.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Git projects/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Git projects/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/worldofzuul/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommandWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/worldofzuul/CommandWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommandWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/worldofzuul/CommandWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/worldofzuul/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/worldofzuul/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/worldofzuul/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/worldofzuul/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,9 +91,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Git projects" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="worldofzuul.Main" />
       <module name="Git projects" />
       <extension name="coverage">
         <pattern>
@@ -91,19 +115,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Git projects" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main1" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -118,5 +132,16 @@
       <updated>1632221505006</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

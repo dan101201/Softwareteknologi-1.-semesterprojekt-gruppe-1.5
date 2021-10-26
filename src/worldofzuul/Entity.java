@@ -4,7 +4,7 @@ abstract class Entity {                                    //Entity is an abstra
     private double size;
     private boolean solid;
     private String description;
-    //private Image model;    Attribute for the 2nd Iteration GUI
+    public String model = "#"; //   Attribute for the 2nd Iteration GUI
 
     //Constructor for 1st Iteration containing the description option
     public Entity(double size, boolean solid, String description){

@@ -6,6 +6,7 @@ public class Player extends Entity {
     private int y;
 
     public Player(Room currentRoom, int x, int y) {
+        model = "P";
         this.currentRoom = currentRoom;
         this.x = x;
         this.y = y;
@@ -21,23 +22,45 @@ public class Player extends Entity {
     // Tag x,y i en switch og ændre værdierne, gem værdierne igen. "Flyt" spilleren i arrayet.
     public void move(String playerDirection) {
         switch (playerDirection) {
-            case "Up":
+            case "up":
                 y += 1;
                 currentRoom.moveEntity(this, 0, 1);
                 break;
-            case "Down":
+            case "down":
                 y -= 1;
                 currentRoom.moveEntity(this, 0, -1);
                 break;
-            case "Left":
+            case "left":
                 x -= 1;
                 currentRoom.moveEntity(this, -1, 0);
                 break;
-            case "Right":
+            case "right":
                 x += 1;
                 currentRoom.moveEntity(this, 1, 0);
                 break;
         }
+    }
+
+    public Room getCurrentRoom() {
+        return currentRoom;
+    }
+
+    public Puzzle roomInteract(String playerDirection) {
+        try {
+            switch (playerDirection) {
+                case "up":
+                    return currentRoom.getRoomCoordinates()[x][y+1].interact();
+                case "down":
+                    return currentRoom.getRoomCoordinates()[x][y-1].interact();
+                case "left":
+                    return currentRoom.getRoomCoordinates()[x+1][y].interact();
+                case "right":
+                    return currentRoom.getRoomCoordinates()[x-1][y].interact();
+            }
+        } catch (Exception e) {
+            return null;
+        }
+        return null;
     }
 
     @Override

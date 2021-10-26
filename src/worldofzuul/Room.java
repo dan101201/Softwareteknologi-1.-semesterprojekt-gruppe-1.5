@@ -1,10 +1,5 @@
 package worldofzuul;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Room {
     private Entity[][] roomCoordinates;
     private String description;
@@ -13,22 +8,6 @@ public class Room {
     public Room (int x, int y, String description) {
         this.roomCoordinates = new Entity[x][y];
         this.description = description;
-    }
-
-    public Room (String path) {
-        try {
-            File roomFile = new File(path);
-            Scanner myReader = new Scanner(roomFile);
-
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-            }
-            myReader.close();
-        }
-        catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
     }
 
     public String getDescription () {

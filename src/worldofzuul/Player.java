@@ -1,6 +1,6 @@
 package worldofzuul;
 
-public class Player {
+public class Player extends Entity {
     private final Room currentRoom;
     private int x;
     private int y;
@@ -19,21 +19,29 @@ public class Player {
     } Vi venter til der er lavet noget mere.*/
 
     // Tag x,y i en switch og ændre værdierne, gem værdierne igen. "Flyt" spilleren i arrayet.
-public void move() {
-        String playerDirection = "Up";
+    public void move(String playerDirection) {
         switch (playerDirection) {
             case "Up":
                 y += 1;
+                currentRoom.moveEntity(this, 0, 1);
                 break;
             case "Down":
                 y -= 1;
+                currentRoom.moveEntity(this, 0, -1);
                 break;
             case "Left":
                 x -= 1;
+                currentRoom.moveEntity(this, -1, 0);
                 break;
             case "Right":
                 x += 1;
+                currentRoom.moveEntity(this, 1, 0);
                 break;
         }
+    }
+
+    @Override
+    public Puzzle interact() {
+        return null;
     }
 }

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 
-public class Puzzle {
+public class Puzzle extends Entity{
     private ArrayList<String> questions = new ArrayList<String>();
     private ArrayList<String> correctAnswers = new ArrayList<String>();
     private boolean completed;
@@ -66,4 +66,8 @@ public class Puzzle {
     }
 
 
+    @Override
+    public Puzzle interact() {
+        return this;
+    }
 }

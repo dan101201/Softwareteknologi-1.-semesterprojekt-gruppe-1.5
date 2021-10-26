@@ -1,49 +1,57 @@
 package worldofzuul;
 
-import java.util.Set;
-import java.util.HashMap;
-import java.util.Iterator;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
-
-public class Room 
-{
+public class Room {
+    private Entity[][] roomCoordinates;
     private String description;
-    private HashMap<String, Room> exits;
 
-    public Room(String description) 
-    {
+    //constructor
+    public Room (int x, int y, String description) {
+        this.roomCoordinates = new Entity[x][y];
         this.description = description;
-        exits = new HashMap<String, Room>();
     }
 
-    public void setExit(String direction, Room neighbor) 
-    {
-        exits.put(direction, neighbor);
+    public Room (String path) {
+        try {
+            File roomFile = new File(path);
+            Scanner myReader = new Scanner(roomFile);
+
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+            }
+            myReader.close();
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 
-    public String getShortDescription()
-    {
+    public String getDescription () {
         return description;
     }
 
-    public String getLongDescription()
-    {
-        return "You are " + description + ".\n" + getExitString();
+    public Entity[][] getRoomCoordinates () {
+        return roomCoordinates;
     }
 
-    private String getExitString()
-    {
-        String returnString = "Exits:";
-        Set<String> keys = exits.keySet();
-        for(String exit : keys) {
-            returnString += " " + exit;
+    public void moveEntity (Entity e, int x, int y) {
+        int tempX = 0;
+        int tempY = 0;
+        for (int i=0; i<roomCoordinates.length; i++) {
+            for (int j=0; j<roomCoordinates[i].length; j++) {
+                if (roomCoordinates[i][j] == e) {
+                    tempX = i;
+                    tempY = j;
+                    roomCoordinates[i][j] = null;
+                    break;
+                }
+            }
         }
-        return returnString;
-    }
-
-    public Room getExit(String direction) 
-    {
-        return exits.get(direction);
+        roomCoordinates[tempX+x][tempY+y] = e;
     }
 }
-

@@ -52,13 +52,15 @@ public class Puzzle extends Entity{
     }
 
     public boolean checkAnswers (List<String> answers) {
+        boolean result = true;
         completed = true;
         for (int i=0; i<answers.size(); i++) {
             if (!answers.get(i).equals(correctAnswers.get(i))) {
-                return false;
+                result = false;
             }
+            else EnergyBar.addEnergy();
         }
-        return true;
+        return result;
     }
 
     public boolean getCompleted () {

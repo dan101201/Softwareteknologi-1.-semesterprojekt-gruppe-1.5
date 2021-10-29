@@ -22,20 +22,20 @@ public class Player extends Entity {
     public void move(String playerDirection) {
         switch (playerDirection) {
             case "up":
-                y -= 1;
-                currentRoom.moveEntity(this, 0, -1); //
+                x -= 1;
+                currentRoom.moveEntity(this, -1, 0); //
                 break;
             case "down":
+                x += 1;
+                currentRoom.moveEntity(this, 1, 0);
+                break;
+            case "left":
                 y += 1;
                 currentRoom.moveEntity(this, 0, 1);
                 break;
-            case "left":
-                x -= 1;
-                currentRoom.moveEntity(this, -1, 0);
-                break;
             case "right":
-                x += 1;
-                currentRoom.moveEntity(this, 1, 0);
+                y -= 1;
+                currentRoom.moveEntity(this, 0, -1);
                 break;
         }
     }
@@ -48,13 +48,13 @@ public class Player extends Entity {
         try {
             switch (playerDirection) {
                 case "up":
-                    return currentRoom.getRoomCoordinates()[x][y+1].interact();
-                case "down":
-                    return currentRoom.getRoomCoordinates()[x][y-1].interact();
-                case "left":
                     return currentRoom.getRoomCoordinates()[x-1][y].interact();
-                case "right":
+                case "down":
                     return currentRoom.getRoomCoordinates()[x+1][y].interact();
+                case "left":
+                    return currentRoom.getRoomCoordinates()[x][y+1].interact();
+                case "right":
+                    return currentRoom.getRoomCoordinates()[x][y-1].interact();
             }
         } catch (Exception e) {
             return null;

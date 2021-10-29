@@ -22,12 +22,12 @@ public class Player extends Entity {
     public void move(String playerDirection) {
         switch (playerDirection) {
             case "up":
-                y += 1;
-                currentRoom.moveEntity(this, 0, 1);
+                y -= 1;
+                currentRoom.moveEntity(this, 0, -1); //
                 break;
             case "down":
-                y -= 1;
-                currentRoom.moveEntity(this, 0, -1);
+                y += 1;
+                currentRoom.moveEntity(this, 0, 1);
                 break;
             case "left":
                 x -= 1;

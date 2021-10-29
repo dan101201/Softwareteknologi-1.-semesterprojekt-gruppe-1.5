@@ -50,7 +50,7 @@ public class Player extends Entity {
                 }
                 break;
             case "down":
-                if (currentRoom.getRoomCoordinates()[x - 1][y] == null || !currentRoom.getRoomCoordinates()[x + 1][y].getSolid()) {
+                if (currentRoom.getRoomCoordinates()[x + 1][y] == null || !currentRoom.getRoomCoordinates()[x + 1][y].getSolid()) {
                     if (!(currentRoom.getRoomCoordinates()[x+1][y] == null)) {
                         temp = currentRoom.getRoomCoordinates()[x+1][y];
                     }
@@ -62,7 +62,7 @@ public class Player extends Entity {
                 }
                 break;
             case "left":
-                if (currentRoom.getRoomCoordinates()[x - 1][y] == null || !currentRoom.getRoomCoordinates()[x][y - 1].getSolid()) {
+                if (currentRoom.getRoomCoordinates()[x][y - 1] == null || !currentRoom.getRoomCoordinates()[x][y - 1].getSolid()) {
                     if (!(currentRoom.getRoomCoordinates()[x][y-1] == null)) {
                         temp = currentRoom.getRoomCoordinates()[x][y-1];
                     }
@@ -74,7 +74,7 @@ public class Player extends Entity {
                 }
                 break;
             case "right":
-                if (currentRoom.getRoomCoordinates()[x - 1][y] == null || !currentRoom.getRoomCoordinates()[x][y + 1].getSolid()) {
+                if (currentRoom.getRoomCoordinates()[x][y + 1] == null || !currentRoom.getRoomCoordinates()[x][y + 1].getSolid()) {
                     if (!(currentRoom.getRoomCoordinates()[x][y+1] == null)) {
                         temp = currentRoom.getRoomCoordinates()[x][y+1];
                     }

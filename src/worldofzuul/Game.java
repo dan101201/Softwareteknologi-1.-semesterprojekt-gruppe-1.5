@@ -7,9 +7,13 @@ public class Game
     public Game() {
         Room room = new Room(9,9,"The room is large and empty. There is nothing but the walls and floor, both of which is made of cut stone brick");
         player = new Player(room, 5, 5);
-        rug = new Entity(1, 1, false, "This is a rug", "R");
+        rug = new Entity(2, 3, false, "This is a rug", "R");
         room.getRoomCoordinates()[5][5] = player;
-        room.getRoomCoordinates()[3][3] = rug;
+        for (int i=0; i<rug.getWidth(); i++) {
+            for (int j=0; j<rug.getLength(); j++) {
+                room.getRoomCoordinates()[3+i][3+j] = rug;
+            }
+        }
     }
 
     public void movePlayer(String playerDirection) {

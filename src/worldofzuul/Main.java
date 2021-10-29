@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            File myObj = new File("txtfiler/filename.txt");
+            File myObj = new File("src/txtfiler/filename.txt");
             if (myObj.createNewFile()) {
               System.out.println("File created: " + myObj.getName());
             } else {

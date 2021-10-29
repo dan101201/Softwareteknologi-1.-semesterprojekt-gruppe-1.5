@@ -1,30 +1,30 @@
 package worldofzuul;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.io.FileNotFoundException;
 
-public class Puzzle extends Entity{
+public class Puzzle extends Entity {
     private ArrayList<String> questions = new ArrayList<String>();
     private ArrayList<String> correctAnswers = new ArrayList<String>();
     private boolean completed;
     private String description;
 
     //constructor
-    public Puzzle (ArrayList<String> questions, ArrayList<String> correctAnswers) {
+    public Puzzle(ArrayList<String> questions, ArrayList<String> correctAnswers) {
         this.questions = questions;
         this.correctAnswers = correctAnswers;
     }
 
-    public Puzzle (ArrayList<String> questions, ArrayList<String> correctAnswers, String description) {
+    public Puzzle(ArrayList<String> questions, ArrayList<String> correctAnswers, String description) {
         this.questions = questions;
         this.correctAnswers = correctAnswers;
         this.description = description;
     }
 
-    public Puzzle (String path) {
+    public Puzzle(String path) {
         try {
             File questionFile = new File(path);
             Scanner myReader = new Scanner(questionFile);
@@ -37,33 +37,29 @@ public class Puzzle extends Entity{
                 }
                 if (answers) {
                     correctAnswers.add(data);
-                }
-                else
-                {
+                } else {
                     questions.add(data);
                 }
             }
             myReader.close();
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
     }
 
-    public boolean checkAnswers (List<String> answers) {
+    public boolean checkAnswers(List<String> answers) {
         boolean result = true;
         completed = true;
-        for (int i=0; i<answers.size(); i++) {
+        for (int i = 0; i < answers.size(); i++) {
             if (!answers.get(i).equals(correctAnswers.get(i))) {
                 result = false;
-            }
-            else EnergyBar.addEnergy();
+            } else EnergyBar.addEnergy();
         }
         return result;
     }
 
-    public boolean getCompleted () {
+    public boolean getCompleted() {
         return completed;
     }
 

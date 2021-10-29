@@ -11,7 +11,6 @@ public class Player extends Entity {
         this.x = x;
         this.y = y;
     }
-
     // Metoder
    public Puzzle interact(String playerOrientation) {
         try {
@@ -31,16 +30,16 @@ public class Player extends Entity {
         return null;
     } //Vi venter til der er lavet noget mere
 
-    // Tag x,y i en switch og ændre værdierne, gem værdierne igen. "Flyt" spilleren i arrayet.
+    // Tag String input i en switch og ændre værdierne, gem værdierne igen. "Flyt" spilleren i arrayet.
     public void move(String playerDirection) {
         switch (playerDirection) {
             case "up":
-                y += 1;
-                currentRoom.moveEntity(this, 0, 1);
+                y -= 1;
+                currentRoom.moveEntity(this, 0, -1); //
                 break;
             case "down":
-                y -= 1;
-                currentRoom.moveEntity(this, 0, -1);
+                y += 1;
+                currentRoom.moveEntity(this, 0, 1);
                 break;
             case "left":
                 x -= 1;
@@ -55,6 +54,24 @@ public class Player extends Entity {
 
     public Room getCurrentRoom() {
         return currentRoom;
+    }
+
+    public Puzzle roomInteract(String playerDirection) {
+        try {
+            switch (playerDirection) {
+                case "up":
+                    return currentRoom.getRoomCoordinates()[x][y+1].interact();
+                case "down":
+                    return currentRoom.getRoomCoordinates()[x][y-1].interact();
+                case "left":
+                    return currentRoom.getRoomCoordinates()[x-1][y].interact();
+                case "right":
+                    return currentRoom.getRoomCoordinates()[x+1][y].interact();
+            }
+        } catch (Exception e) {
+            return null;
+        }
+        return null;
     }
 
     @Override

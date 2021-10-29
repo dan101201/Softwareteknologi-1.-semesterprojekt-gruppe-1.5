@@ -1,7 +1,7 @@
 package worldofzuul;
 
 public class EnergyBar {
-    private static double energy = 0; //No constructor, Energybar starts at 0
+    private static double energy = 0; //No constructor, EnergyBar starts at 0
     //private image model;    prepared for 2nd Iteration
 
     public static void addEnergy(){     //this method adds energy depended on correct answers to the puzzles
@@ -23,7 +23,7 @@ public class EnergyBar {
             System.out.println("Energy [##########+]");
         } else if (energy>=90){
             System.out.println("Energy [###########]");
-        } else{
+        } else {
             System.out.println("Error");
         }
     }

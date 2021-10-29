@@ -8,7 +8,7 @@ public class EnergyBar {
         energy += 12.5;
     }
 
-    public void showEnergyBar(){
+    public static void showEnergyBar(){
         if(energy < 10){
             System.out.println("Energy [-         +]");
         } else if (energy>=10 && energy<25){

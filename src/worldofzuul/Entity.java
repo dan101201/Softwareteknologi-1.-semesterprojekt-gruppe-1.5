@@ -5,6 +5,7 @@ abstract class Entity {                                    //Entity is an abstra
     private boolean solid;
     private String description;
     public String model = "#"; //   Attribute for the 2nd Iteration GUI
+    public Object obj;
 
     //Constructor for 1st Iteration containing the description option
     public Entity(double size, boolean solid, String description){
@@ -23,9 +24,26 @@ abstract class Entity {                                    //Entity is an abstra
     public Entity(){}
 
     //Interact-funktion
-    public abstract Puzzle interact();
-
    public boolean getSolid (){
         return solid;
     }
+    public Puzzle interact() {
+        try {
+            return (Puzzle)obj;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public Room door() {
+        try {
+            return (Room)obj;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+
+
+
 }

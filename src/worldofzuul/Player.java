@@ -13,11 +13,23 @@ public class Player extends Entity {
     }
 
     // Metoder
-   /* public Puzzle interact(String playerOrientation) {
-        Entity item = currentRoom.Array[x][y+1]; // giver enten entity eller null
-        // Check om det er en entity og så om det er en IoT genstand, om det er outOfBounds,
-        return item
-    } Vi venter til der er lavet noget mere.*/
+   public Puzzle interact(String playerOrientation) {
+        try {
+            switch (playerOrientation) {
+                case "up":
+                    return currentRoom.getRoomCoordinates()[x][y+1].interact();
+                case "down":
+                    return currentRoom.getRoomCoordinates()[x][y-1].interact();
+                case "left":
+                    return currentRoom.getRoomCoordinates()[x+1][y].interact();
+                case "right":
+                    return currentRoom.getRoomCoordinates()[x-1][y].interact();
+            }
+        } catch (Exception e) {
+            return null;
+        }
+        return null;
+    } //Vi venter til der er lavet noget mere
 
     // Tag x,y i en switch og ændre værdierne, gem værdierne igen. "Flyt" spilleren i arrayet.
     public void move(String playerDirection) {
@@ -43,24 +55,6 @@ public class Player extends Entity {
 
     public Room getCurrentRoom() {
         return currentRoom;
-    }
-
-    public Puzzle roomInteract(String playerDirection) {
-        try {
-            switch (playerDirection) {
-                case "up":
-                    return currentRoom.getRoomCoordinates()[x][y+1].interact();
-                case "down":
-                    return currentRoom.getRoomCoordinates()[x][y-1].interact();
-                case "left":
-                    return currentRoom.getRoomCoordinates()[x+1][y].interact();
-                case "right":
-                    return currentRoom.getRoomCoordinates()[x-1][y].interact();
-            }
-        } catch (Exception e) {
-            return null;
-        }
-        return null;
     }
 
     @Override

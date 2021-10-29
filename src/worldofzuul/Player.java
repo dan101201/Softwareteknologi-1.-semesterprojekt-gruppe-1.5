@@ -11,7 +11,6 @@ public class Player extends Entity {
         this.x = x;
         this.y = y;
     }
-
     // Metoder
    /* public Puzzle interact(String playerOrientation) {
         Entity item = currentRoom.Array[x][y+1]; // giver enten entity eller null
@@ -19,7 +18,7 @@ public class Player extends Entity {
         return item
     } Vi venter til der er lavet noget mere.*/
 
-    // Tag x,y i en switch og ændre værdierne, gem værdierne igen. "Flyt" spilleren i arrayet.
+    // Tag String input i en switch og ændre værdierne, gem værdierne igen. "Flyt" spilleren i arrayet.
     public void move(String playerDirection) {
         switch (playerDirection) {
             case "up":
@@ -53,9 +52,9 @@ public class Player extends Entity {
                 case "down":
                     return currentRoom.getRoomCoordinates()[x][y-1].interact();
                 case "left":
-                    return currentRoom.getRoomCoordinates()[x+1][y].interact();
-                case "right":
                     return currentRoom.getRoomCoordinates()[x-1][y].interact();
+                case "right":
+                    return currentRoom.getRoomCoordinates()[x+1][y].interact();
             }
         } catch (Exception e) {
             return null;

@@ -28,9 +28,10 @@ class Entity {                                    //Entity is an abstract class
     public Entity(){}
 
     //Interact-funktion
-   public boolean getSolid (){
+    public boolean getSolid(){
         return solid;
     }
+
     public Puzzle interact() {
         try {
             return (Puzzle)obj;

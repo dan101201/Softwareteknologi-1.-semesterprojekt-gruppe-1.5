@@ -17,11 +17,16 @@ public class ConsoleUI {
                 case "right":
                     game.movePlayer(s);
                     break;
+                case "showenergy":
+                    EnergyBar.showEnergyBar();
+                    break;
             }
             PrintRoom(game.getRoom());
         }
     }
-
+//public static void printEnergy(){
+//
+//}
     public static void clearScreen() {  
         System.out.print("\033[H\033[2J");  
         System.out.flush();  

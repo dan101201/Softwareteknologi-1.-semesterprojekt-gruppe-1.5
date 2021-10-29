@@ -1,22 +1,26 @@
 package worldofzuul;
 
-abstract class Entity {                                    //Entity is an abstract class
-    private double size;
+class Entity {                                    //Entity is an abstract class
+    private int length;
+    private int width;
     private boolean solid;
     private String description;
     public String model = "#"; //   Attribute for the 2nd Iteration GUI
     public Object obj;
 
     //Constructor for 1st Iteration containing the description option
-    public Entity(double size, boolean solid, String description){
-        this.size = size;
+    public Entity(int length, int width, boolean solid, String description, String model){
+        this.length = length;
+        this.width = width;
         this.solid = solid;
         this.description = description;
+        this.model = model;
     }
 
     //Constructor for 2nd Iteration GUI without the description option
-    public Entity(double size, boolean solid) {
-        this.size = size;
+    public Entity(int length, int width, boolean solid) {
+        this.length = length;
+        this.width = width;
         this.solid = solid;
     }
 

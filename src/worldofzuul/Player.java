@@ -4,6 +4,8 @@ public class Player extends Entity {
     private final Room currentRoom;
     private int x;
     private int y;
+    private Entity underPlayer = null;
+    private Entity temp = null;
 
     public Player(Room currentRoom, int x, int y) {
         model = "P";
@@ -36,27 +38,51 @@ public class Player extends Entity {
 
         switch (playerDirection) {
             case "up":
-                if (!currentRoom.getRoomCoordinates()[x - 1][y].getSolid()) {
+                if (currentRoom.getRoomCoordinates()[x - 1][y] == null || !currentRoom.getRoomCoordinates()[x - 1][y].getSolid()) {
+                    if (!(currentRoom.getRoomCoordinates()[x-1][y] == null)) {
+                        temp = currentRoom.getRoomCoordinates()[x-1][y];
+                    }
                     x -= 1;
-                    currentRoom.moveEntity(this, -1, 0); //her flyttes playerens plads i array(i verden)
+                    currentRoom.moveEntity(this, -1, 0); //
+                    currentRoom.getRoomCoordinates()[x+1][y] = underPlayer;
+                    underPlayer = temp;
+                    temp = null;
                 }
                 break;
             case "down":
-                if (!currentRoom.getRoomCoordinates()[x + 1][y].getSolid()) {
+                if (currentRoom.getRoomCoordinates()[x - 1][y] == null || !currentRoom.getRoomCoordinates()[x + 1][y].getSolid()) {
+                    if (!(currentRoom.getRoomCoordinates()[x+1][y] == null)) {
+                        temp = currentRoom.getRoomCoordinates()[x+1][y];
+                    }
                     x += 1;
                     currentRoom.moveEntity(this, 1, 0);
+                    currentRoom.getRoomCoordinates()[x-1][y] = underPlayer;
+                    underPlayer = temp;
+                    temp = null;
                 }
                 break;
             case "left":
-                if (!currentRoom.getRoomCoordinates()[x][y - 1].getSolid()) {
+                if (currentRoom.getRoomCoordinates()[x - 1][y] == null || !currentRoom.getRoomCoordinates()[x][y - 1].getSolid()) {
+                    if (!(currentRoom.getRoomCoordinates()[x][y-1] == null)) {
+                        temp = currentRoom.getRoomCoordinates()[x][y-1];
+                    }
                     y -= 1;
                     currentRoom.moveEntity(this, 0, -1);
+                    currentRoom.getRoomCoordinates()[x][y+1] = underPlayer;
+                    underPlayer = temp;
+                    temp = null;
                 }
                 break;
             case "right":
-                if (!currentRoom.getRoomCoordinates()[x][y + 1].getSolid()) {
+                if (currentRoom.getRoomCoordinates()[x - 1][y] == null || !currentRoom.getRoomCoordinates()[x][y + 1].getSolid()) {
+                    if (!(currentRoom.getRoomCoordinates()[x][y+1] == null)) {
+                        temp = currentRoom.getRoomCoordinates()[x][y+1];
+                    }
                     y += 1;
                     currentRoom.moveEntity(this, 0, 1);
+                    currentRoom.getRoomCoordinates()[x][y-1] = underPlayer;
+                    underPlayer = temp;
+                    temp = null;
                 }
                 break;
         }

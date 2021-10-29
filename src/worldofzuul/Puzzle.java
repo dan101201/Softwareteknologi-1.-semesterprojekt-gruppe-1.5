@@ -6,21 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Puzzle extends Entity {
-    private ArrayList<String> questions = new ArrayList<String>();
-    private ArrayList<String> correctAnswers = new ArrayList<String>();
+public class Puzzle extends Entity{
+    private ArrayList<Question> questions = new ArrayList<Question>();
     private boolean completed;
     private String description;
 
     //constructor
-    public Puzzle(ArrayList<String> questions, ArrayList<String> correctAnswers) {
+    public Puzzle (ArrayList<Question> questions) {
         this.questions = questions;
-        this.correctAnswers = correctAnswers;
     }
 
-    public Puzzle(ArrayList<String> questions, ArrayList<String> correctAnswers, String description) {
+    public Puzzle (ArrayList<Question> questions, String description) {
         this.questions = questions;
-        this.correctAnswers = correctAnswers;
         this.description = description;
     }
 
@@ -36,9 +33,11 @@ public class Puzzle extends Entity {
                     continue;
                 }
                 if (answers) {
-                    correctAnswers.add(data);
-                } else {
-                    questions.add(data);
+                    questions.add(new Question(data));
+                }
+                else
+                {
+                    questions.add(new Question(data));
                 }
             }
             myReader.close();
@@ -48,18 +47,7 @@ public class Puzzle extends Entity {
         }
     }
 
-    public boolean checkAnswers(List<String> answers) {
-        boolean result = true;
-        completed = true;
-        for (int i = 0; i < answers.size(); i++) {
-            if (!answers.get(i).equals(correctAnswers.get(i))) {
-                result = false;
-            } else EnergyBar.addEnergy();
-        }
-        return result;
-    }
-
-    public boolean getCompleted() {
+    public boolean getCompleted () {
         return completed;
     }
 

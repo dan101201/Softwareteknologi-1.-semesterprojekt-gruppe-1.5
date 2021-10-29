@@ -20,9 +20,9 @@ public class Player extends Entity {
                 case "down":
                     return currentRoom.getRoomCoordinates()[x][y-1].interact();
                 case "left":
-                    return currentRoom.getRoomCoordinates()[x+1][y].interact();
-                case "right":
                     return currentRoom.getRoomCoordinates()[x-1][y].interact();
+                case "right":
+                    return currentRoom.getRoomCoordinates()[x+1][y].interact();
             }
         } catch (Exception e) {
             return null;
@@ -42,12 +42,12 @@ public class Player extends Entity {
                 currentRoom.moveEntity(this, 1, 0);
                 break;
             case "left":
-                y += 1;
-                currentRoom.moveEntity(this, 0, 1);
-                break;
-            case "right":
                 y -= 1;
                 currentRoom.moveEntity(this, 0, -1);
+                break;
+            case "right":
+                y += 1;
+                currentRoom.moveEntity(this, 0, 1);
                 break;
         }
     }
@@ -64,9 +64,9 @@ public class Player extends Entity {
                 case "down":
                     return currentRoom.getRoomCoordinates()[x+1][y].interact();
                 case "left":
-                    return currentRoom.getRoomCoordinates()[x][y+1].interact();
-                case "right":
                     return currentRoom.getRoomCoordinates()[x][y-1].interact();
+                case "right":
+                    return currentRoom.getRoomCoordinates()[x][y+1].interact();
             }
         } catch (Exception e) {
             return null;

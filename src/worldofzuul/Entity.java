@@ -1,6 +1,5 @@
 package worldofzuul;
-
-abstract class Entity {                                    //Entity is an abstract class
+class Entity {                                    //Entity is an abstract class
     private double size;
     private boolean solid;
     private String description;
@@ -24,9 +23,10 @@ abstract class Entity {                                    //Entity is an abstra
     public Entity(){}
 
     //Interact-funktion
-   public boolean getSolid (){
+    public boolean getSolid(){
         return solid;
     }
+
     public Puzzle interact() {
         try {
             return (Puzzle)obj;

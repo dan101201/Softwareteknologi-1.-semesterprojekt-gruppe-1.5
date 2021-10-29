@@ -11,18 +11,19 @@ public class Player extends Entity {
         this.x = x;
         this.y = y;
     }
+
     // Metoder
-   public Puzzle interact(String playerOrientation) {
+    public Puzzle interact(String playerOrientation) {
         try {
             switch (playerOrientation) {
                 case "up":
-                    return currentRoom.getRoomCoordinates()[x][y+1].interact();
+                    return currentRoom.getRoomCoordinates()[x][y + 1].interact();
                 case "down":
-                    return currentRoom.getRoomCoordinates()[x][y-1].interact();
+                    return currentRoom.getRoomCoordinates()[x][y - 1].interact();
                 case "left":
-                    return currentRoom.getRoomCoordinates()[x-1][y].interact();
+                    return currentRoom.getRoomCoordinates()[x - 1][y].interact();
                 case "right":
-                    return currentRoom.getRoomCoordinates()[x+1][y].interact();
+                    return currentRoom.getRoomCoordinates()[x + 1][y].interact();
             }
         } catch (Exception e) {
             return null;
@@ -32,22 +33,31 @@ public class Player extends Entity {
 
     // Tag String input i en switch og ændre værdierne, gem værdierne igen. "Flyt" spilleren i arrayet.
     public void move(String playerDirection) {
+
         switch (playerDirection) {
             case "up":
-                x -= 1;
-                currentRoom.moveEntity(this, -1, 0); //
+                if (!currentRoom.getRoomCoordinates()[x - 1][y].getSolid()) {
+                    x -= 1;
+                    currentRoom.moveEntity(this, -1, 0); //her flyttes playerens plads i array(i verden)
+                }
                 break;
             case "down":
-                x += 1;
-                currentRoom.moveEntity(this, 1, 0);
+                if (!currentRoom.getRoomCoordinates()[x + 1][y].getSolid()) {
+                    x += 1;
+                    currentRoom.moveEntity(this, 1, 0);
+                }
                 break;
             case "left":
-                y -= 1;
-                currentRoom.moveEntity(this, 0, -1);
+                if (!currentRoom.getRoomCoordinates()[x][y - 1].getSolid()) {
+                    y -= 1;
+                    currentRoom.moveEntity(this, 0, -1);
+                }
                 break;
             case "right":
-                y += 1;
-                currentRoom.moveEntity(this, 0, 1);
+                if (!currentRoom.getRoomCoordinates()[x][y + 1].getSolid()) {
+                    y += 1;
+                    currentRoom.moveEntity(this, 0, 1);
+                }
                 break;
         }
     }
@@ -60,13 +70,13 @@ public class Player extends Entity {
         try {
             switch (playerDirection) {
                 case "up":
-                    return currentRoom.getRoomCoordinates()[x-1][y].interact();
+                    return currentRoom.getRoomCoordinates()[x - 1][y].interact();
                 case "down":
-                    return currentRoom.getRoomCoordinates()[x+1][y].interact();
+                    return currentRoom.getRoomCoordinates()[x + 1][y].interact();
                 case "left":
-                    return currentRoom.getRoomCoordinates()[x][y-1].interact();
+                    return currentRoom.getRoomCoordinates()[x][y - 1].interact();
                 case "right":
-                    return currentRoom.getRoomCoordinates()[x][y+1].interact();
+                    return currentRoom.getRoomCoordinates()[x][y + 1].interact();
             }
         } catch (Exception e) {
             return null;

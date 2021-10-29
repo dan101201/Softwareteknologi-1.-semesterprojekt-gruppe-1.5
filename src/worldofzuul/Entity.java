@@ -24,4 +24,8 @@ abstract class Entity {                                    //Entity is an abstra
 
     //Interact-funktion
     public abstract Puzzle interact();
+
+   public boolean getSolid (){
+        return solid;
+    }
 }

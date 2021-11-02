@@ -9,7 +9,7 @@ public class Game
         player = new Player(room, 5, 5);
         rug = new Entity(2, 3, false, "This is a rug", "R");
         room.getRoomCoordinates()[5][5] = player;
-        for (int i=0; i<rug.getWidth(); i++) {
+        for (int i=0; i<rug.getWidth(); i++) { // Skal ind i en metode?
             for (int j=0; j<rug.getLength(); j++) {
                 room.getRoomCoordinates()[3+i][3+j] = rug;
             }

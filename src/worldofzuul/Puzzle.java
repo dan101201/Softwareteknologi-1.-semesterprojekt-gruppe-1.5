@@ -51,9 +51,4 @@ public class Puzzle extends Entity{
         return completed;
     }
 
-
-    @Override
-    public Puzzle interact() {
-        return this;
-    }
 }

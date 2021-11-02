@@ -98,14 +98,11 @@ public class Player extends Entity {
                 case "right":
                     return currentRoom.getRoomCoordinates()[x][y + 1].interact();
             }
-        } catch (Exception e) {
+        } catch (Exception e) { // Specificer
             return null;
         }
         return null;
     }
 
-    @Override
-    public Puzzle interact() {
-        return null;
-    }
+
 }

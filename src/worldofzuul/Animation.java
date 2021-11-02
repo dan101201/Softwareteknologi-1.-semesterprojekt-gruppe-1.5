@@ -9,13 +9,10 @@ public class Animation {
         try {
             File introAni = new File("src/txtfiler/introAnimation.txt");
             Scanner gameIntro = new Scanner(introAni);
-            boolean text = false;
+
             while (gameIntro.hasNextLine()) {
                 String data = gameIntro.nextLine();
-                if (data == "") {
-                    text = true;
-                    continue;
-                }
+                System.out.println(data);// Shows the data from file
             }
             gameIntro.close();
         }
@@ -29,13 +26,10 @@ public class Animation {
         try {
             File outroAni = new File("src/txtfiler/outroAnimation.txt");
             Scanner gameOutro = new Scanner(outroAni);
-            boolean text = false;
+
             while (gameOutro.hasNextLine()) {
                 String data = gameOutro.nextLine();
-                if (data == "") {
-                    text = true;
-                    continue;
-                }
+                System.out.println(data);// Shows the data from file
             }
             gameOutro.close();
         }

@@ -1,28 +1,28 @@
 package worldofzuul;
 
 public class Room {
-    private Entity[][] roomCoordinates;
-    private String description;
+    private final Entity[][] roomCoordinates;
+    private final String description;
 
     //constructor
-    public Room (int x, int y, String description) {
+    public Room(int x, int y, String description) {
         this.roomCoordinates = new Entity[x][y];
         this.description = description;
     }
 
-    public String getDescription () {
+    public String getDescription() {
         return description;
     }
 
-    public Entity[][] getRoomCoordinates () {
+    public Entity[][] getRoomCoordinates() {
         return roomCoordinates;
     }
 
-    public void moveEntity (Entity e, int x, int y) {
+    public void moveEntity(Entity e, int x, int y) {
         int tempX = 0;
         int tempY = 0;
-        for (int i=0; i<roomCoordinates.length; i++) {
-            for (int j=0; j<roomCoordinates[i].length; j++) {
+        for (int i = 0; i < roomCoordinates.length; i++) {
+            for (int j = 0; j < roomCoordinates[i].length; j++) {
                 if (roomCoordinates[i][j] == e) {
                     tempX = i;
                     tempY = j;
@@ -31,7 +31,7 @@ public class Room {
                 }
             }
         }
-        roomCoordinates[tempX+x][tempY+y] = e;
+        roomCoordinates[tempX + x][tempY + y] = e;
     }
 
     public IntTuple findDoor(Room room) {

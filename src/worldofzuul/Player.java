@@ -50,14 +50,8 @@ public class Player extends Entity {
                 break;
             case "down":
                 if (currentRoom.getRoomCoordinates(x + 1,y) == null || !currentRoom.getRoomCoordinates(x+1,y).getSolid()) {
-                    if (!(currentRoom.getRoomCoordinates(x + 1,y) == null)) {
-                        temp = currentRoom.getRoomCoordinates(x + 1,y);
-                    }
                     x += 1;
-                    currentRoom.moveEntity(this, 1, 0);
-                    currentRoom.addRoomCoordinates(x-1,y,underPlayer);
-                    underPlayer = temp;
-                    temp = null;
+                    move(this,x,y);
                 }
                 break;
             case "left":
@@ -99,9 +93,9 @@ public class Player extends Entity {
     }
 
     private void safeMove(Entity e, int x, int y) {
-        Entity temp = currentRoom.getRoomCoordinates(x-1,y);
-        currentRoom.moveEntity(e, -1, 0); //
-        currentRoom.addRoomCoordinates(x+1,y, underPlayer);
+        Entity temp = currentRoom.getRoomCoordinates(x,y);
+        currentRoom.moveEntity(e, x, y); //
+        currentRoom.addRoomCoordinates(x,y, underPlayer);
         underPlayer = temp;
         temp = null;
     }

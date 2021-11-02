@@ -14,7 +14,8 @@ public class Room {
         return description;
     }
 
-    /** returns roomCordinates[x][y]*/
+    /** returns roomCoordinates[x][y]*/
+
     public Entity getRoomCoordinates(int x,int y) {
         return roomCoordinates[x][y];
     }

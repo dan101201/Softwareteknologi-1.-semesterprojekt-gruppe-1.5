@@ -18,13 +18,13 @@ public class Player extends Entity {
         try {
             switch (playerOrientation) {
                 case "up":
-                    return currentRoom.getRoomCoordinates(x, y+1).interact();
+                    return currentRoom.getRoomCoordinates(x, y + 1).interact();
                 case "down":
-                    return currentRoom.getRoomCoordinates(x, y-1).interact();
+                    return currentRoom.getRoomCoordinates(x, y - 1).interact();
                 case "left":
-                    return currentRoom.getRoomCoordinates(x-1,y).interact();
+                    return currentRoom.getRoomCoordinates(x - 1, y).interact();
                 case "right":
-                    return currentRoom.getRoomCoordinates(x+1,y).interact();
+                    return currentRoom.getRoomCoordinates(x + 1, y).interact();
             }
         } catch (Exception e) {
             return null;
@@ -43,7 +43,7 @@ public class Player extends Entity {
                 }
                 break;
             case "down":
-                if (currentRoom.getRoomCoordinates(x + 1,y) == null || !currentRoom.getRoomCoordinates(x+1,y).getSolid()) {
+                if (currentRoom.getRoomCoordinates(x + 1, y) == null || !currentRoom.getRoomCoordinates(x + 1, y).getSolid()) {
                     x += 1;
                     move(this, 1, 0);
                 }
@@ -61,7 +61,10 @@ public class Player extends Entity {
                 }
                 break;
         }
+        break;
     }
+
+}
 
     private void move(Entity e, int x, int y) {
         try {
@@ -98,13 +101,13 @@ public class Player extends Entity {
         try {
             switch (playerDirection) {
                 case "up":
-                    return currentRoom.getRoomCoordinates(x-1,y).interact();
+                    return currentRoom.getRoomCoordinates(x - 1, y).interact();
                 case "down":
-                    return currentRoom.getRoomCoordinates(x+1,y).interact();
+                    return currentRoom.getRoomCoordinates(x + 1, y).interact();
                 case "left":
-                    return currentRoom.getRoomCoordinates(x,y-1).interact();
+                    return currentRoom.getRoomCoordinates(x, y - 1).interact();
                 case "right":
-                    return currentRoom.getRoomCoordinates(x,y+1).interact();
+                    return currentRoom.getRoomCoordinates(x, y + 1).interact();
             }
         } catch (Exception e) { // Specificer
             return null;

@@ -17,8 +17,8 @@ public class ConsoleUI {
                 case "right":
                     game.movePlayer(s);
                     break;
-                case "showenergy":
-                    EnergyBar.showEnergyBar();
+                case "showEnergy":
+
                     break;
             }
             PrintRoom(game.getRoom());
@@ -32,13 +32,13 @@ public class ConsoleUI {
         System.out.flush();  
     }  
 
-    public static void PrintRoom(Room room) {
-        var content = room.getRoomCoordinates();
-        for (int i = 0; i < content.length; i++) {
-            for (int j = 0; j < content[i].length; j++) {
-                Entity e = content[i][j];
+    public static void PrintRoom(Room r) {
+
+        for (int i = 0; i < r.getRoomCoordinates(0,0).getLength(); i++) {
+            for (int j = 0; j < r.getRoomCoordinates(0,0).getLength(); j++) {
+                Entity e = r.getRoomCoordinates(0,0);
                 if (e == null) {
-                    System.out.print("#");
+                    System.out.print(".");
                 } else {
                     System.out.print(e.model);
                 }

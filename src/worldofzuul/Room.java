@@ -14,8 +14,21 @@ public class Room {
         return description;
     }
 
-    public Entity[][] getRoomCoordinates() {
-        return roomCoordinates;
+    public Entity getRoomCoordinates(int x,int y) {
+        return roomCoordinates[x][y];
+    }
+    /** If i == 0, return length of first array, else return length of second array */
+    public int getLength(int i){
+        if (i ==0)
+            return roomCoordinates.length;
+        return roomCoordinates[0].length;
+    }
+    public void addRoomCoordinates(int x, int y, Entity e) {
+        for (int i = 0; i < e.getWidth(); i++) {
+            for (int j = 0; j < e.getLength(); j++) {
+                roomCoordinates[x + i][y + j] = e;
+            }
+        }
     }
 
     public void moveEntity(Entity e, int x, int y) {

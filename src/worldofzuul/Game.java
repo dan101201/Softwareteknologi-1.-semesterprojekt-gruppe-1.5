@@ -2,7 +2,6 @@ package worldofzuul;
 
 public class Game {
     Player player;
-    Entity rug;
 
     public Game() {
         Room outside = new Room(9, 6, "Du står ude i din forhave, der er en græsslåmaskine langs sokkelen, og en postkasse ude ved vejen.");

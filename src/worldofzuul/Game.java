@@ -2,7 +2,6 @@ package worldofzuul;
 
 public class Game {
     Player player;
-    Entity rug;
 
     public Game() {
         Room outside = new Room(9, 6, "Du står ude i din forhave, der er en græsslåmaskine langs sokkelen, og en postkasse ude ved vejen.");
@@ -13,9 +12,12 @@ public class Game {
         Room diningRoom = new Room(9, 9, "Og her står der noget om spisestuen");
         Room bedRoom = new Room(7, 7, "Soveværelset her");
 
-        player = new Player(outside, 5, 5);
-        rug = new Entity(2, 3, false, "This is a rug", "R");
-        outside.addRoomCoordinates(5, 5, player);
+        bedRoom.addRoomCoordinates(0, 0, new Entity(hall));
+        hall.addRoomCoordinates(2, 2, new Entity(bedRoom));
+
+        player = new Player(hall, 3, 5);
+        Entity rug = new Entity(2, 3, false, "This is a rug", "R");
+        hall.addRoomCoordinates(4, 4, player);
     }
 
     public void movePlayer(String playerDirection) {

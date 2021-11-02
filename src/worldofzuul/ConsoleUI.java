@@ -34,9 +34,9 @@ public class ConsoleUI {
 
     public static void PrintRoom(Room r) {
 
-        for (int i = 0; i < r.getRoomCoordinates(0,0).getLength(); i++) {
-            for (int j = 0; j < r.getRoomCoordinates(0,0).getLength(); j++) {
-                Entity e = r.getRoomCoordinates(0,0);
+        for (int i = 0; i < r.getLength(0); i++) {
+            for (int j = 0; j < r.getLength(1); j++) {
+                Entity e = r.getRoomCoordinates(i,j);
                 if (e == null) {
                     System.out.print(".");
                 } else {

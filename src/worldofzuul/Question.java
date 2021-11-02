@@ -21,7 +21,6 @@ public class Question {
             if (!answers.get(i).equals(this.answers.get(i))) {
                 result = false;
             }
-            else EnergyBar.addEnergy();
         }
         return result;
     }

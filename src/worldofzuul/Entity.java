@@ -24,6 +24,11 @@ class Entity {                                    //Entity is an abstract class
         this.solid = solid;
     }
 
+    public Entity(Room doorRoom) {
+        model = "D";
+        obj = doorRoom;
+    }
+
     //Default constructor
     public Entity(){}
 
@@ -48,12 +53,16 @@ class Entity {                                    //Entity is an abstract class
         }
     }
 
-    public Room door() {
+    public Room Door() {
         try {
             return (Room)obj;
         } catch (Exception e) {
             return null;
         }
+    }
+
+    public boolean isDoor() {
+        return model == "D";
     }
 
 

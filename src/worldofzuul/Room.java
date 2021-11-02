@@ -33,4 +33,16 @@ public class Room {
         }
         roomCoordinates[tempX+x][tempY+y] = e;
     }
+
+    public IntTuple findDoor(Room room) {
+        for (int i = 0; i < roomCoordinates.length; i++) {
+            for (int j = 0; j < roomCoordinates[0].length; j++) {
+                var e = roomCoordinates[i][j];
+                if (e.isDoor() || e.Door() == room) {
+                    return new IntTuple(i,j);
+                }
+            }
+        }
+        return null;
+    }
 }

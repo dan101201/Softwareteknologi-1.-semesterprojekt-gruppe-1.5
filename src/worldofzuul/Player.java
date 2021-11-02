@@ -18,13 +18,13 @@ public class Player extends Entity {
         try {
             switch (playerOrientation) {
                 case "up":
-                    return currentRoom.getRoomCoordinates(x, y+1).interact();
+                    return currentRoom.getRoomCoordinates(x, y + 1).interact();
                 case "down":
-                    return currentRoom.getRoomCoordinates(x, y-1).interact();
+                    return currentRoom.getRoomCoordinates(x, y - 1).interact();
                 case "left":
-                    return currentRoom.getRoomCoordinates(x-1,y).interact();
+                    return currentRoom.getRoomCoordinates(x - 1, y).interact();
                 case "right":
-                    return currentRoom.getRoomCoordinates(x+1,y).interact();
+                    return currentRoom.getRoomCoordinates(x + 1, y).interact();
             }
         } catch (Exception e) {
             return null;
@@ -37,53 +37,38 @@ public class Player extends Entity {
 
         switch (playerDirection) {
             case "up":
-                if (currentRoom.getRoomCoordinates(x-1,y) == null || !currentRoom.getRoomCoordinates(x-1,y).getSolid()) {
-                    if (!(currentRoom.getRoomCoordinates(x-1,y) == null)) {
-                        temp = currentRoom.getRoomCoordinates(x-1,y);
-                    }
+                if (currentRoom.getRoomCoordinates(x - 1, y) == null || !currentRoom.getRoomCoordinates(x - 1, y).getSolid()) {
+                    move(this, x, y);
                     x -= 1;
-                    currentRoom.moveEntity(this, -1, 0); //
-                    currentRoom.addRoomCoordinates(x+1,y,underPlayer);
-                    underPlayer = temp;
-                    temp = null;
                 }
                 break;
             case "down":
-                if (currentRoom.getRoomCoordinates(x + 1,y) == null || !currentRoom.getRoomCoordinates(x+1,y).getSolid()) {
+                if (currentRoom.getRoomCoordinates(x + 1, y) == null || !currentRoom.getRoomCoordinates(x + 1, y).getSolid()) {
                     x += 1;
-                    move(this,x,y);
+                    move(this, x, y);
                 }
                 break;
             case "left":
-                if (currentRoom.getRoomCoordinates(x,y-1) == null || !currentRoom.getRoomCoordinates(x,y-1).getSolid()) {
-                    if (!(currentRoom.getRoomCoordinates(x,y-1)== null)) {
-                        temp = currentRoom.getRoomCoordinates(x,y-1);
-                    }
+                if (currentRoom.getRoomCoordinates(x, y - 1) == null || !currentRoom.getRoomCoordinates(x, y - 1).getSolid()) {
+
+                    move(this, x, y);
                     y -= 1;
-                    currentRoom.moveEntity(this, 0, -1);
-                    currentRoom.addRoomCoordinates(x,y+1,underPlayer);
-                    underPlayer = temp;
-                    temp = null;
                 }
-                break;
-            case "right":
-                if (currentRoom.getRoomCoordinates(x,y+1)== null || !currentRoom.getRoomCoordinates(x,y+1).getSolid()) {
-                    if (!(currentRoom.getRoomCoordinates(x,y+1) == null)) {
-                        temp = currentRoom.getRoomCoordinates(x,y+1);
-                    }
-                    y += 1;
-                    currentRoom.moveEntity(this, 0, 1);
-                    currentRoom.addRoomCoordinates(x,y-1,underPlayer);
-                    underPlayer = temp;
-                    temp = null;
-                }
-                break;
+        break;
+        case "right":
+        if (currentRoom.getRoomCoordinates(x, y + 1) == null || !currentRoom.getRoomCoordinates(x, y + 1).getSolid()) {
+
+            y += 1;
+            move(this, x, y);
         }
+        break;
     }
 
+}
+
     private void move(Entity e, int x, int y) {
-        if (currentRoom.getRoomCoordinates(x,y).isDoor()) {
-            Room otherroom = currentRoom.getRoomCoordinates(x,y).Door();
+        if (currentRoom.getRoomCoordinates(x, y).isDoor()) {
+            Room otherroom = currentRoom.getRoomCoordinates(x, y).Door();
             var coords = otherroom.findDoor(this);
             otherroom.movePlayer(e, coords.x, coords.y);
             safeMove(null, x, y);
@@ -93,9 +78,9 @@ public class Player extends Entity {
     }
 
     private void safeMove(Entity e, int x, int y) {
-        Entity temp = currentRoom.getRoomCoordinates(x,y);
+        Entity temp = currentRoom.getRoomCoordinates(x, y);
         currentRoom.moveEntity(e, x, y); //
-        currentRoom.addRoomCoordinates(x,y, underPlayer);
+        currentRoom.addRoomCoordinates(x, y, underPlayer);
         underPlayer = temp;
         temp = null;
     }
@@ -108,13 +93,13 @@ public class Player extends Entity {
         try {
             switch (playerDirection) {
                 case "up":
-                    return currentRoom.getRoomCoordinates(x-1,y).interact();
+                    return currentRoom.getRoomCoordinates(x - 1, y).interact();
                 case "down":
-                    return currentRoom.getRoomCoordinates(x+1,y).interact();
+                    return currentRoom.getRoomCoordinates(x + 1, y).interact();
                 case "left":
-                    return currentRoom.getRoomCoordinates(x,y-1).interact();
+                    return currentRoom.getRoomCoordinates(x, y - 1).interact();
                 case "right":
-                    return currentRoom.getRoomCoordinates(x,y+1).interact();
+                    return currentRoom.getRoomCoordinates(x, y + 1).interact();
             }
         } catch (Exception e) { // Specificer
             return null;

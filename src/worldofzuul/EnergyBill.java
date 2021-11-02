@@ -7,7 +7,7 @@ public class EnergyBill {
         amount -= 75;
     }
 
-    public void showEnergyBill(){
+    public static void showEnergyBill(){
         System.out.println("Find enheder, hvor du kan spare strøm.");
         System.out.println("Elregning: " + amount);
     }

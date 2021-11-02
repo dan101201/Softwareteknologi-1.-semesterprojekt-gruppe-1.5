@@ -17,8 +17,8 @@ public class ConsoleUI {
                 case "right":
                     game.movePlayer(s);
                     break;
-                case "showEnergy":
-
+                case "showEnergyBill":
+                    EnergyBill.showEnergyBill();
                     break;
             }
             PrintRoom(game.getRoom());

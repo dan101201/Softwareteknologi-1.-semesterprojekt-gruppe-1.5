@@ -14,8 +14,40 @@ public class Game {
         Room bedRoom = new Room(7, 7, "Soveværelset her, med mobil og seng");
 // Enteties
         player = new Player(outside, 5, 5);
-        rug = new Entity(2, 3, false, "This is a rug", "R");
         outside.addRoomCoordinates(5, 5, player);
+
+        Entity lawnmover = new Entity(1, 1, true, "Worx dc01 robotplæneklipper, i god stand", "G");
+        outside.addRoomCoordinates(1, 1, lawnmover);
+        Entity postalbox = new Entity(1, 1, true, "Grå postkasse, i rustfritstål", "P");
+        outside.addRoomCoordinates(6,6,postalbox);
+
+        rug = new Entity(1, 3, false, "This is a rug", "R");
+        hall.addRoomCoordinates(3, 3, rug);
+        Entity security = new Entity(1,1,true,"Hi-tech alarmsystem fra THansen", "A");
+        hall.addRoomCoordinates(1,9,security);
+
+        Entity smartwatch = new Entity(1,1,true,"Fedt Samsungur med smarte funktioner","s");
+        bath.addRoomCoordinates(4,4,smartwatch);
+        Entity toilet = new Entity(1,1,true, "Flot toilet fra Hansgröe, model 2012", "T");
+        bath.addRoomCoordinates(3,1,toilet);
+
+        Entity fridge = new Entity(1,1,true,"Stort køleskab fra Samsung, med stort display på fronten", "K");
+        kitchen.addRoomCoordinates(2,1,fridge);
+        Entity kitchenIsle = new Entity(2,3,true,"Fed køkkenø","I");
+        kitchen.addRoomCoordinates(4,4,kitchenIsle);
+        Entity oven = new Entity(1,1,true,"Fed ovn og integreret komfur med induktion", "O");
+        kitchen.addRoomCoordinates(6,1,oven);
+        Entity candyBowl = new Entity(1,1,true,"Halvfyldt slikskål", "Q");
+        kitchen.addRoomCoordinates(3,1,candyBowl);
+
+        Entity pc = new Entity(1,1,true,"Stor beskidt rød gamer-computer med blinkende lamper og lys i blæserne", "#");
+        homeOffice.addRoomCoordinates(5,1,pc);
+        Entity teddy = new Entity(1,1,false,"Lys teddy-bjørn størrelse 25", "T");
+        homeOffice.addRoomCoordinates(2,6,teddy);
+
+
+
+
     }
 
     public void movePlayer(String playerDirection) {

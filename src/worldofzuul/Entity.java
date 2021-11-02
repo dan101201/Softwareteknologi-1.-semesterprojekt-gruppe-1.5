@@ -24,6 +24,11 @@ public class Entity {
         this.solid = solid;
     }
 
+    public Entity(Room doorRoom) {
+        model = "D";
+        obj = doorRoom;
+    }
+
     //Default constructor
     public Entity(){}
 
@@ -41,19 +46,24 @@ public class Entity {
     }
 
     public Puzzle interact() {
-        try {
-            return (Puzzle)obj;
-        } catch (Exception e) { // Skal specificeres
-            return null;
-        }
+            if (obj instanceof Puzzle) {
+                return (Puzzle)obj;
+            } else {
+                return null;
+            }
     }
 
+
     public Room door() {
-        try {
-            return (Room)obj;
-        } catch (Exception e) {// Skal specificeres
-            return null;
-        }
+            if(obj instanceof Room){
+                return (Room)obj;
+            } else {
+                return null;
+            }
+    }
+
+    public boolean isDoor() {
+        return model == "D";
     }
 
 

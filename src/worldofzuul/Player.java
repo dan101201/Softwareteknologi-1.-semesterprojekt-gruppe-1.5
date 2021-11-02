@@ -5,7 +5,6 @@ public class Player extends Entity {
     private int x;
     private int y;
     private Entity underPlayer = null;
-    private Entity temp = null;
 
     public Player(Room currentRoom, int x, int y) {
         model = "P";
@@ -86,6 +85,25 @@ public class Player extends Entity {
                 }
                 break;
         }
+    }
+
+    private void move(Entity e, int x, int y) {
+        if (currentRoom.getRoomCoordinates(x,y).isDoor()) {
+            Room otherroom = currentRoom.getRoomCoordinates(x,y).Door();
+            var coords = otherroom.findDoor(this);
+            otherroom.movePlayer(e, coords.x, coords.y);
+            safeMove(null, x, y);
+        } else {
+            safeMove(e, x, y);
+        }
+    }
+
+    private void safeMove(Entity e, int x, int y) {
+        Entity temp = currentRoom.getRoomCoordinates(x-1,y);
+        currentRoom.moveEntity(e, -1, 0); //
+        currentRoom.addRoomCoordinates(x+1,y, underPlayer);
+        underPlayer = temp;
+        temp = null;
     }
 
     public Room getCurrentRoom() {

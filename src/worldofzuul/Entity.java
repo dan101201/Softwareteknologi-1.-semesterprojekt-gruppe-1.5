@@ -52,8 +52,6 @@ public class Entity {
                 return null;
             }
     }
-
-
     public Room door() {
             if(obj instanceof Room){
                 return (Room)obj;
@@ -61,12 +59,7 @@ public class Entity {
                 return null;
             }
     }
-
     public boolean isDoor() {
         return model == "D";
     }
-
-
-
-
 }

@@ -10,9 +10,9 @@ public class Game {
         Room kitchen = new Room(9, 9, "Fed køkken beskrivelse");
         Room bath = new Room(5, 5, "Lækkert badeværelse i store lysegrå 60x60 fliser, der er et badekar med en digitalt håndledsur liggende på kanten. Håndvasken er indbygget i et åbent træskelet med hylder til toiletpapir og håndklæder.");
         Room homeOffice = new Room(8, 6, "I kontoret fanges til blik først af det røde monster af en computer som står på gulvet ved bordet. En bamse i form af en lysebrun bjørn ligger i hjørnet.");
-        Room diningRoom = new Room(9, 9, "Og her står der noget om spisestuen");
-        Room bedRoom = new Room(7, 7, "Soveværelset her");
-
+        Room diningRoom = new Room(9, 9, "Og her står der noget om spisestuen. Der er et tv og en AC. Din sofa står og lugter ved væggen");
+        Room bedRoom = new Room(7, 7, "Soveværelset her, med mobil og seng");
+// Enteties
         player = new Player(outside, 5, 5);
         rug = new Entity(2, 3, false, "This is a rug", "R");
         outside.addRoomCoordinates(5, 5, player);

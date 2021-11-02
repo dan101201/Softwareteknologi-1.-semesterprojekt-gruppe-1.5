@@ -20,7 +20,7 @@ public class Game {
         Entity postalbox = new Entity(1, 1, true, "Grå postkasse, i rustfritstål", "P");
         outside.addRoomCoordinates(6,6,postalbox);
 
-        rug = new Entity(1, 3, false, "This is a rug", "R");
+        Entity rug = new Entity(1, 3, false, "This is a rug", "R");
         hall.addRoomCoordinates(3, 3, rug);
         Entity security = new Entity(1,1,true,"Hi-tech alarmsystem fra THansen", "A");
         hall.addRoomCoordinates(1,9,security);

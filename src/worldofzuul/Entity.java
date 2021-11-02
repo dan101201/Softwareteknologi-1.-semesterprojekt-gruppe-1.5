@@ -1,8 +1,8 @@
 package worldofzuul;
 
 public class Entity {
-    private int width;
-    private int length;
+    private int width = 1;
+    private int length = 1;
     private boolean solid;
     private String description;
     public String model = "#";

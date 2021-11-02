@@ -1,7 +1,7 @@
 package worldofzuul;
 
 public class Player extends Entity {
-    private final Room currentRoom;
+    private Room currentRoom;
     private int x;
     private int y;
     private Entity underPlayer = null;
@@ -37,50 +37,58 @@ public class Player extends Entity {
 
         switch (playerDirection) {
             case "up":
-                if (currentRoom.getRoomCoordinates(x - 1, y) == null || !currentRoom.getRoomCoordinates(x - 1, y).getSolid()) {
-                    move(this, x, y);
+                if (currentRoom.getRoomCoordinates(x-1,y) == null || !currentRoom.getRoomCoordinates(x-1,y).getSolid()) {
                     x -= 1;
+                    move(this, -1, 0);
                 }
                 break;
             case "down":
                 if (currentRoom.getRoomCoordinates(x + 1, y) == null || !currentRoom.getRoomCoordinates(x + 1, y).getSolid()) {
                     x += 1;
-                    move(this, x, y);
+                    move(this, 1, 0);
                 }
                 break;
             case "left":
-                if (currentRoom.getRoomCoordinates(x, y - 1) == null || !currentRoom.getRoomCoordinates(x, y - 1).getSolid()) {
-
-                    move(this, x, y);
+                if (currentRoom.getRoomCoordinates(x,y-1) == null || !currentRoom.getRoomCoordinates(x,y-1).getSolid()) {
                     y -= 1;
+                    move(this, 0, -1);
                 }
-        break;
-        case "right":
-        if (currentRoom.getRoomCoordinates(x, y + 1) == null || !currentRoom.getRoomCoordinates(x, y + 1).getSolid()) {
-
-            y += 1;
-            move(this, x, y);
+                break;
+            case "right":
+                if (currentRoom.getRoomCoordinates(x,y+1)== null || !currentRoom.getRoomCoordinates(x,y+1).getSolid()) {
+                    y += 1;
+                    move(this, 0, 1);
+                }
+                break;
         }
-        break;
+
     }
 
-}
+
 
     private void move(Entity e, int x, int y) {
-        if (currentRoom.getRoomCoordinates(x, y).isDoor()) {
-            Room otherroom = currentRoom.getRoomCoordinates(x, y).Door();
-            var coords = otherroom.findDoor(this);
-            otherroom.movePlayer(e, coords.x, coords.y);
-            safeMove(null, x, y);
-        } else {
-            safeMove(e, x, y);
+        try {
+            if (currentRoom.getRoomCoordinates(this.x + x, this.y + y) != null && currentRoom.getRoomCoordinates(this.x + x, this.y + y).isDoor()) {
+                Room otherroom = currentRoom.getRoomCoordinates(x,y).door();
+                var coords = otherroom.findDoor(currentRoom);
+                otherroom.moveEntity(e, coords.x, coords.y);
+                currentRoom.addRoomCoordinates(this.x, this.y, null);
+                this.x = coords.x;
+                this.y = coords.y;
+                currentRoom = otherroom;
+            } else {
+                safeMove(e, x, y);
+            }
+        }
+        catch(IndexOutOfBoundsException exception) {
+            return;
         }
     }
 
     private void safeMove(Entity e, int x, int y) {
-        Entity temp = currentRoom.getRoomCoordinates(x, y);
+        Entity temp = currentRoom.getRoomCoordinates(this.x + x,this.y + y);
         currentRoom.moveEntity(e, x, y); //
-        currentRoom.addRoomCoordinates(x, y, underPlayer);
+        currentRoom.addRoomCoordinates(this.x + x,this.y + y, underPlayer);
         underPlayer = temp;
         temp = null;
     }

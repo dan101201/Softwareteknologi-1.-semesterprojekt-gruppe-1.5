@@ -26,6 +26,10 @@ public class Room {
         return roomCoordinates[0].length;
     }
     public void addRoomCoordinates(int x, int y, Entity e) {
+        if (e == null) {
+            roomCoordinates[x][y] = e;
+            return;
+        }
         for (int i = 0; i < e.getWidth(); i++) {
             for (int j = 0; j < e.getLength(); j++) {
                 roomCoordinates[x + i][y + j] = e;
@@ -46,6 +50,10 @@ public class Room {
                 }
             }
         }
+        if (tempX + x >= roomCoordinates.length || tempY + y >= roomCoordinates[0].length || tempY + y < 0 || tempX + x < 0) {
+            roomCoordinates[tempX][tempY] = e;
+            return;
+        }
         roomCoordinates[tempX + x][tempY + y] = e;
     }
 
@@ -53,7 +61,7 @@ public class Room {
         for (int i = 0; i < roomCoordinates.length; i++) {
             for (int j = 0; j < roomCoordinates[0].length; j++) {
                 var e = roomCoordinates[i][j];
-                if (e.isDoor() || e.Door() == room) {
+                if (e.isDoor() || e.door() == room) {
                     return new IntTuple(i,j);
                 }
             }

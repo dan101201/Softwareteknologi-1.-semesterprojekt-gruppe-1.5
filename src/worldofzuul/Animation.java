@@ -12,7 +12,7 @@ public class Animation {
 
             while (gameIntro.hasNextLine()) {
                 String data = gameIntro.nextLine();
-                System.out.println(data);// Shows the data from file
+                System.out.println(data);   // Shows the data from file
             }
             gameIntro.close();
         }

@@ -13,7 +13,6 @@ public class Player extends Entity {
         this.y = y;
     }
 
-    // Metoder
     public Entity interact(String playerOrientation) {
         try {
             switch (playerOrientation) {
@@ -37,7 +36,7 @@ public class Player extends Entity {
 
         switch (playerDirection) {
             case "up":
-                if (currentRoom.getRoomCoordinates(x-1,y) == null || !currentRoom.getRoomCoordinates(x-1,y).getSolid()) {
+                if (currentRoom.getRoomCoordinates(x - 1, y) == null || !currentRoom.getRoomCoordinates(x - 1, y).getSolid()) {
                     x -= 1;
                     move(this, -1, 0);
                 }
@@ -49,27 +48,24 @@ public class Player extends Entity {
                 }
                 break;
             case "left":
-                if (currentRoom.getRoomCoordinates(x,y-1) == null || !currentRoom.getRoomCoordinates(x,y-1).getSolid()) {
+                if (currentRoom.getRoomCoordinates(x, y - 1) == null || !currentRoom.getRoomCoordinates(x, y - 1).getSolid()) {
                     y -= 1;
                     move(this, 0, -1);
                 }
                 break;
             case "right":
-                if (currentRoom.getRoomCoordinates(x,y+1)== null || !currentRoom.getRoomCoordinates(x,y+1).getSolid()) {
+                if (currentRoom.getRoomCoordinates(x, y + 1) == null || !currentRoom.getRoomCoordinates(x, y + 1).getSolid()) {
                     y += 1;
                     move(this, 0, 1);
                 }
                 break;
         }
-
     }
-
-
 
     private void move(Entity e, int x, int y) {
         try {
             if (currentRoom.getRoomCoordinates(this.x + x, this.y + y) != null && currentRoom.getRoomCoordinates(this.x + x, this.y + y).isDoor()) {
-                Room otherroom = currentRoom.getRoomCoordinates(x,y).door();
+                Room otherroom = currentRoom.getRoomCoordinates(x, y).door();
                 var coords = otherroom.findDoor(currentRoom);
                 otherroom.moveEntity(e, coords.x, coords.y);
                 currentRoom.addRoomCoordinates(this.x, this.y, null);
@@ -79,16 +75,15 @@ public class Player extends Entity {
             } else {
                 safeMove(e, x, y);
             }
-        }
-        catch(IndexOutOfBoundsException exception) {
+        } catch (IndexOutOfBoundsException exception) {
             return;
         }
     }
 
     private void safeMove(Entity e, int x, int y) {
-        Entity temp = currentRoom.getRoomCoordinates(this.x + x,this.y + y);
+        Entity temp = currentRoom.getRoomCoordinates(this.x + x, this.y + y);
         currentRoom.moveEntity(e, x, y); //
-        currentRoom.addRoomCoordinates(this.x + x,this.y + y, underPlayer);
+        currentRoom.addRoomCoordinates(this.x + x, this.y + y, underPlayer);
         underPlayer = temp;
         temp = null;
     }

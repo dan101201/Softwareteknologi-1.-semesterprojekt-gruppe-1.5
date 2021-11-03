@@ -3,6 +3,7 @@ package worldofzuul;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,11 +16,11 @@ public class Puzzle extends Entity{
     public Puzzle (ArrayList<Question> questions) {
         this.questions = questions;
     }
-
+/*
     public void addAnswer(int index, String answer) {
         this.questions.get(index).addAnswer(answer);
     }
-
+*/
     public Puzzle (ArrayList<Question> questions, String description) {
         this.questions = questions;
         this.description = description;
@@ -31,19 +32,24 @@ public class Puzzle extends Entity{
             Scanner myReader = new Scanner(questionFile);
             boolean answers = false;
             boolean question = false;
+            boolean wrongAnswers = false;
             Question temp = null;
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                answers = data.startsWith("A=");
                 question = data.startsWith("Q=");
+                answers = data.startsWith("A=");
+                wrongAnswers = data.startsWith("F=");
                 if (answers) {
-                    temp.addAnswer(data.substring(2));
+                    temp.addAnswer(data.substring(2), true);
                 }
                 if (question) {
                     if (!(temp == null)) {
                         questions.add(temp);
                     }
                     temp = new Question(data.substring(2));
+                }
+                if (wrongAnswers) {
+                    temp.addAnswer(data.substring(2), false);
                 }
             }
             questions.add(temp);
@@ -56,6 +62,10 @@ public class Puzzle extends Entity{
 
     public ArrayList<Question> getQuestions() {
         return questions;
+    }
+
+    public Question getQuestionByIndex(int index) {
+        return questions.get(index);
     }
 
     public boolean getCompleted () {

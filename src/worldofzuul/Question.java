@@ -1,39 +1,37 @@
 package worldofzuul;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class Question {
     private String question;
-    private ArrayList<String> answers = new ArrayList<String>();
+    private LinkedHashMap<String, Boolean> answers = new LinkedHashMap<String, Boolean>();
 
-    public Question (String question) {
+    public Question(String question) {
         this.question = question;
     }
 
-    public String getQuestion () {
+    public String getQuestion() {
         return question;
     }
-
-    public boolean checkAnswers (List<String> answers) {
+/*
+    public boolean checkAnswers(LinkedHashMap<String, Boolean> answers) {
         boolean result = true;
-        for (int i=0; i<answers.size(); i++) {
-            if (!answers.get(i).equals(this.answers.get(i))) {
+        for (String key : answers.keySet()) {
+            if (!answers.get(key).equals(this.answers.get(key))) {
                 result = false;
             }
         }
         return result;
     }
+*/
+    public void addAnswer(String answer, Boolean correctness) {
+        answers.put(answer, correctness);
+    }
 
-    public ArrayList<String> getAnswers () {
+    public LinkedHashMap<String, Boolean> getAnswers() {
         return answers;
     }
 
-    public void addAnswer (String answer) {
-        answers.add(answer);
-    }
-
-    public void addAnswerAtIndex (int index, String answer) {
-        answers.add(index, answer);
-    }
 }

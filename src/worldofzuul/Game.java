@@ -18,12 +18,12 @@ public class Game {
         Entity lawnmover = new Entity(1, 1, true, "Worx dc01 robotplæneklipper, i god stand", "G");
         outside.addRoomCoordinates(1, 1, lawnmover);
         Entity postalbox = new Entity(1, 1, true, "Grå postkasse, i rustfritstål", "P");
-        outside.addRoomCoordinates(6,6,postalbox);
+        outside.addRoomCoordinates(6,5,postalbox);
 
         Entity rug = new Entity(1, 3, false, "This is a rug", "R");
         hall.addRoomCoordinates(3, 3, rug);
         Entity security = new Entity(1,1,true,"Hi-tech alarmsystem fra THansen", "A");
-        hall.addRoomCoordinates(1,9,security);
+        hall.addRoomCoordinates(0,8,security);
 
         Entity smartwatch = new Entity(1,1,true,"Fedt Samsungur med smarte funktioner","s");
         bath.addRoomCoordinates(4,4,smartwatch);
@@ -42,7 +42,7 @@ public class Game {
         Entity pc = new Entity(1,1,true,"Stor beskidt rød gamer-computer med blinkende lamper og lys i blæserne", "#");
         homeOffice.addRoomCoordinates(5,1,pc);
         Entity teddy = new Entity(1,1,false,"Lys teddy-bjørn størrelse 25", "T");
-        homeOffice.addRoomCoordinates(2,6,teddy);
+        homeOffice.addRoomCoordinates(2,5,teddy);
 
 
 

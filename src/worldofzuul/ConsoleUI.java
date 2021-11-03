@@ -1,9 +1,10 @@
 package worldofzuul;
 public class ConsoleUI {
+    public static Parser parser = new Parser();
     public static Game game = new Game();
     public static void Control() {
         while (true) {
-            var s = System.console().readLine();
+            var s = parser.getCommand();
             switch (s) {
                 case "up":
                     game.movePlayer(s);

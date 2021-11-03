@@ -22,6 +22,10 @@ public class Question {
             if (!answers.get(key).equals(this.answers.get(key))) {
                 result = false;
             }
+//<<<<<<< Updated upstream
+//=======
+//            else EnergyBill.removeAmountEnergyBill();
+//>>>>>>> Stashed changes
         }
         return result;
     }

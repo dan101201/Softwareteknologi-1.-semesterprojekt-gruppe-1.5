@@ -27,6 +27,7 @@ public class Entity {
     public Entity(Room doorRoom) {
         model = "D";
         obj = doorRoom;
+        this.description = "A door, leading to a different room, it is in okay condition. Made of solid stone, cracks in the stone slither across its surface, the hinges hidden, it looks quite sturdy, but also very much out of place in this suburban neighborhood. Almost like it was made a long time ago. Stone carvings can be found around 3 quarters the way up, forming multiple faces, staring deeply into your soul. The faces look uncanny and familiar, but you can't quite place where you would have seen it before. In the middle face's mouth is a door knocker, the handle seemingly made of ebony, with the hinges made of silver.";
     }
 
     //Default constructor
@@ -44,7 +45,7 @@ public class Entity {
     public int getWidth() {
         return width;
     }
-
+public String getDescription() {return description;}
     public Puzzle interact() {
             if (obj instanceof Puzzle) {
                 return (Puzzle)obj;

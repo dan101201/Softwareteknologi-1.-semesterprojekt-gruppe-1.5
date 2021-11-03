@@ -7,24 +7,23 @@ public class Player extends Entity {
     private Entity underPlayer = null;
 
     public Player(Room currentRoom, int x, int y) {
-        model = "P";
+        model = "\u2606";
         this.currentRoom = currentRoom;
         this.x = x;
         this.y = y;
     }
 
-    // Metoder
-    public Puzzle interact(String playerOrientation) {
+    public Entity interact(String playerOrientation) {
         try {
             switch (playerOrientation) {
                 case "up":
-                    return currentRoom.getRoomCoordinates(x, y + 1).interact();
+                    return currentRoom.getRoomCoordinates(x - 1, y);
                 case "down":
-                    return currentRoom.getRoomCoordinates(x, y - 1).interact();
+                    return currentRoom.getRoomCoordinates(x + 1, y);
                 case "left":
-                    return currentRoom.getRoomCoordinates(x - 1, y).interact();
+                    return currentRoom.getRoomCoordinates(x, y - 1);
                 case "right":
-                    return currentRoom.getRoomCoordinates(x + 1, y).interact();
+                    return currentRoom.getRoomCoordinates(x, y + 1);
             }
         } catch (Exception e) {
             return null;
@@ -38,38 +37,35 @@ public class Player extends Entity {
         switch (playerDirection) {
             case "up":
                 if (currentRoom.getRoomCoordinates(x-1,y) == null || !currentRoom.getRoomCoordinates(x-1,y).getSolid()) {
-                    x -= 1;
                     move(this, -1, 0);
+                    x -= 1;
                 }
                 break;
             case "down":
                 if (currentRoom.getRoomCoordinates(x + 1, y) == null || !currentRoom.getRoomCoordinates(x + 1, y).getSolid()) {
-                    x += 1;
                     move(this, 1, 0);
+                    x += 1;
                 }
                 break;
             case "left":
                 if (currentRoom.getRoomCoordinates(x,y-1) == null || !currentRoom.getRoomCoordinates(x,y-1).getSolid()) {
-                    y -= 1;
                     move(this, 0, -1);
+                    y -= 1;
                 }
                 break;
             case "right":
                 if (currentRoom.getRoomCoordinates(x,y+1)== null || !currentRoom.getRoomCoordinates(x,y+1).getSolid()) {
-                    y += 1;
                     move(this, 0, 1);
+                    y += 1;
                 }
                 break;
         }
-
     }
-
-
 
     private void move(Entity e, int x, int y) {
         try {
             if (currentRoom.getRoomCoordinates(this.x + x, this.y + y) != null && currentRoom.getRoomCoordinates(this.x + x, this.y + y).isDoor()) {
-                Room otherroom = currentRoom.getRoomCoordinates(x,y).door();
+                Room otherroom = currentRoom.getRoomCoordinates(x, y).door();
                 var coords = otherroom.findDoor(currentRoom);
                 otherroom.moveEntity(e, coords.x, coords.y);
                 currentRoom.addRoomCoordinates(this.x, this.y, null);
@@ -79,16 +75,15 @@ public class Player extends Entity {
             } else {
                 safeMove(e, x, y);
             }
-        }
-        catch(IndexOutOfBoundsException exception) {
+        } catch (IndexOutOfBoundsException exception) {
             return;
         }
     }
 
     private void safeMove(Entity e, int x, int y) {
-        Entity temp = currentRoom.getRoomCoordinates(this.x + x,this.y + y);
+        Entity temp = currentRoom.getRoomCoordinates(this.x + x, this.y + y);
         currentRoom.moveEntity(e, x, y); //
-        currentRoom.addRoomCoordinates(this.x + x,this.y + y, underPlayer);
+        currentRoom.addRoomCoordinates(this.x,this.y, underPlayer);
         underPlayer = temp;
         temp = null;
     }
@@ -109,7 +104,7 @@ public class Player extends Entity {
                 case "right":
                     return currentRoom.getRoomCoordinates(x, y + 1).interact();
             }
-        } catch (Exception e) { // Specificer
+        } catch (IndexOutOfBoundsException e) { // Specificer
             return null;
         }
         return null;

@@ -1,6 +1,4 @@
-Q="Spørgsmål 1"
-A="Svar 1"
-Q="Spørgsmål 2"
+Q="Spørgsmål"
 A="Svar 1"
 A="Svar 2"
 F="Svar 3"

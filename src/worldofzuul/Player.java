@@ -38,26 +38,26 @@ public class Player extends Entity {
         switch (playerDirection) {
             case "up":
                 if (currentRoom.getRoomCoordinates(x-1,y) == null || !currentRoom.getRoomCoordinates(x-1,y).getSolid()) {
-                    x -= 1;
                     move(this, -1, 0);
+                    x -= 1;
                 }
                 break;
             case "down":
                 if (currentRoom.getRoomCoordinates(x + 1, y) == null || !currentRoom.getRoomCoordinates(x + 1, y).getSolid()) {
-                    x += 1;
                     move(this, 1, 0);
+                    x += 1;
                 }
                 break;
             case "left":
                 if (currentRoom.getRoomCoordinates(x,y-1) == null || !currentRoom.getRoomCoordinates(x,y-1).getSolid()) {
-                    y -= 1;
                     move(this, 0, -1);
+                    y -= 1;
                 }
                 break;
             case "right":
                 if (currentRoom.getRoomCoordinates(x,y+1)== null || !currentRoom.getRoomCoordinates(x,y+1).getSolid()) {
-                    y += 1;
                     move(this, 0, 1);
+                    y += 1;
                 }
                 break;
         }
@@ -88,7 +88,7 @@ public class Player extends Entity {
     private void safeMove(Entity e, int x, int y) {
         Entity temp = currentRoom.getRoomCoordinates(this.x + x,this.y + y);
         currentRoom.moveEntity(e, x, y); //
-        currentRoom.addRoomCoordinates(this.x + x,this.y + y, underPlayer);
+        currentRoom.addRoomCoordinates(this.x,this.y, underPlayer);
         underPlayer = temp;
         temp = null;
     }
@@ -109,7 +109,7 @@ public class Player extends Entity {
                 case "right":
                     return currentRoom.getRoomCoordinates(x, y + 1).interact();
             }
-        } catch (Exception e) { // Specificer
+        } catch (IndexOutOfBoundsException e) { // Specificer
             return null;
         }
         return null;

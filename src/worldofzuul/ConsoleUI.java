@@ -4,6 +4,7 @@ public class ConsoleUI {
     public static Game game = new Game();
     public static void Control() {
         while (true) {
+            PrintRoom(game.getRoom());
             var s = parser.getCommand();
             switch (s) {
                 case "up":
@@ -22,7 +23,6 @@ public class ConsoleUI {
                     EnergyBill.showEnergyBill();
                     break;
             }
-            PrintRoom(game.getRoom());
         }
     }
 //public static void printEnergy(){

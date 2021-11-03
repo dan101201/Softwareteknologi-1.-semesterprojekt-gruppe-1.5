@@ -44,7 +44,7 @@ public class Entity {
     public int getWidth() {
         return width;
     }
-
+public String getDescription() {return description;}
     public Puzzle interact() {
             if (obj instanceof Puzzle) {
                 return (Puzzle)obj;

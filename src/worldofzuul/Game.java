@@ -53,8 +53,8 @@ public class Game {
         player.move(playerDirection);
     }
 
-    public Puzzle playerInteract() {
-        return player.interact();
+    public Entity playerInteract(String s1) {
+        return player.interact(s1);
     }
 
     public Room getRoom() {

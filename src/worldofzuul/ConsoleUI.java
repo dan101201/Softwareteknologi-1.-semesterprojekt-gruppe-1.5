@@ -1,43 +1,58 @@
 package worldofzuul;
+
 public class ConsoleUI {
     public static Parser parser = new Parser();
     public static Game game = new Game();
+
     public static void Control() {
         while (true) {
-            PrintRoom(game.getRoom());
-            var s = parser.getCommand();
-            switch (s) {
+            var s = parser.getCommand().split(" ");
+
+            String s1 = s[0];
+            String s2 = "";
+            if (s.length >= 2) {
+                s2 = s[1];
+            }
+            switch (s1) {
                 case "up":
-                    game.movePlayer(s);
+                    game.movePlayer(s1);
                     break;
                 case "down":
-                    game.movePlayer(s);
+                    game.movePlayer(s1);
                     break;
                 case "left":
-                    game.movePlayer(s);
+                    game.movePlayer(s1);
                     break;
                 case "right":
-                    game.movePlayer(s);
+                    game.movePlayer(s1);
                     break;
-                case "showEnergyBill":
+                case "showenergybill":
                     EnergyBill.showEnergyBill();
                     break;
+                case "use":
+                    Entity e = game.playerInteract(s2);
+                    Puzzle p = e.interact();
+                    if (p != null) {
+                        for (Question q : p.getQuestions()) {
+                            System.out.println(q.getQuestion());
+                        }
+                    } else {
+                        System.out.println(e.getDescription());
+                    }
             }
         }
     }
-//public static void printEnergy(){
-//
-//}
-    public static void clearScreen() {  
-        System.out.print("\033[H\033[2J");  
-        System.out.flush();  
-    }  
+
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 
     public static void PrintRoom(Room r) {
 
         for (int i = 0; i < r.getLength(0); i++) {
             for (int j = 0; j < r.getLength(1); j++) {
-                Entity e = r.getRoomCoordinates(i,j);
+                Entity e = r.getRoomCoordinates(i, j);
                 if (e == null) {
                     System.out.print(".");
                 } else {
@@ -46,6 +61,6 @@ public class ConsoleUI {
             }
             System.out.print("\n");
         }
-        
+
     }
 }

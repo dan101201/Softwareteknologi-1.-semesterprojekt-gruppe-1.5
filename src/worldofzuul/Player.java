@@ -17,13 +17,13 @@ public class Player extends Entity {
         try {
             switch (playerOrientation) {
                 case "up":
-                    return currentRoom.getRoomCoordinates(x, y + 1);
-                case "down":
-                    return currentRoom.getRoomCoordinates(x, y - 1);
-                case "left":
                     return currentRoom.getRoomCoordinates(x - 1, y);
-                case "right":
+                case "down":
                     return currentRoom.getRoomCoordinates(x + 1, y);
+                case "left":
+                    return currentRoom.getRoomCoordinates(x, y - 1);
+                case "right":
+                    return currentRoom.getRoomCoordinates(x, y + 1);
             }
         } catch (Exception e) {
             return null;

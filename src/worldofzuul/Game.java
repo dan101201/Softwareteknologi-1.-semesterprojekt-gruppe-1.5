@@ -19,6 +19,7 @@ public class Game {
         outside.addRoomCoordinates(1, 1, lawnmover);
         Entity postalbox = new Entity(1, 1, true, "Grå postkasse, i rustfritstål", "P");
         outside.addRoomCoordinates(6,5,postalbox);
+        outside.addRoomCoordinates(2, 0, new Entity(hall));
 
         Entity rug = new Entity(1, 3, false, "This is a rug", "R");
         hall.addRoomCoordinates(3, 3, rug);

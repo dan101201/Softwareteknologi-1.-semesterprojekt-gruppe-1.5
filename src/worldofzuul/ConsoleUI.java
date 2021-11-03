@@ -5,6 +5,7 @@ public class ConsoleUI {
     public static Game game = new Game();
 
     public static void Control() {
+        PrintRoom(game.getRoom());
         while (true) {
             var s = parser.getCommand().split(" ");
 
@@ -16,21 +17,29 @@ public class ConsoleUI {
             switch (s1) {
                 case "up":
                     game.movePlayer(s1);
+                    PrintRoom(game.getRoom());
                     break;
                 case "down":
                     game.movePlayer(s1);
+                    PrintRoom(game.getRoom());
                     break;
                 case "left":
                     game.movePlayer(s1);
+                    PrintRoom(game.getRoom());
                     break;
                 case "right":
                     game.movePlayer(s1);
+                    PrintRoom(game.getRoom());                    
                     break;
                 case "showenergybill":
                     EnergyBill.showEnergyBill();
                     break;
                 case "use":
                     Entity e = game.playerInteract(s2);
+                    if (e == null) {
+                        System.out.println("There is nothing to interact with.");
+                        break;
+                    }
                     Puzzle p = e.interact();
                     if (p != null) {
                         for (Question q : p.getQuestions()) {
@@ -39,6 +48,7 @@ public class ConsoleUI {
                     } else {
                         System.out.println(e.getDescription());
                     }
+                    break;
             }
         }
     }

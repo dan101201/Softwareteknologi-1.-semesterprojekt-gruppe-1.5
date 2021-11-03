@@ -34,7 +34,7 @@ public class ConsoleUI {
                 case "showenergybill":
                     EnergyBill.showEnergyBill();
                     break;
-                case "use":
+                case "interact":
                     Entity e = game.playerInteract(s2);
                     if (e == null) {
                         System.out.println("There is nothing to interact with.");

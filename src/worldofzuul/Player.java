@@ -7,7 +7,7 @@ public class Player extends Entity {
     private Entity underPlayer = null;
 
     public Player(Room currentRoom, int x, int y) {
-        model = "P";
+        model = "\u2606";
         this.currentRoom = currentRoom;
         this.x = x;
         this.y = y;

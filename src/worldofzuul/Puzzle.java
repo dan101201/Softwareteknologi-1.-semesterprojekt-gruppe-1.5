@@ -16,6 +16,10 @@ public class Puzzle extends Entity{
         this.questions = questions;
     }
 
+    public void addAnswer(int index, String answer) {
+        this.questions.get(index).addAnswer(answer);
+    }
+
     public Puzzle (ArrayList<Question> questions, String description) {
         this.questions = questions;
         this.description = description;
@@ -26,25 +30,32 @@ public class Puzzle extends Entity{
             File questionFile = new File(path);
             Scanner myReader = new Scanner(questionFile);
             boolean answers = false;
+            boolean question = false;
+            Question temp = null;
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                if (data == "") {
-                    answers = true;
-                    continue;
-                }
+                answers = data.startsWith("A=");
+                question = data.startsWith("Q=");
                 if (answers) {
-                    questions.add(new Question(data));
+                    temp.addAnswer(data.substring(2));
                 }
-                else
-                {
-                    questions.add(new Question(data));
+                if (question) {
+                    if (!(temp == null)) {
+                        questions.add(temp);
+                    }
+                    temp = new Question(data.substring(2));
                 }
             }
+            questions.add(temp);
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+    }
+
+    public ArrayList<Question> getQuestions() {
+        return questions;
     }
 
     public boolean getCompleted () {

@@ -14,17 +14,17 @@ public class Player extends Entity {
     }
 
     // Metoder
-    public Puzzle interact(String playerOrientation) {
+    public Entity interact(String playerOrientation) {
         try {
             switch (playerOrientation) {
                 case "up":
-                    return currentRoom.getRoomCoordinates(x, y + 1).interact();
+                    return currentRoom.getRoomCoordinates(x, y + 1);
                 case "down":
-                    return currentRoom.getRoomCoordinates(x, y - 1).interact();
+                    return currentRoom.getRoomCoordinates(x, y - 1);
                 case "left":
-                    return currentRoom.getRoomCoordinates(x - 1, y).interact();
+                    return currentRoom.getRoomCoordinates(x - 1, y);
                 case "right":
-                    return currentRoom.getRoomCoordinates(x + 1, y).interact();
+                    return currentRoom.getRoomCoordinates(x + 1, y);
             }
         } catch (Exception e) {
             return null;

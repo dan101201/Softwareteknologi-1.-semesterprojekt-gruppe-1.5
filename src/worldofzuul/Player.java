@@ -1,5 +1,7 @@
 package worldofzuul;
 
+import java.nio.charset.CoderResult;
+
 public class Player extends Entity {
     private Room currentRoom;
     private int x;
@@ -65,12 +67,13 @@ public class Player extends Entity {
     private void move(Entity e, int x, int y) {
         try {
             if (currentRoom.getRoomCoordinates(this.x + x, this.y + y) != null && currentRoom.getRoomCoordinates(this.x + x, this.y + y).isDoor()) {
-                Room otherroom = currentRoom.getRoomCoordinates(x, y).door();
+                Room otherroom = currentRoom.getRoomCoordinates(this.x + x, this.y + y).door();
                 var coords = otherroom.findDoor(currentRoom);
+                currentRoom.addRoomCoordinates(this.x, this.y, underPlayer);
+                underPlayer = otherroom.getRoomCoordinates(coords.x, coords.y);
                 otherroom.moveEntity(e, coords.x, coords.y);
-                currentRoom.addRoomCoordinates(this.x, this.y, null);
-                this.x = coords.x;
-                this.y = coords.y;
+                this.x = coords.x - x;
+                this.y = coords.y - y;
                 currentRoom = otherroom;
             } else {
                 safeMove(e, x, y);

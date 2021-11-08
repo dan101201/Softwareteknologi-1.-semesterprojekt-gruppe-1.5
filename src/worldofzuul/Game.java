@@ -19,17 +19,22 @@ public class Game {
         outside.addRoomCoordinates(1, 1, lawnmover);
         Entity postalbox = new Entity(1, 1, true, "Grå postkasse, i rustfritstål", "P");
         outside.addRoomCoordinates(6,5,postalbox);
-        outside.addRoomCoordinates(2, 0, new Entity(hall));
+        outside.addRoomCoordinates(0, 3, new Entity(hall));
 
         Entity rug = new Entity(1, 3, false, "This is a rug", "R");
         hall.addRoomCoordinates(3, 3, rug);
         Entity security = new Entity(1, 1, true, "Hi-tech alarmsystem fra THansen", "A");
         hall.addRoomCoordinates(0, 8, security);
+        hall.addRoomCoordinates(2, 0, new Entity(outside));
+        hall.addRoomCoordinates(0, 1, new Entity(bath));
+        hall.addRoomCoordinates(0, 3, new Entity(kitchen));
+        hall.addRoomCoordinates(0, 6, new Entity(homeOffice));
 
         Entity smartwatch = new Entity(1, 1, true, "Fedt Samsungur med smarte funktioner", "s");
         bath.addRoomCoordinates(4, 4, smartwatch);
         Entity toilet = new Entity(1, 1, true, "Flot toilet fra Hansgröe, model 2012", "T");
         bath.addRoomCoordinates(3, 1, toilet);
+        bath.addRoomCoordinates(1, 0, new Entity(hall));
 
         Entity fridge = new Entity(1, 1, true, "Stort køleskab fra Samsung, med stort display på fronten", "K");
         kitchen.addRoomCoordinates(2, 1, fridge);
@@ -39,11 +44,13 @@ public class Game {
         kitchen.addRoomCoordinates(6, 1, oven);
         Entity candyBowl = new Entity(1, 1, true, "Halvfyldt slikskål", "Q");
         kitchen.addRoomCoordinates(3, 1, candyBowl);
+        kitchen.addRoomCoordinates(0, 1, new Entity(hall));
 
         Entity pc = new Entity(1, 1, true, "Stor beskidt rød gamer-computer med blinkende lamper og lys i blæserne", "#");
         homeOffice.addRoomCoordinates(5, 1, pc);
         Entity teddy = new Entity(1, 1, false, "Lys teddy-bjørn størrelse 25", "T");
         homeOffice.addRoomCoordinates(2, 5, teddy);
+        homeOffice.addRoomCoordinates(0, 1, new Entity(hall));
     }
 
     public void movePlayer(String playerDirection) {

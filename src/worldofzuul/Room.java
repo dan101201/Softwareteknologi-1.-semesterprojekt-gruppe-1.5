@@ -1,5 +1,7 @@
 package worldofzuul;
 
+import java.nio.file.attribute.UserPrincipal;
+
 public class Room {
     private final Entity[][] roomCoordinates;
     private final String description;
@@ -61,7 +63,9 @@ public class Room {
         for (int i = 0; i < roomCoordinates.length; i++) {
             for (int j = 0; j < roomCoordinates[0].length; j++) {
                 var e = roomCoordinates[i][j];
-                if (e.isDoor() || e.door() == room) {
+                if (e == null)
+                    continue;
+                if (e.isDoor() && e.door() == room) {
                     return new IntTuple(i,j);
                 }
             }

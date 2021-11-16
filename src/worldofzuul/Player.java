@@ -9,7 +9,7 @@ public class Player extends Entity {
     private Entity underPlayer = null;
 
     public Player(Room currentRoom, int x, int y) {
-        model = "\u2606";
+        model = "\uD83D\uDC7D"; //white star: \u2606
         this.currentRoom = currentRoom;
         this.x = x;
         this.y = y;
@@ -27,7 +27,7 @@ public class Player extends Entity {
                 case "right":
                     return currentRoom.getRoomCoordinates(x, y + 1);
             }
-        } catch (Exception e) {
+        } catch (IndexOutOfBoundsException e) {
             return null;
         }
         return null;
@@ -134,7 +134,7 @@ public class Player extends Entity {
                 case "right":
                     return currentRoom.getRoomCoordinates(x, y + 1).interact();
             }
-        } catch (IndexOutOfBoundsException e) { // Specificer
+        } catch (IndexOutOfBoundsException e) {
             return null;
         }
         return null;

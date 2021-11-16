@@ -15,21 +15,22 @@ public class Question {
     public String getQuestion() {
         return question;
     }
-/*
-    public boolean checkAnswers(LinkedHashMap<String, Boolean> answers) {
-        boolean result = true;
-        for (String key : answers.keySet()) {
-            if (!answers.get(key).equals(this.answers.get(key))) {
-                result = false;
+
+    /*
+        public boolean checkAnswers(LinkedHashMap<String, Boolean> answers) {
+            boolean result = true;
+            for (String key : answers.keySet()) {
+                if (!answers.get(key).equals(this.answers.get(key))) {
+                    result = false;
+                }
+    //<<<<<<< Updated upstream
+    //=======
+    //            else EnergyBill.removeAmountEnergyBill();
+    //>>>>>>> Stashed changes
             }
-//<<<<<<< Updated upstream
-//=======
-//            else EnergyBill.removeAmountEnergyBill();
-//>>>>>>> Stashed changes
+            return result;
         }
-        return result;
-    }
-*/
+    */
     public void addAnswer(String answer, Boolean correctness) {
         answers.put(answer, correctness);
     }

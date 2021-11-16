@@ -38,7 +38,7 @@ public class Player extends Entity {
 
         switch (playerDirection) {
             case "up":
-                if (currentRoom.getRoomCoordinates(x-1,y) == null || !currentRoom.getRoomCoordinates(x-1,y).getSolid()) {
+                if (currentRoom.getRoomCoordinates(x - 1, y) == null || !currentRoom.getRoomCoordinates(x - 1, y).getSolid()) {
                     move(this, -1, 0);
                     x -= 1;
                 }
@@ -50,13 +50,13 @@ public class Player extends Entity {
                 }
                 break;
             case "left":
-                if (currentRoom.getRoomCoordinates(x,y-1) == null || !currentRoom.getRoomCoordinates(x,y-1).getSolid()) {
+                if (currentRoom.getRoomCoordinates(x, y - 1) == null || !currentRoom.getRoomCoordinates(x, y - 1).getSolid()) {
                     move(this, 0, -1);
                     y -= 1;
                 }
                 break;
             case "right":
-                if (currentRoom.getRoomCoordinates(x,y+1)== null || !currentRoom.getRoomCoordinates(x,y+1).getSolid()) {
+                if (currentRoom.getRoomCoordinates(x, y + 1) == null || !currentRoom.getRoomCoordinates(x, y + 1).getSolid()) {
                     move(this, 0, 1);
                     y += 1;
                 }
@@ -86,7 +86,7 @@ public class Player extends Entity {
     private void safeMove(Entity e, int x, int y) {
         Entity temp = currentRoom.getRoomCoordinates(this.x + x, this.y + y);
         currentRoom.moveEntity(e, x, y); //
-        currentRoom.addRoomCoordinates(this.x,this.y, underPlayer);
+        currentRoom.addRoomCoordinates(this.x, this.y, underPlayer);
         underPlayer = temp;
         temp = null;
     }

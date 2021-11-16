@@ -16,17 +16,23 @@ public class Room {
         return description;
     }
 
-    /** returns roomCoordinates[x][y]*/
+    /**
+     * returns roomCoordinates[x][y]
+     */
 
-    public Entity getRoomCoordinates(int x,int y) {
+    public Entity getRoomCoordinates(int x, int y) {
         return roomCoordinates[x][y];
     }
-    /** If i == 0, return length of first array, else return length of second array */
-    public int getLength(int i){
-        if (i ==0)
+
+    /**
+     * If i == 0, return length of first array, else return length of second array
+     */
+    public int getLength(int i) {
+        if (i == 0)
             return roomCoordinates.length;
         return roomCoordinates[0].length;
     }
+
     public void addRoomCoordinates(int x, int y, Entity e) {
         if (e == null) {
             roomCoordinates[x][y] = e;
@@ -66,7 +72,7 @@ public class Room {
                 if (e == null)
                     continue;
                 if (e.isDoor() && e.door() == room) {
-                    return new IntTuple(i,j);
+                    return new IntTuple(i, j);
                 }
             }
         }

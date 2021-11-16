@@ -1,11 +1,12 @@
 package worldofzuul;
+
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 
 public class Animation {
 
-    public void introAnimation(String path){
+    public void introAnimation(String path) {
         try {
             File introAni = new File("src/txtfiler/introAnimation.txt");
             Scanner gameIntro = new Scanner(introAni);
@@ -15,14 +16,13 @@ public class Animation {
                 System.out.println(data);   // Shows the data from file
             }
             gameIntro.close();
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
     }
 
-    public void outroAnimation(String path){
+    public void outroAnimation(String path) {
         try {
             File outroAni = new File("src/txtfiler/outroAnimation.txt");
             Scanner gameOutro = new Scanner(outroAni);
@@ -32,8 +32,7 @@ public class Animation {
                 System.out.println(data);// Shows the data from file
             }
             gameOutro.close();
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }

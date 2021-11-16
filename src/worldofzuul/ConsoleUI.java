@@ -29,7 +29,7 @@ public class ConsoleUI {
                     break;
                 case "right":
                     game.movePlayer(s1);
-                    PrintRoom(game.getRoom());                    
+                    PrintRoom(game.getRoom());
                     break;
                 case "showenergybill":
                     EnergyBill.showEnergyBill();

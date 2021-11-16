@@ -10,7 +10,7 @@ public class Entity {
     // 16/11 Nikolaj: Vi skal have en SquareSize implementeret, vi skal have en speed implementeret som indikrere hvor hurtigt Entity bevæger sig.  
 
     //Constructor for 1st Iteration containing the description option
-    public Entity(int width, int length, boolean solid, String description, String model){
+    public Entity(int width, int length, boolean solid, String description, String model) {
         this.width = width;
         this.length = length;
         this.solid = solid;
@@ -32,10 +32,11 @@ public class Entity {
     }
 
     //Default constructor
-    public Entity(){}
+    public Entity() {
+    }
 
     //Interact-funktion
-    public boolean getSolid(){
+    public boolean getSolid() {
         return solid;
     }
 
@@ -46,21 +47,27 @@ public class Entity {
     public int getWidth() {
         return width;
     }
-public String getDescription() {return description;}
+
+    public String getDescription() {
+        return description;
+    }
+
     public Puzzle interact() {
-            if (obj instanceof Puzzle) {
-                return (Puzzle)obj;
-            } else {
-                return null;
-            }
+        if (obj instanceof Puzzle) {
+            return (Puzzle) obj;
+        } else {
+            return null;
+        }
     }
+
     public Room door() {
-            if(obj instanceof Room){
-                return (Room)obj;
-            } else {
-                return null;
-            }
+        if (obj instanceof Room) {
+            return (Room) obj;
+        } else {
+            return null;
+        }
     }
+
     public boolean isDoor() {
         return model == "D";
     }

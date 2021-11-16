@@ -7,21 +7,22 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class Puzzle extends Entity{
+public class Puzzle extends Entity {
     private ArrayList<Question> questions = new ArrayList<Question>();
     private boolean completed;
     private String description;
 
     //constructor
-    public Puzzle (ArrayList<Question> questions) {
+    public Puzzle(ArrayList<Question> questions) {
         this.questions = questions;
     }
-/*
-    public void addAnswer(int index, String answer) {
-        this.questions.get(index).addAnswer(answer);
-    }
-*/
-    public Puzzle (ArrayList<Question> questions, String description) {
+
+    /*
+        public void addAnswer(int index, String answer) {
+            this.questions.get(index).addAnswer(answer);
+        }
+    */
+    public Puzzle(ArrayList<Question> questions, String description) {
         this.questions = questions;
         this.description = description;
     }
@@ -68,7 +69,7 @@ public class Puzzle extends Entity{
         return questions.get(index);
     }
 
-    public boolean getCompleted () {
+    public boolean getCompleted() {
         return completed;
     }
 

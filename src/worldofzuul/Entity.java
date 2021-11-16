@@ -7,6 +7,7 @@ public class Entity {
     private String description;
     public String model = "#";
     public Object obj;
+    // 16/11 Nikolaj: Vi skal have en SquareSize implementeret, vi skal have en speed implementeret som indikrere hvor hurtigt Entity bevæger sig.  
 
     //Constructor for 1st Iteration containing the description option
     public Entity(int width, int length, boolean solid, String description, String model){

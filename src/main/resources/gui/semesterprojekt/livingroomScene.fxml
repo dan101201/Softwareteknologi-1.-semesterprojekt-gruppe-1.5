@@ -12,7 +12,7 @@
          <children>
             <ImageView fitHeight="256.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../guiImages/pixil-frame-0%20(1).png" />
+                  <Image url="@../../../../guiImages/stueGulv.png" />
                </image>
             </ImageView>
             <ImageView fx:id="tvObj" fitHeight="16.0" fitWidth="16.0" layoutX="20.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">

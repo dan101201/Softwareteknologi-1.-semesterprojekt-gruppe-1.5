@@ -34,33 +34,60 @@ public class Player extends Entity {
     }
 
     // Tag String input i en switch og ændre værdierne, gem værdierne igen. "Flyt" spilleren i arrayet.
-    public void move(String playerDirection) {
+<<<<<<< Updated upstream
+    public void move(KeySt) {
 
-        switch (playerDirection) {
-            case "up":
-                if (currentRoom.getRoomCoordinates(x - 1, y) == null || !currentRoom.getRoomCoordinates(x - 1, y).getSolid()) {
-                    move(this, -1, 0);
-                    x -= 1;
-                }
-                break;
-            case "down":
-                if (currentRoom.getRoomCoordinates(x + 1, y) == null || !currentRoom.getRoomCoordinates(x + 1, y).getSolid()) {
-                    move(this, 1, 0);
-                    x += 1;
-                }
-                break;
-            case "left":
-                if (currentRoom.getRoomCoordinates(x, y - 1) == null || !currentRoom.getRoomCoordinates(x, y - 1).getSolid()) {
-                    move(this, 0, -1);
-                    y -= 1;
-                }
-                break;
-            case "right":
-                if (currentRoom.getRoomCoordinates(x, y + 1) == null || !currentRoom.getRoomCoordinates(x, y + 1).getSolid()) {
-                    move(this, 0, 1);
-                    y += 1;
-                }
-                break;
+
+        //
+//        switch (playerDirection) {
+//            case "up":
+//                if (currentRoom.getRoomCoordinates(x - 1, y) == null || !currentRoom.getRoomCoordinates(x - 1, y).getSolid()) {
+//                    move(this, -1, 0);
+//                    x -= 1;
+//                }
+//                break;
+//            case "down":
+//                if (currentRoom.getRoomCoordinates(x + 1, y) == null || !currentRoom.getRoomCoordinates(x + 1, y).getSolid()) {
+//                    move(this, 1, 0);
+//                    x += 1;
+//                }
+//                break;
+//            case "left":
+//                if (currentRoom.getRoomCoordinates(x, y - 1) == null || !currentRoom.getRoomCoordinates(x, y - 1).getSolid()) {
+//                    move(this, 0, -1);
+//                    y -= 1;
+//                }
+//                break;
+//            case "right":
+//                if (currentRoom.getRoomCoordinates(x, y + 1) == null || !currentRoom.getRoomCoordinates(x, y + 1).getSolid()) {
+//                    move(this, 0, 1);
+//                    y += 1;
+//                }
+//                break;
+=======
+    public void move(KeyEvent event) {
+
+        if ("UP".equals(event)) {
+            if (currentRoom.getRoomCoordinates(x - 1, y) == null || !currentRoom.getRoomCoordinates(x - 1, y).getSolid()) {
+                move(this, -1, 0);
+                x -= 1;
+            }
+        } else if ("DOWN".equals(event)) {
+            if (currentRoom.getRoomCoordinates(x + 1, y) == null || !currentRoom.getRoomCoordinates(x + 1, y).getSolid()) {
+                move(this, 1, 0);
+                x += 1;
+            }
+        } else if ("LEFT".equals(event)) {
+            if (currentRoom.getRoomCoordinates(x, y - 1) == null || !currentRoom.getRoomCoordinates(x, y - 1).getSolid()) {
+                move(this, 0, -1);
+                y -= 1;
+            }
+        } else if ("RIGHT".equals(event)) {
+            if (currentRoom.getRoomCoordinates(x, y + 1) == null || !currentRoom.getRoomCoordinates(x, y + 1).getSolid()) {
+                move(this, 0, 1);
+                y += 1;
+            }
+>>>>>>> Stashed changes
         }
     }
 

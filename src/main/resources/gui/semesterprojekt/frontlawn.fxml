@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.Frontlawn">
+   <children>
+      <ImageView fx:id="mailbox" fitHeight="256.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../GUIimages/grassbg.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lawnmover" fitHeight="16.0" fitWidth="16.0" layoutX="28.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../GUIimages/robotlawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fenceleft" fitHeight="16.0" fitWidth="96.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../GUIimages/fence96.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fenceright" fitHeight="16.0" fitWidth="96.0" layoutX="160.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../GUIimages/fence96.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dog" fitHeight="16.0" fitWidth="16.0" layoutX="186.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Users/super/Downloads/dog.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="frontdoor" fitHeight="32.0" fitWidth="32.0" layoutX="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../GUIimages/frontdoor.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="93.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../GUIimages/mailbox.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

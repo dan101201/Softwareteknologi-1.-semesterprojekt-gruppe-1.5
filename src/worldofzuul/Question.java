@@ -15,20 +15,13 @@ public class Question {
     public String getQuestion() {
         return question;
     }
-
-    /*
-        public boolean checkAnswers(LinkedHashMap<String, Boolean> answers) {
-            boolean result = true;
-            for (String key : answers.keySet()) {
-                if (!answers.get(key).equals(this.answers.get(key))) {
-                    result = false;
-                }
-    //<<<<<<< Updated upstream
-    //=======
-    //            else EnergyBill.removeAmountEnergyBill();
-    //>>>>>>> Stashed changes
+/*
+    public boolean checkAnswers(ArrayList<String> answers) {
+        boolean result = true;
+        for (String key : answers.keySet()) {
+            if (!answers.get(key).equals(this.answers.get(key)) && this.answers.get(key)) {
+                result = false;
             }
-            return result;
         }
     */
     public void addAnswer(String answer, Boolean correctness) {

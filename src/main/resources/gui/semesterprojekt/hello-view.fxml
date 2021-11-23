@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="menuRoot" prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.MenuController">
    <children>
-      <AnchorPane prefHeight="256.0" prefWidth="256.0">
-         <children>
-            <ImageView fitHeight="256.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../guiImages/pixil-frame-0%20(1).png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="tvObj" fitHeight="16.0" fitWidth="16.0" layoutX="20.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../guiImages/smartTV.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="playerObj" fitHeight="16.0" fitWidth="16.0" layoutX="120.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../guiImages/PlayerModel.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
+      <ImageView fx:id="yellowFloor" fitHeight="256.0" fitWidth="256.0" layoutX="3.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/yellowFloor.png" />
+         </image>
+         <viewport>
+            <Rectangle2D height="256.0" width="256.0" />
+         </viewport>
+      </ImageView>
+      <TabPane prefHeight="200.0" prefWidth="264.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Hjælp" />
+          <Tab text="Om spillet">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="90.0" layoutY="100.0" mnemonicParsing="false" onAction="#moveToFrontLawn" prefHeight="58.0" prefWidth="92.0" text="Start" />
+      <ImageView fx:id="playerObj" fitHeight="70.0" fitWidth="166.0" layoutX="32.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/PlayerModel.png" />
+         </image>
+      </ImageView>
    </children>
-</VBox>
+</AnchorPane>

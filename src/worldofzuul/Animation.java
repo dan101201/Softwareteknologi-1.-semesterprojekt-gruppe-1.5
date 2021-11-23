@@ -1,40 +1,34 @@
 package worldofzuul;
 
+import java.util.*;
+import java.util.function.*;
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 
 public class Animation {
 
-    public void introAnimation(String path) {
-        try {
-            File introAni = new File("src/txtfiler/introAnimation.txt");
-            Scanner gameIntro = new Scanner(introAni);
+    List<Function<Void,Void>> actions;
 
-            while (gameIntro.hasNextLine()) {
-                String data = gameIntro.nextLine();
-                System.out.println(data);   // Shows the data from file
-            }
-            gameIntro.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+    Animation() {
+        actions = new ArrayList<Function<Void,Void>>();
+    }
+
+    void addAction(Function<Void, Void> func) {
+        actions.add(func);
+    }
+
+    void playAnimation() {
+        for (Function<Void,Void> function : actions) {
+            function.apply(null);
         }
     }
 
-    public void outroAnimation(String path) {
-        try {
-            File outroAni = new File("src/txtfiler/outroAnimation.txt");
-            Scanner gameOutro = new Scanner(outroAni);
+    public static void introAnimation(String path) {
+        
+    }
 
-            while (gameOutro.hasNextLine()) {
-                String data = gameOutro.nextLine();
-                System.out.println(data);// Shows the data from file
-            }
-            gameOutro.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
+    public static void outroAnimation(String path) {
+        
     }
 }

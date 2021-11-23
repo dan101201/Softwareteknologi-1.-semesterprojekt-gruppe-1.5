@@ -16,55 +16,25 @@ public class Player extends Entity {
         this.currentRoom = currentRoom;
     }
 
-    public void move(KeyEvent playerDirection) {
-        int keyCode = playerDirection.getKeyCode();
-
-        switch (keyCode) {
-            case KeyEvent.VK_W:
+    public void move(String playerDirection) {
+        switch (playerDirection) {
+            case "up":
                 if (!currentRoom.roomEntities(this.x, this.y - this.speed).getSolid() && !currentRoom.roomEntities(this.x + this.width, this.y - this.speed).getSolid()) {
                     this.y -= speed;
                 }
-            case KeyEvent.VK_S:
+            case "down":
                 if (!currentRoom.roomEntities(this.x, this.y + this.speed).getSolid() && !currentRoom.roomEntities(this.x + this.width, this.y + this.speed).getSolid()) {
                     this.y += speed;
                 }
-            case KeyEvent.VK_A:
+            case "left":
                 if (!currentRoom.roomEntities(this.x - this.speed, this.y).getSolid() && !currentRoom.roomEntities(this.x - this.speed, this.y + this.height).getSolid()) {
                     this.x -= speed;
                 }
-            case KeyEvent.VK_D:
+            case "right":
                 if (!currentRoom.roomEntities(this.x + this.speed, this.y).getSolid() && !currentRoom.roomEntities(this.x + this.speed, this.y + this.height).getSolid()) {
                     this.x += speed;
                 }
         }
-/*
-        switch (playerDirection) {
-            case "up":
-                if (currentRoom.getRoomCoordinates(x - 1, y) == null || !currentRoom.getRoomCoordinates(x - 1, y).getSolid()) {
-                    move(this, -1, 0);
-                    x -= 1;
-                }
-                break;
-            case "down":
-                if (currentRoom.getRoomCoordinates(x + 1, y) == null || !currentRoom.getRoomCoordinates(x + 1, y).getSolid()) {
-                    move(this, 1, 0);
-                    x += 1;
-                }
-                break;
-            case "left":
-                if (currentRoom.getRoomCoordinates(x, y - 1) == null || !currentRoom.getRoomCoordinates(x, y - 1).getSolid()) {
-                    move(this, 0, -1);
-                    y -= 1;
-                }
-                break;
-            case "right":
-                if (currentRoom.getRoomCoordinates(x, y + 1) == null || !currentRoom.getRoomCoordinates(x, y + 1).getSolid()) {
-                    move(this, 0, 1);
-                    y += 1;
-                }
-                break;
-        }
-*/
     }
 
     private void move(Entity e, int x, int y) {

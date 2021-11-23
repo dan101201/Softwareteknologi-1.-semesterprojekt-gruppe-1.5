@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>gui.semesterprojekt/gui.semesterprojekt.HelloApplication</mainClass>
+                            <mainClass>gui.semesterprojekt/gui.semesterprojekt.MenuApplication</mainClass>
                         </configuration>
                     </execution>
                 </executions>

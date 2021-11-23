@@ -1,0 +1,4 @@
+Q="Bruger du den energisparende funktion på din Smartphone? Eller vil du begynde at bruge den?"
+A="Ja, brugte den allerede før spillet"
+A="Ja, har lige slået den til på min Smartphone"
+A="Nej"

@@ -1,8 +1,16 @@
 package worldofzuul;
 
+import java.awt.event.KeyEvent;
+
 public class Game {
     Player player;
 
+    public Game() {
+        Room newRoom = new Room(1000,1000);
+// Entities
+        player = new Player(newRoom,16,16,500,500);
+    }
+/*
     public Game() {
         Room outside = new Room(9, 6, "Du står ude i din forhave, der er en græsslåmaskine langs sokkelen, og en postkasse ude ved vejen.");
         Room hall = new Room(5, 9, "Gangen er lang og smukt indrettet. Der ligger et ægte persisk tæppe på gulvet, og i hjørnet er kontrolskærmen til dit alarmsystem.");
@@ -52,13 +60,13 @@ public class Game {
         homeOffice.addRoomCoordinates(2, 5, teddy);
         homeOffice.addRoomCoordinates(0, 1, new Entity(hall));
     }
-
-    public void movePlayer(String playerDirection) {
+*/
+    public void movePlayer(KeyEvent playerDirection) {
         player.move(playerDirection);
     }
 
-    public Entity playerInteract(String s1) {
-        return player.interact(s1);
+    public Entity playerInteract(int x, int y) {
+        return player.getCurrentRoom().roomInteract(x, y);
     }
 
     public Room getRoom() {

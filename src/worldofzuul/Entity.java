@@ -1,8 +1,6 @@
 package worldofzuul;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 
 public class Entity {
     int width = 1;
@@ -34,13 +32,6 @@ public class Entity {
         this.y = y;
         this.solid = solid;
         this.interactable = interactable;
-    }
-
-    public Entity(int width, int height, int x, int y) {
-        this.width = width;
-        this.height = height;
-        this.x = x;
-        this.y = y;
     }
 
     public Entity(Room doorRoom) {

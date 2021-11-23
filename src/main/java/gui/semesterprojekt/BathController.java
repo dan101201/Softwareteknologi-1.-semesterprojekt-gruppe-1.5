@@ -1,25 +1,25 @@
 package gui.semesterprojekt;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class HallController {
+public class BathController {
 
     @FXML
-    AnchorPane hall;
+    AnchorPane bathroom;
 
     @FXML
-    private ImageView kitchendoor;
+    private Button door;
 
     @FXML
-    void openKitchenDoor(MouseEvent event) throws IOException {
+    void openKitchenDoor(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("kitchen.fxml"));
-        hall.getChildren().setAll(pane);
+        bathroom.getChildren().setAll(pane);
     }
 
 }

@@ -1,78 +1,75 @@
 package worldofzuul;
 
-import java.nio.file.attribute.UserPrincipal;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Room {
-    private final Entity[][] roomCoordinates;
-    private final String description;
+    private int width;
+    private int height;
+    private List<Entity> entities;
 
-    //constructor
-    public Room(int x, int y, String description) {
-        this.roomCoordinates = new Entity[x][y];
-        this.description = description;
+    public Room(int width, int height) {
+        this.width = width;
+        this.height = height;
+        entities = new ArrayList<Entity>();
     }
 
-    public String getDescription() {
-        return description;
+    public int getWidth() {
+        return width;
     }
 
-    /**
-     * returns roomCoordinates[x][y]
-     */
-
-    public Entity getRoomCoordinates(int x, int y) {
-        return roomCoordinates[x][y];
+    public int getHeight() {
+        return height;
     }
 
-    /**
-     * If i == 0, return length of first array, else return length of second array
-     */
-    public int getLength(int i) {
-        if (i == 0)
-            return roomCoordinates.length;
-        return roomCoordinates[0].length;
+    public void addEntity(Entity entity) {
+        this.entities.add(entity);
     }
 
-    public void addRoomCoordinates(int x, int y, Entity e) {
-        if (e == null) {
-            roomCoordinates[x][y] = e;
-            return;
-        }
-        for (int i = 0; i < e.getWidth(); i++) {
-            for (int j = 0; j < e.getLength(); j++) {
-                roomCoordinates[x + i][y + j] = e;
+    public void removeEntity(Entity entity) {
+        this.entities.remove(entity);
+    }
+
+    public Entity getEntity(int x, int y) {
+        for (int i=0; i<entities.size(); i++) {
+            if (entities.get(i).getX() == x && entities.get(i).getY() == y) {
+                return entities.get(i);
             }
         }
+        return null;
     }
 
-    public void moveEntity(Entity e, int x, int y) {
-        int tempX = 0;
-        int tempY = 0;
-        for (int i = 0; i < roomCoordinates.length; i++) {
-            for (int j = 0; j < roomCoordinates[i].length; j++) {
-                if (roomCoordinates[i][j] == e) {
-                    tempX = i;
-                    tempY = j;
-                    roomCoordinates[i][j] = null;
-                    break;
+    public Entity findDoor(Room room) {
+        for (int i = 0; i < entities.size(); i++) {
+            var e = entities.get(i);
+            if (e == null)
+                continue;
+            if (e.isDoor() && e.door() == room) {
+                return entities.get(i);
+            }
+        }
+        return null;
+    }
+
+    public Entity roomInteract(int x, int y) {
+        for (Entity entity : entities) {
+            if (!entity.getInteractable()) {
+                continue;
+            }
+            if (x >= entity.getX() && x < entity.getX() + entity.getWidth()) {
+                if (y >= entity.getY() && y < entity.getY() + entity.getHeight()) {
+                    return entity;
                 }
             }
         }
-        if (tempX + x >= roomCoordinates.length || tempY + y >= roomCoordinates[0].length || tempY + y < 0 || tempX + x < 0) {
-            roomCoordinates[tempX][tempY] = e;
-            return;
-        }
-        roomCoordinates[tempX + x][tempY + y] = e;
+        return null;
     }
 
-    public IntTuple findDoor(Room room) {
-        for (int i = 0; i < roomCoordinates.length; i++) {
-            for (int j = 0; j < roomCoordinates[0].length; j++) {
-                var e = roomCoordinates[i][j];
-                if (e == null)
-                    continue;
-                if (e.isDoor() && e.door() == room) {
-                    return new IntTuple(i, j);
+    public Entity roomEntities(int x, int y) {
+        for (Entity entity : entities) {
+            if (x >= entity.getX() && x < entity.getX() + entity.getWidth()) {
+                if (y >= entity.getY() && y < entity.getY() + entity.getHeight()) {
+                    return entity;
                 }
             }
         }

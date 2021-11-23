@@ -1,28 +1,46 @@
 package worldofzuul;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Entity {
-    private int width = 1;
-    private int length = 1;
+    int width = 1;
+    int height = 1;
+    int x;
+    int y;
     private boolean solid;
+    private boolean interactable;
     private String description;
     public String model = "#";
+    public File imageModel = null;
     public Object obj;
     // 16/11 Nikolaj: Vi skal have en SquareSize implementeret, vi skal have en speed implementeret som indikrere hvor hurtigt Entity bevæger sig. Vi skal have lavet noget kollisionDetection af en art..
 
     //Constructor for 1st Iteration containing the description option
-    public Entity(int width, int length, boolean solid, String description, String model) {
+    public Entity(int width, int height, boolean solid, String description, String model) {
         this.width = width;
-        this.length = length;
+        this.height = height;
         this.solid = solid;
         this.description = description;
         this.model = model;
     }
 
     //Constructor for 2nd Iteration GUI without the description option
-    public Entity(int width, int length, boolean solid) {
+    public Entity(int width, int height, int x, int y, boolean solid, boolean interactable, String path) {
         this.width = width;
-        this.length = length;
+        this.height = height;
+        this.x = x;
+        this.y = y;
         this.solid = solid;
+        this.interactable = interactable;
+    }
+
+    public Entity(int width, int height, int x, int y) {
+        this.width = width;
+        this.height = height;
+        this.x = x;
+        this.y = y;
     }
 
     public Entity(Room doorRoom) {
@@ -40,19 +58,44 @@ public class Entity {
         return solid;
     }
 
-    public int getLength() {
-        return length;
+    public boolean getInteractable() {
+        return interactable;
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     public int getWidth() {
         return width;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void moveEntity(int x, int y) {
+        this.x += x;
+        this.y += y;
+    }
+
     public String getDescription() {
         return description;
     }
 
-    public Puzzle interact() {
+    public Puzzle getPuzzle() {
         if (obj instanceof Puzzle) {
             return (Puzzle) obj;
         } else {

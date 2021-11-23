@@ -20,7 +20,7 @@ public class FrontlawnController implements Initializable {
 // To do: make it possible to run separate controllerClasses
 
     @FXML
-    private AnchorPane frontlawnroot;
+    AnchorPane frontlawnroot;
 
 
     @FXML

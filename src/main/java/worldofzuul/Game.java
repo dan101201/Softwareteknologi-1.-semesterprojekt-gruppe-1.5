@@ -6,9 +6,10 @@ public class Game {
     Player player;
 
     public Game() {
-        Room newRoom = new Room(1000,1000);
-        // Entities
-        player = new Player(newRoom,16,16,500,500);
+    }
+
+    public void SetPlayer(Player player) {
+        this.player = player;
     }
 
     public Player getPlayer() {

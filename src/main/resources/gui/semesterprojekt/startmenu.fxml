@@ -28,7 +28,7 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Button layoutX="90.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#switchToFrontlawn" prefHeight="58.0" prefWidth="92.0" text="Start" />
+      <Button fx:id="startbutton" layoutX="90.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#goToFrontlawn" prefHeight="58.0" prefWidth="92.0" text="Start" />
       <ImageView fx:id="playerObj" fitHeight="70.0" fitWidth="166.0" layoutX="32.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/PlayerModel.png" />

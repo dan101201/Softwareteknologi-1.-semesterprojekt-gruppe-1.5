@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import worldofzuul.Entity;
@@ -20,9 +21,10 @@ import java.util.List;
 public class MenuApplication extends Application {
     private HashMap<String, Boolean> currentlyActiveKeys = new HashMap<>();
     private Stage stage;
-    private AnchorPane mainLayout;
+    private static AnchorPane mainLayout;
     private Scene scene;
     private Game game = new Game();
+    private Label magicLabel;
 
     private void showMainView() throws IOException {
         FXMLLoader loader = new FXMLLoader();
@@ -33,6 +35,16 @@ public class MenuApplication extends Application {
         stage.setScene(scene);
         sceneToRoom(scene);
         stage.show();
+    }
+
+    public static void showFrontLawn() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MenuApplication.class.getResource("frontlawn.fxml"));
+        mainLayout = loader.load();
+    }
+
+    public static void changeMagicLabel(){
+        
     }
 
     public Room sceneToRoom(Scene s) {
@@ -53,12 +65,7 @@ public class MenuApplication extends Application {
         return room;
     }
 
-    /*public static void goFrontLawn(){
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(MenuApplication.class.getResource("frontlawn.fxml"));
-        AnchorPane tofrontlawn = loader.load();
-        mainLayout.setCenter(tofrontlawn);
-    }*/
+
 
 
     @Override

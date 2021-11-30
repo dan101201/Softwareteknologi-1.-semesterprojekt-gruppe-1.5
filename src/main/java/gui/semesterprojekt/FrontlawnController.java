@@ -53,7 +53,7 @@ public class FrontlawnController implements Initializable {
     private ImageView dog;
 
     @FXML
-    private ImageView frontdoor; //To do: change imageview to access to hallscene
+    private ImageView frontdoor;
 
     @FXML
     private ImageView mailbox; //To do: create interact on mailbox

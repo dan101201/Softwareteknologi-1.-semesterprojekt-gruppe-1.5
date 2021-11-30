@@ -34,6 +34,15 @@ public class Entity {
         this.interactable = interactable;
     }
 
+    public Entity(int width, int height, int x, int y, boolean solid, boolean interactable) {
+        this.width = width;
+        this.height = height;
+        this.x = x;
+        this.y = y;
+        this.solid = solid;
+        this.interactable = interactable;
+    }
+
     public Entity(Room doorRoom) {
         model = "D";
         obj = doorRoom;

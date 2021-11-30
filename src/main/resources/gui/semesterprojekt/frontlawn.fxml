@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="frontlawnroot" prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.FrontlawnController">
+<AnchorPane fx:id="frontlawnroot" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.FrontlawnController">
    <children>
-      <ImageView fx:id="grass" fitHeight="256.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="grass" fitHeight="256.0" fitWidth="265.0" opacity="0.99" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/lawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="mailbox" fitHeight="16.0" fitWidth="16.0" layoutX="93.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mailbox" fitHeight="16.0" fitWidth="16.0" layoutX="91.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/mailbox.png" />
          </image>
@@ -22,26 +21,65 @@
             <Image url="@../../guiImages/robotlawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="fenceleft" fitHeight="16.0" fitWidth="96.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="fenceleft" fitHeight="16.0" fitWidth="96.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/fence96.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="fenceright" fitHeight="16.0" fitWidth="96.0" layoutX="160.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="fenceright" fitHeight="16.0" fitWidth="96.0" layoutX="160.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/fence96.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="dog" fitHeight="16.0" fitWidth="16.0" layoutX="186.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="80.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../Users/super/Downloads/dog.png" />
+            <Image url="@../../guiImages/outdoorwall.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="frontdoor" fitHeight="32.0" fitWidth="32.0" layoutX="108.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="frontdoor" fitHeight="72.0" fitWidth="71.0" layoutX="89.0" layoutY="18.0" onMouseClicked="#switchToHall" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/frontdoor.png" />
          </image>
       </ImageView>
-      <Button fx:id="frontdoorButton" layoutX="102.0" layoutY="64.0" mnemonicParsing="false" onAction="#moveToHall" text="Åbn" />
+      <ImageView fitHeight="16.0" fitWidth="256.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/sidewalk.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="160.0" layoutX="32.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@../../guiImages/sidewalk.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="160.0" layoutX="42.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@../../guiImages/sidewalk.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="160.0" layoutX="52.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@../../guiImages/sidewalk.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dog" fitHeight="32.0" fitWidth="32.0" layoutX="186.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Users/super/Downloads/dog.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="leftwindow" fitHeight="48.0" fitWidth="48.0" layoutX="29.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/outdoorwindow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rightwindow" fitHeight="48.0" fitWidth="48.0" layoutX="165.0" onMouseClicked="#wittyComment" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/outdoorwindow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="149.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/PlayerModel.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

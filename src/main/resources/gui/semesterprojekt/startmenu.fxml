@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="menuRoot" prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.MenuController">
    <children>
-      <ImageView fx:id="yellowFloor" fitHeight="256.0" fitWidth="256.0" layoutX="3.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="yellowFloor" fitHeight="256.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/yellowFloor.png" />
          </image>
@@ -18,7 +18,7 @@
             <Rectangle2D height="256.0" width="256.0" />
          </viewport>
       </ImageView>
-      <TabPane prefHeight="200.0" prefWidth="264.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane prefHeight="100.0" prefWidth="256.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Hjælp" />
           <Tab text="Om spillet">
@@ -28,7 +28,7 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Button layoutX="90.0" layoutY="100.0" mnemonicParsing="false" onAction="#moveToFrontLawn" prefHeight="58.0" prefWidth="92.0" text="Start" />
+      <Button layoutX="90.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#switchToFrontlawn" prefHeight="58.0" prefWidth="92.0" text="Start" />
       <ImageView fx:id="playerObj" fitHeight="70.0" fitWidth="166.0" layoutX="32.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/PlayerModel.png" />

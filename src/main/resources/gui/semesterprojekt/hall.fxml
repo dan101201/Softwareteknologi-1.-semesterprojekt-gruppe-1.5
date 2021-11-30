@@ -4,12 +4,26 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane fx:id="hall" prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.HallController">
    <children>
-      <ImageView fx:id="kitchendoor" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="53.0" onMouseClicked="#openKitchenDoor" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="256.0" fitWidth="256.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/hallfloor.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kitchendoor" fitHeight="16.0" fitWidth="16.0" layoutX="107.0" layoutY="13.0" onMouseClicked="#switchToKitchen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/door16x16.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="108.0" layoutY="219.0" onMouseClicked="#backToFrontlawn" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/frontdoor.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="alarmsystem" fitHeight="16.0" fitWidth="16.0" layoutX="203.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/alarmPanel.png" />
          </image>
       </ImageView>
    </children>

@@ -32,3 +32,7 @@ Softwareteknologi-1.-semesterprojekt-gruppe-1.5.iml
 out/production/Softwareteknologi-1.-semesterprojekt-gruppe-1.5/txtfiler/
 
 out/production/Git projects/txtfiler/
+
+target/classes/gui/semesterprojekt/
+
+target/classes/guiImages/

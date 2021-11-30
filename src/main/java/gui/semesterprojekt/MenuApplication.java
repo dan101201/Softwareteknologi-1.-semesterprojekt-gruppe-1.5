@@ -1,9 +1,9 @@
 package gui.semesterprojekt;
+
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -11,11 +11,8 @@ import worldofzuul.Entity;
 import worldofzuul.Game;
 import worldofzuul.Room;
 
-import java.awt.event.MouseEvent;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class MenuApplication extends Application {
     private HashMap<String, Boolean> currentlyActiveKeys = new HashMap<>();
@@ -67,7 +64,7 @@ public class MenuApplication extends Application {
         this.stage.setTitle("Spar på energien");
         showMainView();
 
-        scene.setOnMouseClicked(mouseEvent -> onmouseclick(mouseEvent));
+        scene.setOnMouseClicked(mouseEvent -> onMouseClick(mouseEvent));
 
         scene.setOnKeyPressed(event -> {
             String codeString = event.getCode().toString();
@@ -79,27 +76,31 @@ public class MenuApplication extends Application {
                 currentlyActiveKeys.remove(event.getCode().toString())
         );
 
-        new AnimationTimer() {
+        var timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
                 if (removeActiveKey("LEFT")) {
                     game.movePlayer("left");
+                    updatePlayerPosition();
                 }
 
                 if (removeActiveKey("RIGHT")) {
                     game.movePlayer("right");
+                    updatePlayerPosition();
                 }
 
                 if (removeActiveKey("UP")) {
                     game.movePlayer("up");
+                    updatePlayerPosition();
                 }
 
                 if (removeActiveKey("DOWN")) {
                     game.movePlayer("down");
+                    updatePlayerPosition();
                 }
             }
         };
-
+        timer.start();
     }
 
     private boolean removeActiveKey(String codeString) {
@@ -113,8 +114,20 @@ public class MenuApplication extends Application {
         }
     }
 
-    public static void onmouseclick(javafx.scene.input.MouseEvent event) {
+    public static void onMouseClick(javafx.scene.input.MouseEvent event) {
 
+    }
+
+    private void updatePlayerPosition() {
+        worldofzuul.Player player = game.getPlayer();
+        Node playerImage = null;
+        for (int i = 0; i < scene.getRoot().getChildrenUnmodifiable().size(); i++) {
+            if (scene.getRoot().getChildrenUnmodifiable().get(i).getId() == "player") {
+                playerImage = scene.getRoot().getChildrenUnmodifiable().get(i);
+            }
+        }
+        playerImage.setLayoutX(player.getX());
+        playerImage.setLayoutY(player.getY());
     }
 
     public static void main(String[] args) {

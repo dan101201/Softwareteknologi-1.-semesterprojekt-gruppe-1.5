@@ -64,6 +64,9 @@ public class FrontlawnController implements Initializable {
     @FXML
     private ImageView rightwindow;
 
+    @FXML
+    private ImageView player;
+
     @FXML   // To do: Make witty comment: En vindueskigger!
     void wittyComment(MouseEvent event) {
 

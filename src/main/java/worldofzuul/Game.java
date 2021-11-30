@@ -10,6 +10,11 @@ public class Game {
         // Entities
         player = new Player(newRoom,16,16,500,500);
     }
+
+    public Player getPlayer() {
+        return player;
+    }
+
     public void movePlayer(String playerDirection) {
         player.move(playerDirection);
     }

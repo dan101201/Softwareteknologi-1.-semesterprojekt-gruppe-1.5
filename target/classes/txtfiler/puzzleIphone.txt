@@ -1,4 +1,0 @@
-Q="Mange Smartphones har en energisparende funktion - hvad sker der, når man slår den energisparende funktion til på en iPhone?"
-A="Alle apps undtagen telefon, SMS og Safari(internet) deaktiveres"
-A="AirDrop og iCloud-synkronisering deaktiveres"
-A="Apps som fx mail opdaterer ikke i baggrunden"

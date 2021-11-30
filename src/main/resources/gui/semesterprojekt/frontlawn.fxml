@@ -76,7 +76,7 @@
             <Image url="@../../guiImages/outdoorwindow.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="149.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="player" fitHeight="32.0" fitWidth="32.0" layoutX="149.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/PlayerModel.png" />
          </image>

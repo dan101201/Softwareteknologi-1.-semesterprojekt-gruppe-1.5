@@ -34,5 +34,9 @@ public class Player extends Entity {
         return currentRoom;
     }
 
+    public void setCurrentRoom(Room r) {
+        this.currentRoom = r;
+    }
+
 
 }

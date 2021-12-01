@@ -21,7 +21,8 @@ public class BedroomController {
 
     @FXML
     private ImageView blivingroomdoor;
-
+    @FXML
+    private ImageView smartphoneActivate;
     @FXML
     private AnchorPane bedroom;
 
@@ -31,6 +32,10 @@ public class BedroomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    public void smartPhoneActivate (MouseEvent event) throws IOException {
+
+        MenuApplication.changeScene("smartphonepuzzle.fxml", false);
     }
 
 }

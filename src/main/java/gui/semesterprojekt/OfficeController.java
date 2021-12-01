@@ -23,7 +23,7 @@ public class OfficeController {
 
     @FXML
     private void goToKitchen(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("kitchen.fxml", false);
+        MenuApplication.changeScene("kitchen.fxml", true);
     }
 
 }

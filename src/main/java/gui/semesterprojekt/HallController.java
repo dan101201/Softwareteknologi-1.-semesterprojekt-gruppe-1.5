@@ -22,7 +22,7 @@ public class HallController {
 
     @FXML
     private void goToKitchen(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("kitchen.fxml", true);
+        MenuApplication.changeScene("kitchen.fxml", false);
     }
 
     @FXML

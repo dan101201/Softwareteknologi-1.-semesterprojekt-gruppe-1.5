@@ -45,12 +45,13 @@ public class SmartphonePuzzleController implements Initializable {
 
     @FXML
     void checkAnswer(ActionEvent event) throws IOException {
-        if(inputWifi == 0 && inputSMS == 0 && inputEmail == 1 && inputiCloud == 1){
+        if(inputWifi < 50 && inputSMS < 50 && inputEmail >= 50 && inputiCloud >= 50){
             MenuApplication.magicLabel("Sejt! Du klarede den! Du har sparet penge på din energibar ");
-            //To do: fjern penge fra energybill,
+            BasicFrameController.controller.decreaseEnergyBill();
             MenuApplication.changeScene("bedroom.fxml", true);
 
         } else {
+            //MenuApplication.magicLabel("" + inputWifi +" "+ inputSMS +" "+ inputEmail +" "+ inputiCloud);
             MenuApplication.magicLabel("Forkert kombination - prøv igen - tjek evt. hintet før du svarer ");
             MenuApplication.changeScene("bedroom.fxml", true);
         }

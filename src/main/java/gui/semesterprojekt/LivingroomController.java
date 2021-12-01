@@ -29,12 +29,12 @@ public class LivingroomController {
 
     @FXML
     private void goToBedroom(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("bedroom.fxml");
+        MenuApplication.changeScene("bedroom.fxml", true);
     }
 
     @FXML
     private void goToKitchen(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("kitchen.fxml");
+        MenuApplication.changeScene("kitchen.fxml", true);
     }
 
 }

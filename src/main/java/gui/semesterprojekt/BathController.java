@@ -18,7 +18,7 @@ public class BathController {
 
     @FXML
     private void goToKitchen(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("kitchen.fxml");
+        MenuApplication.changeScene("kitchen.fxml", true);
     }
 
     @FXML

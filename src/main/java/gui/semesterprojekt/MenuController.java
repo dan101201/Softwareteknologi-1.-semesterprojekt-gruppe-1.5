@@ -19,7 +19,7 @@ public class MenuController {
 
     @FXML
     private void goToFrontlawn(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("frontlawn.fxml");
+        MenuApplication.changeScene("frontlawn.fxml", false);
     }
 
     @FXML

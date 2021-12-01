@@ -16,13 +16,13 @@ public class HallController {
 
     @FXML
     private void goToFrontlawn(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("frontlawn.fxml");
+        MenuApplication.changeScene("frontlawn.fxml", true);
     }
 
 
     @FXML
     private void goToKitchen(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("kitchen.fxml");
+        MenuApplication.changeScene("kitchen.fxml", true);
     }
 
     @FXML

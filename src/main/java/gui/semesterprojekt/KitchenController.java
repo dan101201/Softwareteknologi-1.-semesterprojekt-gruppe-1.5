@@ -43,22 +43,22 @@ public class KitchenController {
 
     @FXML
     private void goToHall(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("hall.fxml");
+        MenuApplication.changeScene("hall.fxml", true);
     }
 
     @FXML
     private void goToBathroom(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("bathroom.fxml");
+        MenuApplication.changeScene("bath.fxml", true);
     }
 
     @FXML
     private void goToLivingroom(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("livingroom.fxml");
+        MenuApplication.changeScene("livingroom.fxml", true);
     }
 
     @FXML
     private void goToOffice(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("office.fxml");
+        MenuApplication.changeScene("office.fxml", true);
     }
 
 }

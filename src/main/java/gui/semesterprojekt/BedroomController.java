@@ -25,7 +25,7 @@ public class BedroomController {
 
     @FXML
     private void goToLivingRoom(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("livingroom.fxml");
+        MenuApplication.changeScene("livingroom.fxml", true);
     }
 
 }

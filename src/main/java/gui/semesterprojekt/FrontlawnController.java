@@ -25,7 +25,7 @@ public class FrontlawnController implements Initializable {
 
     @FXML
     private void goToHall(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("hall.fxml");
+        MenuApplication.changeScene("hall.fxml", true);
     }
 
     @FXML

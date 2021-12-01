@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.BedroomController">
+<AnchorPane prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.SmartphonePuzzleController">
    <children>
       <Label layoutX="50.0" layoutY="6.0" text="Energisparefunktionen" textAlignment="CENTER">
          <font>
@@ -21,7 +20,7 @@
             <Image url="@../../guiImages/smartphone.png" />
          </image>
       </ImageView>
-      <Slider fx:id="sliderwifi" layoutX="129.0" layoutY="126.0" prefHeight="14.0" prefWidth="25.0" />
+      <Slider fx:id="sliderwifi" blockIncrement="1.0" layoutX="129.0" layoutY="126.0" max="1.0" prefHeight="14.0" prefWidth="25.0" />
       <Label layoutX="68.0" layoutY="125.0" text="Wifi" />
       <Slider fx:id="slidericloud" layoutX="129.0" layoutY="152.0" prefHeight="14.0" prefWidth="25.0" />
       <Slider fx:id="slideremail" layoutX="129.0" layoutY="178.0" prefHeight="14.0" prefWidth="25.0" />
@@ -29,8 +28,8 @@
       <Label layoutX="68.0" layoutY="150.0" text="iCloud" />
       <Label layoutX="68.0" layoutY="176.0" text="Email" />
       <Label layoutX="68.0" layoutY="201.0" text="SMS" />
-      <Button fx:id="answer" layoutX="70.0" layoutY="230.0" mnemonicParsing="false" text="Svar" />
-      <Button fx:id="hint" layoutX="127.0" layoutY="230.0" mnemonicParsing="false" text="Hint" />
+      <Button fx:id="answer" layoutX="70.0" layoutY="230.0" mnemonicParsing="false" onAction="#checkAnswer" text="Svar" />
+      <Button fx:id="hint" layoutX="127.0" layoutY="230.0" mnemonicParsing="false" onAction="#showHint" text="Hint" />
       <ImageView fitHeight="52.0" fitWidth="115.0" layoutX="63.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/textsmartphonepuzzle.PNG" />

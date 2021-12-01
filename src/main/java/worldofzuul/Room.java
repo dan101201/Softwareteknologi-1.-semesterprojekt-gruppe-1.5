@@ -67,6 +67,7 @@ public class Room {
 
     public Entity roomEntities(int x, int y) {
         for (Entity entity : entities) {
+            if (!entity.getSolid()) continue;
             if (x >= entity.getX() && x < entity.getX() + entity.getWidth()) {
                 if (y >= entity.getY() && y < entity.getY() + entity.getHeight()) {
                     return entity;

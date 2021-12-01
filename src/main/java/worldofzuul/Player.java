@@ -18,24 +18,28 @@ public class Player extends Entity {
         switch (playerDirection) {
             case "up":
                 entity = currentRoom.roomEntities(this.x, this.y - this.speed);
-                if (entity != null && !entity.getSolid() && !currentRoom.roomEntities(this.x + this.width, this.y - this.speed).getSolid()) {
+                if (entity == null || !entity.getSolid() && !currentRoom.roomEntities(this.x + this.width, this.y - this.speed).getSolid()) {
                     this.y -= speed;
                 }
+                break;
             case "down":
-                entity = currentRoom.roomEntities(this.x, this.y + this.speed);
-                if (entity != null && !entity.getSolid() && !currentRoom.roomEntities(this.x + this.width, this.y + this.speed).getSolid()) {
+                entity = currentRoom.roomEntities(this.x, this.y + this.speed + width);
+                if (entity == null || !entity.getSolid() && !currentRoom.roomEntities(this.x + this.width, this.y + this.speed).getSolid()) {
                     this.y += speed;
                 }
+                break;
             case "left":
                 entity = currentRoom.roomEntities(this.x - this.speed, this.y);
-                if (entity != null && !currentRoom.roomEntities(this.x - this.speed, this.y).getSolid() && !currentRoom.roomEntities(this.x - this.speed, this.y + this.height).getSolid()) {
+                if (entity == null || !currentRoom.roomEntities(this.x - this.speed, this.y).getSolid() && !currentRoom.roomEntities(this.x - this.speed, this.y + this.height).getSolid()) {
                     this.x -= speed;
                 }
+                break;
             case "right":
-                entity = currentRoom.roomEntities(this.x + this.speed, this.y);
-                if (entity != null && !currentRoom.roomEntities(this.x + this.speed, this.y).getSolid() && !currentRoom.roomEntities(this.x + this.speed, this.y + this.height).getSolid()) {
+                entity = currentRoom.roomEntities(this.x + this.speed + width, this.y);
+                if (entity == null || !currentRoom.roomEntities(this.x + this.speed, this.y).getSolid() && !currentRoom.roomEntities(this.x + this.speed, this.y + this.height).getSolid()) {
                     this.x += speed;
                 }
+                break;
         }
     }
 

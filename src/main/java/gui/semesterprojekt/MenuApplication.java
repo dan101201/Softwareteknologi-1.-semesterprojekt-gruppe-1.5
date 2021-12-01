@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -36,14 +37,16 @@ public class MenuApplication extends Application {
         stage.show();
     }
 
-    public static void changeScene(String s) throws IOException {
+    public static void changeScene(String s, boolean needsPlayer) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(MenuApplication.class.getResource(s));
         AnchorPane pane = loader.load();
         BasicFrameController.gameView.getChildren().setAll(pane);
-        Player p = new Player(16,16,30,30);
-        game.SetPlayer(p);
-        p.setCurrentRoom(sceneToRoom(pane));
+        if (needsPlayer) {
+            Player p = new Player(16,16,30,30);
+            game.SetPlayer(p);
+            p.setCurrentRoom(sceneToRoom(pane));
+        }
     }
 
 
@@ -61,7 +64,7 @@ public class MenuApplication extends Application {
             catch (Exception e) {
                 solid = false;
             }
-            Entity e = new Entity((int)node.getLayoutX(),(int)node.getLayoutY(),(int)node.getScaleX(),(int)node.getScaleY(),solid,false);
+            Entity e = new Entity( (int)((ImageView)node).getFitWidth() ,(int)((ImageView)node).getFitHeight(),(int)node.getLayoutX(),(int)node.getLayoutY(),solid,false);
             room.addEntity(e);
         }
 

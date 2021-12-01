@@ -27,7 +27,7 @@ public class BasicFrameController implements Initializable {
         gameView = gameview;
         MenuApplication.magicLabel = changabletext;
         try {
-            MenuApplication.changeScene("startmenu.fxml");
+            MenuApplication.changeScene("startmenu.fxml", false);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -10,13 +10,13 @@
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
-            <Label fx:id="changabletext" layoutX="19.0" layoutY="4.0" prefHeight="39.0" prefWidth="562.0" text="Find enheder hvor du kan spare på strømmen">
+            <Label fx:id="changabletext" layoutX="19.0" layoutY="4.0" prefHeight="39.0" prefWidth="562.0" text="Find enheder hvor du kan spare på strømmen" wrapText="true">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
          </children></AnchorPane>
-    <AnchorPane fx:id="gameview" minHeight="0.0" minWidth="0.0" prefHeight="262.0" prefWidth="599.0" />
+    <AnchorPane fx:id="gameview" minHeight="0.0" minWidth="0.0" />
       <AnchorPane prefHeight="104.0" prefWidth="599.0" style="-fx-background-color: green;">
          <children>
             <ProgressBar fx:id="energibill" layoutX="139.0" layoutY="18.0" prefHeight="18.0" prefWidth="410.0" progress="0.0" />

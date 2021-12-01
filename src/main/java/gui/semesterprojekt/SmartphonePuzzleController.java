@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import org.w3c.dom.Text;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -43,14 +44,15 @@ public class SmartphonePuzzleController implements Initializable {
     private Slider slidersms;
 
     @FXML
-    void checkAnswer(ActionEvent event) {
+    void checkAnswer(ActionEvent event) throws IOException {
         if(inputWifi == 0 && inputSMS == 0 && inputEmail == 1 && inputiCloud == 1){
             MenuApplication.magicLabel("Sejt! Du klarede den! Du har sparet penge på din energibar ");
+            //To do: fjern penge fra energybill,
+            MenuApplication.changeScene("bedroom.fxml", true);
 
-            //To do: fjern penge fra energybill, returner til soveværelset
         } else {
             MenuApplication.magicLabel("Forkert kombination - prøv igen - tjek evt. hintet før du svarer ");
-            //To do: returner til soveværelset
+            MenuApplication.changeScene("bedroom.fxml", true);
         }
 
     }

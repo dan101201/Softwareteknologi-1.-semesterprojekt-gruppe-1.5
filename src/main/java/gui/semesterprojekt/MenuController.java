@@ -16,25 +16,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MenuController {
-    //private Stage stage;
-    //private Scene scene;
-    //private Parent root;
-    private MenuApplication menu;
 
     @FXML
     private void goToFrontlawn(MouseEvent mouseEvent) throws IOException {
-        menu.showFrontLawn();
+        MenuApplication.changeScene("frontlawn.fxml", false);
     }
-
-    /*public void switchToFrontlawn(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("frontlawn.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }*/
-
-
 
     @FXML
     AnchorPane menuRoot;
@@ -47,7 +33,5 @@ public class MenuController {
 
     @FXML
     ImageView yellowFloor;
-
-
 
 }

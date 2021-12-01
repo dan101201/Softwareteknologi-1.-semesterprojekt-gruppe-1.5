@@ -37,10 +37,6 @@ public class MenuApplication extends Application {
         stage.show();
     }
 
-    public static void showFrontLawn() throws IOException {
-        changeScene("frontlawn.fxml", true);
-    }
-
     public static void changeScene(String s, boolean needsPlayer) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(MenuApplication.class.getResource(s));
@@ -52,6 +48,10 @@ public class MenuApplication extends Application {
             p.setCurrentRoom(sceneToRoom(pane));
         }
     }
+
+
+
+
 
     public static Room sceneToRoom(AnchorPane pane) {
         Room room = new Room((int)pane.getWidth(),(int)pane.getHeight());

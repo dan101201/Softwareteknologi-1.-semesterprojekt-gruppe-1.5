@@ -46,6 +46,7 @@ public class SmartphonePuzzleController implements Initializable {
     void checkAnswer(ActionEvent event) {
         if(inputWifi == 0 && inputSMS == 0 && inputEmail == 1 && inputiCloud == 1){
             MenuApplication.magicLabel("Sejt! Du klarede den! Du har sparet penge på din energibar ");
+
             //To do: fjern penge fra energybill, returner til soveværelset
         } else {
             MenuApplication.magicLabel("Forkert kombination - prøv igen - tjek evt. hintet før du svarer ");

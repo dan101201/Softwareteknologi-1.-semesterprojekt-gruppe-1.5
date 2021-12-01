@@ -11,22 +11,22 @@
             <Image url="@../../guiImages/kitchenfloor.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="officedoor" fitHeight="32.0" fitWidth="32.0" layoutX="113.0" layoutY="6.0" onMouseClicked="#switchToOffice" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="officedoor" fitHeight="32.0" fitWidth="32.0" layoutX="113.0" layoutY="6.0" onMouseClicked="#goToOffice" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/door16x16.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="livingroomdoor" fitHeight="32.0" fitWidth="32.0" layoutX="220.0" layoutY="106.0" onMouseClicked="#switchToLivingRoom" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="livingroomdoor" fitHeight="32.0" fitWidth="32.0" layoutX="220.0" layoutY="106.0" onMouseClicked="#goToLivingroom" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/door16x16.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bathroomdoor" fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="106.0" onMouseClicked="#switchToBathroom" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bathroomdoor" fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="106.0" onMouseClicked="#goToBathroom" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/door16x16.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="halldoor" fitHeight="32.0" fitWidth="32.0" layoutX="113.0" layoutY="210.0" onMouseClicked="#backToHall" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="halldoor" fitHeight="32.0" fitWidth="32.0" layoutX="113.0" layoutY="210.0" onMouseClicked="#goToHall" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/door16x16.png" />
          </image>

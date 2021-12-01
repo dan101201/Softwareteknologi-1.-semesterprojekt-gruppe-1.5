@@ -20,8 +20,12 @@ public class Game {
         player.move(playerDirection);
     }
 
-    public static void removeFromBill(){
-        
+    public void removeFromBill(){
+        EnergyBill.removeAmountEnergyBill();
+    }
+
+    public double getBill(){
+        return EnergyBill.getAmount();
     }
 
     public Entity playerInteract(int x, int y) {

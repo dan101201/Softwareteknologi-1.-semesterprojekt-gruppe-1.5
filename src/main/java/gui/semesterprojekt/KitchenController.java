@@ -42,39 +42,23 @@ public class KitchenController {
     private ImageView stove;
 
     @FXML
-    void backToHall(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("hall.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    private void goToHall(MouseEvent mouseEvent) throws IOException {
+        MenuApplication.changeScene("hall.fxml");
     }
 
     @FXML
-    void switchToBathroom(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("bathroom.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    private void goToBathroom(MouseEvent mouseEvent) throws IOException {
+        MenuApplication.changeScene("bathroom.fxml");
     }
 
     @FXML
-    void switchToLivingRoom(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("livingroom.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    private void goToLivingroom(MouseEvent mouseEvent) throws IOException {
+        MenuApplication.changeScene("livingroom.fxml");
     }
 
     @FXML
-    void switchToOffice(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("office.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    private void goToOffice(MouseEvent mouseEvent) throws IOException {
+        MenuApplication.changeScene("office.fxml");
     }
 
 }

@@ -21,16 +21,9 @@ public class OfficeController {
     @FXML
     private ImageView bkitchendoor;
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-
-    public void switchToKitchen(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("kitchen.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    @FXML
+    private void goToKitchen(MouseEvent mouseEvent) throws IOException {
+        MenuApplication.changeScene("kitchen.fxml");
     }
 
 }

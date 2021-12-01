@@ -11,12 +11,12 @@
             <Image url="@../../guiImages/hallfloor.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="kitchendoor" fitHeight="16.0" fitWidth="16.0" layoutX="107.0" layoutY="13.0" onMouseClicked="#switchToKitchen" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="kitchendoor" fitHeight="16.0" fitWidth="16.0" layoutX="107.0" layoutY="13.0" onMouseClicked="#goToKitchen" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/door16x16.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="108.0" layoutY="219.0" onMouseClicked="#backToFrontlawn" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="frontdoor" fitHeight="16.0" fitWidth="16.0" layoutX="108.0" layoutY="219.0" onMouseClicked="#goToFrontlawn" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/frontdoor.png" />
          </image>

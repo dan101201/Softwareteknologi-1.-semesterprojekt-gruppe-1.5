@@ -11,7 +11,7 @@
             <Image url="@../../guiImages/Floor.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="blivingroomdoor" fitHeight="32.0" fitWidth="32.0" layoutX="117.0" layoutY="210.0" onMouseClicked="#backToLivingroom" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="blivingroomdoor" fitHeight="32.0" fitWidth="32.0" layoutX="117.0" layoutY="210.0" onMouseClicked="#goToLivingRoom" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/door16x16.png" />
          </image>

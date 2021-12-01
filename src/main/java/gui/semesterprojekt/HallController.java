@@ -13,24 +13,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HallController {
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
-    public void switchToKitchen(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("kitchen.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    @FXML
+    private void goToFrontlawn(MouseEvent mouseEvent) throws IOException {
+        MenuApplication.changeScene("frontlawn.fxml");
     }
 
-    public void backToFrontlawn(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("frontlawn.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+
+    @FXML
+    private void goToKitchen(MouseEvent mouseEvent) throws IOException {
+        MenuApplication.changeScene("kitchen.fxml");
     }
 
     @FXML
@@ -45,17 +37,5 @@ public class HallController {
     @FXML
     private ImageView frontdoor;
 
-
-
-
-
-
-
-
-    /*@FXML
-    void openKitchenDoor(MouseEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("kitchen.fxml"));
-        hall.getChildren().setAll(pane);
-    }*/
 
 }

@@ -62,13 +62,19 @@ public class FrontlawnController implements Initializable {
     private ImageView leftwindow;
 
     @FXML
+    public void wittyCommentLeft(MouseEvent event){
+        MenuApplication.magicLabel("Hey! Du behøver ikke kravle ind gennem vinduet - brug døren");
+    }
+
+    @FXML
     private ImageView rightwindow;
 
     @FXML
     private ImageView player;
 
-    @FXML   // To do: Make witty comment: En vindueskigger!
+    @FXML
     void wittyComment(MouseEvent event) {
+        MenuApplication.magicLabel("Åh åh - en vindueskigger!");
 
     }
 

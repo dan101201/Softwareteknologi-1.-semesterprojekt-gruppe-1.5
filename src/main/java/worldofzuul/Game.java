@@ -20,6 +20,10 @@ public class Game {
         player.move(playerDirection);
     }
 
+    public static void removeFromBill(){
+        
+    }
+
     public Entity playerInteract(int x, int y) {
         return player.getCurrentRoom().roomInteract(x, y);
     }

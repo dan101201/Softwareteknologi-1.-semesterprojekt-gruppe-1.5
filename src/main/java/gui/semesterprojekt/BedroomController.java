@@ -25,24 +25,6 @@ public class BedroomController {
     @FXML
     private AnchorPane bedroom;
 
-    @FXML
-    private Button answer;
-
-    @FXML
-    private Button hint;
-
-    @FXML
-    private Slider slideremail;
-
-    @FXML
-    private Slider slidericloud;
-
-    @FXML
-    private Slider slidersms;
-
-    @FXML
-    private Slider sliderwifi;
-
     public void backToLivingroom(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("livingroom.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

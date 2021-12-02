@@ -16,10 +16,6 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class KitchenController {
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-
     @FXML
     private ImageView bathroomdoor;
 
@@ -40,6 +36,11 @@ public class KitchenController {
 
     @FXML
     private ImageView stove;
+
+    public void fridgeActivate(MouseEvent event) throws IOException {
+
+        MenuApplication.changeScene("fridgepuzzle.fxml", false);
+    }
 
     @FXML
     private void goToHall(MouseEvent mouseEvent) throws IOException {

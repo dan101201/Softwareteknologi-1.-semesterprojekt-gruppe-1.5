@@ -27,11 +27,6 @@ public class SmartphonePuzzleController implements Initializable {
     private Button hint;
 
     @FXML
-    public void showHint(ActionEvent event){
-       MenuApplication.magicLabel("Energisparefunktionen på Smartphones deaktiverer bl.a. opdatering af fx mail og iCloud");
-    }
-
-    @FXML
     private Slider sliderwifi;
 
     @FXML
@@ -56,6 +51,11 @@ public class SmartphonePuzzleController implements Initializable {
             MenuApplication.changeScene("bedroom.fxml", true);
         }
 
+    }
+
+    @FXML
+    public void showHint(ActionEvent event){
+        MenuApplication.magicLabel("Energisparefunktionen på Smartphones deaktiverer bl.a. opdatering af fx mail og iCloud");
     }
 
     @Override

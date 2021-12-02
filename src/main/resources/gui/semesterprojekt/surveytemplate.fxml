@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.IntroSurveyController">
    <children>
       <VBox layoutY="32.0" prefHeight="370.0" prefWidth="600.0">
          <children>
@@ -36,6 +36,6 @@
          </children>
       </VBox>
       <Label fx:id="topLabel" layoutY="-2.0" prefHeight="34.0" prefWidth="476.0" text="Svar efter bedste evne:" />
-      <Button fx:id="svarKnap" layoutX="499.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" text="Aflever svar" wrapText="true" />
+      <Button fx:id="svarKnap" layoutX="499.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkAnswers" prefHeight="26.0" prefWidth="86.0" text="Aflever svar" wrapText="true" />
    </children>
 </AnchorPane>

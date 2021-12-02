@@ -28,7 +28,7 @@ public class BedroomController {
     private void goToLivingRoom(MouseEvent mouseEvent) throws IOException {
         MenuApplication.changeScene("livingroom.fxml", true);
     }
-    public void smartPhoneActivate (MouseEvent event) throws IOException {
+    public void smartPhoneActivate(MouseEvent event) throws IOException {
 
         MenuApplication.changeScene("smartphonepuzzle.fxml", false);
     }

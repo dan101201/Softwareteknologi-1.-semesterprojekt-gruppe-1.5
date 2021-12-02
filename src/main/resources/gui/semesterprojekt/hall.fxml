@@ -21,7 +21,7 @@
             <Image url="@../../guiImages/frontdoor.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="alarmsystem" fitHeight="16.0" fitWidth="16.0" layoutX="203.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="alarmsystem" fitHeight="16.0" fitWidth="16.0" layoutX="203.0" layoutY="21.0" onMouseClicked="#alarmActivate" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/alarmPanel.png" />
          </image>

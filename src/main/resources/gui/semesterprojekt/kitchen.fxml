@@ -4,41 +4,46 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="kitchen" prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.KitchenController">
+<AnchorPane fx:id="kitchen" prefHeight="291.2" prefWidth="599.2" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.KitchenController">
    <children>
-      <ImageView fitHeight="256.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="291.2" fitWidth="599.2" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../guiImages/kitchenfloor.png" />
+            <Image url="@../../guiImages/greyfloorw599.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="officedoor" fitHeight="32.0" fitWidth="32.0" layoutX="113.0" layoutY="6.0" onMouseClicked="#goToOffice" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="291.2" fitWidth="599.2" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../guiImages/door16x16.png" />
+            <Image url="@../../guiImages/greywallw599.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="livingroomdoor" fitHeight="32.0" fitWidth="32.0" layoutX="220.0" layoutY="106.0" onMouseClicked="#goToLivingroom" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../guiImages/door16x16.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="bathroomdoor" fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="106.0" onMouseClicked="#goToBathroom" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../guiImages/door16x16.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="halldoor" fitHeight="32.0" fitWidth="32.0" layoutX="113.0" layoutY="210.0" onMouseClicked="#goToHall" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../guiImages/door16x16.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="fridge" fitHeight="32.0" fitWidth="32.0" layoutX="178.0" layoutY="45.0" onMouseClicked="#fridgeActivate" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="fridge" fitHeight="43.0" fitWidth="43.0" layoutX="284.0" layoutY="38.0" onMouseClicked="#fridgeActivate" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/fridge.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="stove" fitHeight="32.0" fitWidth="32.0" layoutX="71.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="stove" fitHeight="32.0" fitWidth="32.0" layoutX="123.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/stove.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bathroomdoor" fitHeight="43.0" fitWidth="32.0" layoutX="222.0" layoutY="38.0" onMouseClicked="#goToBathroom" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/door16x16.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="officedoor" fitHeight="43.0" fitWidth="32.0" layoutX="384.0" layoutY="38.0" onMouseClicked="#goToOffice" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/door16x16.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="livingroomdoor" fitHeight="43.0" fitWidth="29.0" layoutX="536.0" layoutY="38.0" onMouseClicked="#goToLivingroom" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/door16x16.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="halldoor" fitHeight="43.0" fitWidth="32.0" layoutX="22.0" layoutY="37.0" onMouseClicked="#goToHall" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/door16x16.png" />
          </image>
       </ImageView>
    </children>

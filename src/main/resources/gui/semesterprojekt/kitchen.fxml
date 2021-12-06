@@ -56,5 +56,10 @@
             <Image url="@../../guiImages/microwave.png" />
          </image>
       </ImageView>
+      <ImageView id="player" fitHeight="32.0" fitWidth="32.0" layoutX="20.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/PlayerModel.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

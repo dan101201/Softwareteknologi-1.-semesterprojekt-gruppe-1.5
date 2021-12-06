@@ -21,7 +21,7 @@
             <Image url="@../../guiImages/door16x16.png" />
          </image>
       </ImageView>
-      <ImageView id="player" fitHeight="32.0" fitWidth="32.0" layoutX="322.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="player" fitHeight="32.0" fitWidth="32.0" layoutX="284.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/PlayerModel.png" />
          </image>

@@ -28,6 +28,12 @@ public class LivingroomController {
     private ImageView tv;
 
     @FXML
+    void tvActivate(MouseEvent event) throws IOException {
+        MenuApplication.changeScene("tvpuzzle.fxml", false);
+
+    }
+
+    @FXML
     private void goToBedroom(MouseEvent mouseEvent) throws IOException {
         MenuApplication.changeScene("bedroom.fxml", true);
     }

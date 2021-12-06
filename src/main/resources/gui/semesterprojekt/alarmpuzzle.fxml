@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="291.2" prefWidth="599.2" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.AlarmpuzzleController">
+   <children>
+      <SplitPane dividerPositions="0.7085635359116023" orientation="VERTICAL" prefHeight="291.2" prefWidth="599.2">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="598.0">
+               <children>
+                  <Spinner fx:id="digit2" layoutX="161.0" layoutY="132.0" prefHeight="43.0" prefWidth="80.0" />
+                  <Spinner fx:id="digit1" layoutX="52.0" layoutY="132.0" prefHeight="43.0" prefWidth="80.0" />
+                  <Spinner fx:id="digit3" layoutX="281.0" layoutY="132.0" prefHeight="43.0" prefWidth="80.0" />
+                  <Spinner fx:id="digit4" layoutX="396.0" layoutY="132.0" prefHeight="43.0" prefWidth="80.0" />
+                  <Label layoutX="196.0" layoutY="10.0" text="Knæk koden til alarmen">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="answer" layoutX="508.0" layoutY="132.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="43.0" prefWidth="72.0" text="SVAR" />
+                  <Label fx:id="labeldig1" layoutX="76.0" layoutY="176.0" text="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="43.0" prefHeight="18.0" prefWidth="514.0" text="1. Ciffer: Er det højeste tal du kan nå" />
+                  <Label layoutX="42.0" layoutY="62.0" prefHeight="18.0" prefWidth="514.0" text="2. Ciffer: En bronzemedalje kan du få" />
+                  <Label layoutX="42.0" layoutY="80.0" prefHeight="18.0" prefWidth="514.0" text="3. Ciffer: Er et kvart dusin" />
+                  <Label layoutX="42.0" layoutY="97.0" prefHeight="18.0" prefWidth="514.0" text="4. Ciffer: Er antallet af glas i en almindelig flaske (hvid)vin" />
+                  <Label fx:id="labeldig2" layoutX="187.0" layoutY="177.0" text="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labeldig3" layoutX="305.0" layoutY="176.0" text="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labeldig4" layoutX="422.0" layoutY="176.0" text="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="5.0" layoutY="12.0" prefHeight="18.0" prefWidth="590.0" text="Vidste du? At i SmartHomes kan man fx anvende aktivering og deaktivering af alarmen til intelligent styring af" />
+                  <Label layoutX="5.0" layoutY="30.0" prefHeight="18.0" prefWidth="590.0" text="termostater og lys mm. og på den måde spare på strømmen? " />
+                  <Label layoutX="5.0" layoutY="49.0" prefHeight="18.0" prefWidth="590.0" text="Prøv om du kan knække koden til alarmen, og få tændt for varmen i huset." />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

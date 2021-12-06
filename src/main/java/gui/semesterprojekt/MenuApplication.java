@@ -24,7 +24,7 @@ public class MenuApplication extends Application {
     private Stage stage;
     private static SplitPane mainLayout;
     private Scene scene;
-    private static Game game = new Game();
+    public static Game game = new Game();
     static Label magicLabel;
 
 

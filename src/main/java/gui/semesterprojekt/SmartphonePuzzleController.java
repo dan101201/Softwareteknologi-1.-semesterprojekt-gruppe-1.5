@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import org.w3c.dom.Text;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -26,11 +27,6 @@ public class SmartphonePuzzleController implements Initializable {
     private Button hint;
 
     @FXML
-    public void showHint(ActionEvent event){
-       MenuApplication.magicLabel("Energisparefunktionen på Smartphones deaktiverer bl.a. opdatering af fx mail og iCloud");
-    }
-
-    @FXML
     private Slider sliderwifi;
 
     @FXML
@@ -43,16 +39,23 @@ public class SmartphonePuzzleController implements Initializable {
     private Slider slidersms;
 
     @FXML
-    void checkAnswer(ActionEvent event) {
-        if(inputWifi == 0 && inputSMS == 0 && inputEmail == 1 && inputiCloud == 1){
+    void checkAnswer(ActionEvent event) throws IOException {
+        if(inputWifi < 50 && inputSMS < 50 && inputEmail >= 50 && inputiCloud >= 50){
             MenuApplication.magicLabel("Sejt! Du klarede den! Du har sparet penge på din energibar ");
+            BasicFrameController.controller.decreaseEnergyBill();
+            MenuApplication.changeScene("bedroom.fxml", true);
 
-            //To do: fjern penge fra energybill, returner til soveværelset
         } else {
+            //MenuApplication.magicLabel("" + inputWifi +" "+ inputSMS +" "+ inputEmail +" "+ inputiCloud);
             MenuApplication.magicLabel("Forkert kombination - prøv igen - tjek evt. hintet før du svarer ");
-            //To do: returner til soveværelset
+            MenuApplication.changeScene("bedroom.fxml", true);
         }
 
+    }
+
+    @FXML
+    public void showHint(ActionEvent event){
+        MenuApplication.magicLabel("Energisparefunktionen på Smartphones deaktiverer bl.a. opdatering af fx mail og iCloud");
     }
 
     @Override

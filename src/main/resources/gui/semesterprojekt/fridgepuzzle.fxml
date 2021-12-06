@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="291.2" prefWidth="599.2" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.FridgepuzzleController">
+   <children>
+      <SplitPane dividerPositions="0.2665745856353592" orientation="VERTICAL" prefHeight="291.2" prefWidth="599.2">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="224.0" layoutY="14.0" text="Blev du lidt sulten?">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="76.0" layoutY="41.0" text="Tag et kig i køleskabet, hvordan vil du gøre det, så du sparer mest på strømmen?" textAlignment="CENTER" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <RadioButton fx:id="radiobuttonfridge" layoutX="91.0" layoutY="147.0" mnemonicParsing="false" onAction="#checkAnswer" text="Åbn køleskabet">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="quiz" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radiobuttonapp" layoutX="371.0" layoutY="145.0" mnemonicParsing="false" onAction="#checkAnswer" text="Brug køleskabs App'en" toggleGroup="$quiz" />
+                  <ImageView fitHeight="116.0" fitWidth="89.0" layoutX="91.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../guiImages/fridge.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="116.0" fitWidth="48.0" layoutX="416.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" rotate="13.4">
+                     <image>
+                        <Image url="@../../guiImages/smartphone.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="61.0" fitWidth="48.0" layoutX="416.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" rotate="13.4">
+                     <image>
+                        <Image url="@../../guiImages/fridge.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

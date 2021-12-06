@@ -15,17 +15,6 @@ import java.io.IOException;
 public class HallController {
 
     @FXML
-    private void goToFrontlawn(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("frontlawn.fxml", true);
-    }
-
-
-    @FXML
-    private void goToKitchen(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("kitchen.fxml", true);
-    }
-
-    @FXML
     private AnchorPane hall;
 
     @FXML
@@ -36,6 +25,23 @@ public class HallController {
 
     @FXML
     private ImageView frontdoor;
+
+    @FXML
+    private void goToFrontlawn(MouseEvent mouseEvent) throws IOException {
+        MenuApplication.changeScene("frontlawn.fxml", true);
+    }
+
+    @FXML
+    private void goToKitchen(MouseEvent mouseEvent) throws IOException {
+        MenuApplication.changeScene("kitchen.fxml", false);
+    }
+
+    public void alarmActivate(MouseEvent event) throws IOException {
+
+        MenuApplication.changeScene("alarmpuzzle.fxml", false);
+    }
+
+
 
 
 }

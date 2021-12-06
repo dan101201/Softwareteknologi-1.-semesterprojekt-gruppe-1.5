@@ -1,14 +1,14 @@
 package worldofzuul;
 
 public class EnergyBill {
-    private static double amount = 1200;
-
-    static void removeAmountEnergyBill() {
-        amount -= 75;
-    }
+    private static double amount = 1;
 
     static double getAmount(){
         return amount;
+    }
+
+    static void setAmount(double newAmount) {
+        amount = newAmount;
     }
 
     static void showEnergyBill() {

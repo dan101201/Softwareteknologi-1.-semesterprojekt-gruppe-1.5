@@ -19,13 +19,18 @@ public class BedroomController {
 
     @FXML
     private ImageView blivingroomdoor;
-
+    @FXML
+    private ImageView smartphoneActivate;
     @FXML
     private AnchorPane bedroom;
 
     @FXML
     private void goToLivingRoom(MouseEvent mouseEvent) throws IOException {
         MenuApplication.changeScene("livingroom.fxml", true);
+    }
+    public void smartPhoneActivate(MouseEvent event) throws IOException {
+
+        MenuApplication.changeScene("smartphonepuzzle.fxml", false);
     }
 
 }

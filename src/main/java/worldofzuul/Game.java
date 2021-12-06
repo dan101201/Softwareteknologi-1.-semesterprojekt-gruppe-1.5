@@ -20,8 +20,8 @@ public class Game {
         player.move(playerDirection);
     }
 
-    public void removeFromBill(){
-        EnergyBill.removeAmountEnergyBill();
+    public void setBill(double n){
+        EnergyBill.setAmount(n);
     }
 
     public double getBill(){

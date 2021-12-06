@@ -8,6 +8,8 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class SurveyBeforeController {
 
@@ -65,8 +67,11 @@ public class SurveyBeforeController {
     void checkAnswers(ActionEvent event) throws IOException {
 
         String data = checkRadioGroup(group1);
-        data += "\n" + checkRadioGroup(group2);
+        data += "\n" + checkRadioGroup(group2) + "\n";
         worldofzuul.Utility.writeToFile("SurveyBeforeAnswers.txt", data);
+        // Prøver at finde min fil
+        Path path = Paths.get("SurveyBeforeAnswers.txt");
+        MenuApplication.magicLabel(String.valueOf(path.toAbsolutePath()));
 
         MenuApplication.changeScene("frontlawn.fxml", true);
     }

@@ -4,7 +4,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="livingroom" prefHeight="291.2" prefWidth="599.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.LivingroomController">
+<AnchorPane fx:id="livingroom" prefHeight="291.2" prefWidth="599.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.LivingroomController">
    <children>
       <ImageView fitHeight="291.2" fitWidth="599.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
          <image>

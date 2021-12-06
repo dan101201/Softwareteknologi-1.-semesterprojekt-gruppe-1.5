@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="256.0" prefWidth="256.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.gui.Puzzle">
+<AnchorPane prefHeight="256.0" prefWidth="256.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.gui.Puzzle">
    <children>
       <ImageView fitHeight="60.0" fitWidth="100.0" layoutX="80.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>

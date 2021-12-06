@@ -20,7 +20,7 @@
                      </toggleGroup></RadioButton>
                   <RadioButton fx:id="SletIkke1" layoutX="445.0" layoutY="45.0" mnemonicParsing="false" text="Slet ikke" toggleGroup="$group1" />
 
-                  <Label fx:id="label1" layoutX="14.0" layoutY="5.0" prefHeight="98.0" prefWidth="395.0" text="Spørgsmål 1: I hvor høj grad er du blevet klogere på hvordan du kan spare strøm i forskellige IoT objekter?" wrapText="true" />
+                  <Label fx:id="label1" layoutX="14.0" layoutY="5.0" prefHeight="98.0" prefWidth="395.0" text="Spørgsmål 1: I hvor høj gradved du noget om hvordan du kan spare strøm i forskellige IoT objekter?" wrapText="true" />
                   <RadioButton fx:id="lilleGrad1" layoutX="445.0" layoutY="77.0" mnemonicParsing="false" text="Lille grad" toggleGroup="$group1" />
                   <RadioButton fx:id="HøjGrad1" layoutX="515.0" layoutY="77.0" mnemonicParsing="false" text="I høj grad" toggleGroup="$group1" />
                </children>

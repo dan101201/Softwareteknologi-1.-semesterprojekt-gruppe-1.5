@@ -36,3 +36,5 @@ out/production/Git projects/txtfiler/
 target/classes/gui/semesterprojekt/
 
 target/classes/guiImages/
+
+.vscode/launch.json

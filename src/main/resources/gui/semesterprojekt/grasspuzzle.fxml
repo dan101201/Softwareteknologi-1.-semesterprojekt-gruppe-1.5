@@ -8,79 +8,78 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="256.0" prefWidth="256.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.gui.Puzzle">
    <children>
       <ImageView fitHeight="60.0" fitWidth="100.0" layoutX="80.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/grass.png" />
+            <Image url="@../../guiImages/grass.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="83.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/robotlawn.png" />
+            <Image url="@../../guiImages/robotlawn.png" />
          </image>
       </ImageView>
       <Button layoutX="95.0" layoutY="211.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="49.0" text="Start" />
       <Label layoutX="63.0" layoutY="15.0" text="Kod robotplæneklipperen" />
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="110.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/flowers.png" />
+            <Image url="@../../guiImages/flowers.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="123.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/flowers.png" />
+            <Image url="@../../guiImages/flowers.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="94.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/grasstop.png" />
+            <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="108.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/grasstop.png" />
+            <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="94.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/grasstop.png" />
+            <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="81.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/grasstop.png" />
+            <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="124.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/grasstop.png" />
+            <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="108.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/grasstop.png" />
+            <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="94.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/grasstop.png" />
+            <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="137.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/grasstop.png" />
+            <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="138.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/grasstop.png" />
+            <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="123.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/super/OneDrive/SDU/Projekt_Udvikling%20af%20softwaresystemer/Projekt/game_images/grasstop.png" />
+            <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
       <TextField layoutX="50.0" layoutY="167.0" />

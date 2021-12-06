@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.SmartphonePuzzleController">
+<AnchorPane prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.SmartphonePuzzleController">
    <children>
       <Label layoutX="50.0" layoutY="6.0" text="Energisparefunktionen" textAlignment="CENTER">
          <font>

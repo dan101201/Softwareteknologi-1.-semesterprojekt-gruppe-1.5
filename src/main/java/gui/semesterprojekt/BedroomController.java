@@ -32,5 +32,9 @@ public class BedroomController {
 
         MenuApplication.changeScene("smartphonepuzzle.fxml", false);
     }
+    @FXML
+    public void wittyCommentPlant(MouseEvent event){
+        MenuApplication.magicLabel("Ja, det er en plante. Selvom den er fuld af energi er denne her altså ikke sat til stikkontakten. Teknologien er vidst ikke moden til det endnu..");
+    }
 
 }

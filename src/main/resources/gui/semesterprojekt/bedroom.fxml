@@ -21,17 +21,17 @@
             <Image url="@../../guiImages/wallw599.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="482.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bedroomPlant2" fitHeight="32.0" fitWidth="32.0" layoutX="482.0" layoutY="94.0" onMouseClicked="#wittyCommentPlant" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/plant.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="460.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bedroomPlant1" fitHeight="32.0" fitWidth="32.0" layoutX="460.0" layoutY="80.0" onMouseClicked="#wittyCommentPlant" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/plant.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="504.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bedroomPlant3" fitHeight="32.0" fitWidth="32.0" layoutX="504.0" layoutY="114.0" onMouseClicked="#wittyCommentPlant" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/plant.png" />
          </image>

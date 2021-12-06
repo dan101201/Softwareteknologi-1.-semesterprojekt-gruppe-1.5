@@ -61,7 +61,7 @@
             <Image url="@../../guiImages/table.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="tv" fitHeight="32.0" fitWidth="32.0" layoutX="546.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="tv" fitHeight="32.0" fitWidth="32.0" layoutX="547.0" layoutY="119.0" onMouseClicked="#tvActivate" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/tv.png" />
          </image>

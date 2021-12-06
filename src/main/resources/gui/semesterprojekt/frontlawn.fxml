@@ -21,9 +21,19 @@
             <Image url="@../../guiImages/lawn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="lawnmover" fitHeight="16.0" fitWidth="16.0" layoutX="191.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="16.0" fitWidth="175.0" layoutX="212.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
          <image>
-            <Image url="@../../guiImages/robotlawn.png" />
+            <Image url="@../../guiImages/sidewalk.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="175.0" layoutX="190.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@../../guiImages/sidewalk.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="175.0" layoutX="201.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@../../guiImages/sidewalk.png" />
          </image>
       </ImageView>
       <ImageView fx:id="mailbox" fitHeight="32.0" fitWidth="32.0" layoutX="249.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
@@ -51,16 +61,6 @@
             <Image url="@../../guiImages/frontdoor.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="175.0" layoutX="212.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
-         <image>
-            <Image url="@../../guiImages/sidewalk.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="dog" fitHeight="32.0" fitWidth="32.0" layoutX="349.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../guiImages/dog.png" />
-         </image>
-      </ImageView>
       <ImageView fx:id="leftwindow" fitHeight="48.0" fitWidth="48.0" layoutX="195.0" layoutY="-1.0" onMouseClicked="#wittyCommentLeft" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/outdoorwindow.png" />
@@ -77,16 +77,6 @@
          </image>
       </ImageView>
       <ImageView fitHeight="16.0" fitWidth="256.0" layoutX="1.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../guiImages/sidewalk.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="175.0" layoutX="190.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
-         <image>
-            <Image url="@../../guiImages/sidewalk.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="175.0" layoutX="201.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
          <image>
             <Image url="@../../guiImages/sidewalk.png" />
          </image>
@@ -114,6 +104,16 @@
       <ImageView fitHeight="16.0" fitWidth="256.0" layoutX="163.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/sidewalk.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lawnmover" fitHeight="16.0" fitWidth="16.0" layoutX="191.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/robotlawn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dog" fitHeight="32.0" fitWidth="32.0" layoutX="349.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/dog.png" />
          </image>
       </ImageView>
       <ImageView id="player" fitHeight="32.0" fitWidth="32.0" layoutX="312.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">

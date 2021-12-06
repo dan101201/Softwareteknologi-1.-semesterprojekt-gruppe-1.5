@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="291.2" prefWidth="599.2" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.FridgepuzzleController">
+<AnchorPane prefHeight="291.2" prefWidth="599.2" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.FridgepuzzleController">
    <children>
       <SplitPane dividerPositions="0.2665745856353592" orientation="VERTICAL" prefHeight="291.2" prefWidth="599.2">
         <items>

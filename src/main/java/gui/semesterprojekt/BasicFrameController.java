@@ -36,12 +36,12 @@ public class BasicFrameController implements Initializable {
             e.printStackTrace();
         }
 
-        energibill.setStyle("-fx-accent: purple");
+        energibill.setStyle("-fx-accent: yellow");
     }
 
     public void decreaseEnergyBill(){
-        MenuApplication.game.setBill(MenuApplication.game.getBill() -0.125);
+        MenuApplication.game.setBill(MenuApplication.game.getBill() + 0.20);
         energibill.setProgress(MenuApplication.game.getBill());
-        amount.setText(""+(MenuApplication.game.getBill()*1200));
+        amount.setText(""+(MenuApplication.game.getBill()*5));
     }
 }

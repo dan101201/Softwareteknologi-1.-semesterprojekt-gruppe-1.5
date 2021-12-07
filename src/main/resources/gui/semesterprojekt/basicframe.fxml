@@ -19,22 +19,17 @@
     <AnchorPane fx:id="gameview" minHeight="0.0" minWidth="0.0" />
       <AnchorPane maxHeight="104.0" prefHeight="104.0" prefWidth="599.0" style="-fx-background-color: green;">
          <children>
-            <ProgressBar fx:id="energibill" layoutX="129.0" layoutY="18.0" prefHeight="18.0" prefWidth="393.0" progress="1.0" />
-            <Label layoutX="7.0" layoutY="13.0" prefHeight="27.0" prefWidth="116.0" text="Din elregning:" textFill="#efebeb">
+            <Label layoutX="7.0" layoutY="13.0" prefHeight="27.0" prefWidth="104.0" text="Fremskridt:" textFill="#efebeb">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="amount" layoutX="533.0" layoutY="18.0" text="1200" textFill="WHITE">
+            <Label fx:id="amount" layoutX="533.0" layoutY="18.0" text="5" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="577.0" layoutY="18.0" text="kr." textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+            <ProgressBar fx:id="energibill" layoutX="129.0" layoutY="18.0" prefHeight="18.0" prefWidth="393.0" progress="0.0" />
          </children>
       </AnchorPane>
   </items>

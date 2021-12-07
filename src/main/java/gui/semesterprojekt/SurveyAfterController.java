@@ -70,7 +70,7 @@ public class SurveyAfterController {
         //Prøver at finde min fil
         //Path path = Paths.get("SurveyAfterAnswers.txt");
         //MenuApplication.magicLabel(String.valueOf(path.toAbsolutePath()));
-        MenuApplication.magicLabel("Tak fordi du spillede spillet! Du må gerne lukke det nu..");
+
     }
 
     String checkRadioGroup(ToggleGroup group) {

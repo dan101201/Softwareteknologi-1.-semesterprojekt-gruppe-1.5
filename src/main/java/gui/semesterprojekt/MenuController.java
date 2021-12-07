@@ -22,6 +22,8 @@ public class MenuController {
         MenuApplication.changeScene("SurveyBefore.fxml", true);
     }
 
+    // funktion til aktivering af surveyAfter
+
     @FXML
     AnchorPane menuRoot;
 

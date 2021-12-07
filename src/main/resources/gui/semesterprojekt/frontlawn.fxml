@@ -4,7 +4,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="frontlawnroot" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="291.2" prefWidth="599.2" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.FrontlawnController">
+<AnchorPane fx:id="frontlawnroot" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="291.2" prefWidth="599.2" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.FrontlawnController">
    <children>
       <ImageView fitHeight="256.0" fitWidth="256.0" layoutX="343.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -36,7 +36,7 @@
             <Image url="@../../guiImages/sidewalk.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="mailbox" fitHeight="32.0" fitWidth="32.0" layoutX="249.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mailbox" fitHeight="32.0" fitWidth="32.0" layoutX="249.0" layoutY="218.0" onMouseClicked="#payBill" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/mailbox.png" />
          </image>

@@ -3,18 +3,12 @@ package gui.semesterprojekt;
 import javafx.animation.Interpolator;
 import javafx.animation.RotateTransition;
 import javafx.animation.TranslateTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -24,47 +18,37 @@ import java.util.ResourceBundle;
 public class FrontlawnController implements Initializable {
 
     @FXML
+    AnchorPane frontlawnroot;
+    @FXML
+    private Button frontdoorButton;
+    @FXML
+    private ImageView lawnmover;
+    @FXML
+    private ImageView fenceleft;
+    @FXML
+    private ImageView fenceright;
+    @FXML
+    private ImageView dog;
+    @FXML
+    private ImageView frontdoor;
+    @FXML
+    private ImageView mailbox;
+    @FXML
+    private ImageView leftwindow;
+    @FXML
+    private ImageView rightwindow;
+    @FXML
+    private ImageView player;
+
+    @FXML
     private void goToHall(MouseEvent mouseEvent) throws IOException {
         MenuApplication.changeScene("hall.fxml", true);
     }
 
     @FXML
-    AnchorPane frontlawnroot;
-
-    @FXML
-    private Button frontdoorButton;
-
-    @FXML
-    private ImageView lawnmover;
-
-    @FXML
-    private ImageView fenceleft;
-
-    @FXML
-    private ImageView fenceright;
-
-    @FXML
-    private ImageView dog;
-
-    @FXML
-    private ImageView frontdoor;
-
-    @FXML
-    private ImageView mailbox;
-
-    @FXML
-    private ImageView leftwindow;
-
-    @FXML
-    public void wittyCommentLeft(MouseEvent event){
+    public void wittyCommentLeft(MouseEvent event) {
         MenuApplication.magicLabel("Hey! Du behøver ikke kravle ind gennem vinduet - brug døren");
     }
-
-    @FXML
-    private ImageView rightwindow;
-
-    @FXML
-    private ImageView player;
 
     @FXML
     void wittyComment(MouseEvent event) {
@@ -72,10 +56,23 @@ public class FrontlawnController implements Initializable {
 
     }
 
+    @FXML
+    private void payBill(MouseEvent mouseEvent) throws IOException {
+        double value = 1000;
+        if (MenuApplication.game.getBill() < value) {
+            MenuApplication.changeScene("SurveyAfter.fxml", false);
+
+        } else {
+            MenuApplication.magicLabel("Du er nødt til lige at komme rundt i huset og klare nogle puzzles, så din elregning falder. Prøv at trykke på nogle apparater i huset.");
+
+        }
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        fenceleft.getProperties().put("solid",true);
-        fenceright.getProperties().put("solid",true);
+        fenceleft.getProperties().put("solid", true);
+        fenceright.getProperties().put("solid", true);
         //animation of the lawnmover: move to the right and back again
         TranslateTransition tlawnmover = new TranslateTransition();
         tlawnmover.setNode(lawnmover);

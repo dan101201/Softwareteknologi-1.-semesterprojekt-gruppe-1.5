@@ -72,7 +72,7 @@ public class SurveyAfterController {
         // Prøver at finde min fil
         Path path = Paths.get("SurveyAfterAnswers.txt");
         MenuApplication.magicLabel(String.valueOf(path.toAbsolutePath()));
-        MenuApplication.changeScene("frontlawn.fxml", true);
+        MenuApplication.changeScene("outroanimation.fxml", false);
     }
 
     String checkRadioGroup(ToggleGroup group) {

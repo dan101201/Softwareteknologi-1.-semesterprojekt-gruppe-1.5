@@ -51,6 +51,18 @@ public class BathController implements Initializable {
         MenuApplication.changeScene("kitchen.fxml", true);
     }
 
+    @FXML
+    void wittyComment(MouseEvent event) {
+        MenuApplication.magicLabel("Tid til at lade vandet!");
+
+    }
+
+    @FXML
+    void wittyCommentBath(MouseEvent event) {
+        MenuApplication.magicLabel("Husk gummiænderne!");
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         wall.getProperties().put("solid",true);

@@ -4,7 +4,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="livingroom" prefHeight="291.2" prefWidth="599.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.LivingroomController">
+<AnchorPane fx:id="livingroom" prefHeight="291.2" prefWidth="599.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.LivingroomController">
    <children>
       <ImageView fitHeight="291.2" fitWidth="599.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -16,47 +16,47 @@
             <Image url="@../../guiImages/rug.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="184.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="chair4" fitHeight="32.0" fitWidth="32.0" layoutX="184.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/chairLeft.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="184.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="chair3" fitHeight="32.0" fitWidth="32.0" layoutX="184.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/chairLeft.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="144.0" fitWidth="64.0" layoutX="107.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="diningtable" fitHeight="144.0" fitWidth="64.0" layoutX="107.0" layoutY="165.0" onMouseClicked="#wittyCommentTable" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/table.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="599.2" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="wall" fitHeight="80.0" fitWidth="599.2" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/wallw599.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="81.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="chair1" fitHeight="32.0" fitWidth="32.0" layoutX="81.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/chairRight.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="80.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="chair2" fitHeight="32.0" fitWidth="32.0" layoutX="80.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/chairRight.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="35.0" fitWidth="73.0" layoutX="468.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="couch" fitHeight="35.0" fitWidth="73.0" layoutX="468.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/couch.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="44.0" fitWidth="32.0" layoutX="151.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="fireplace" fitHeight="44.0" fitWidth="32.0" layoutX="151.0" layoutY="51.0" onMouseClicked="#wittyCommentFire" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/fireplace.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="22.0" fitWidth="40.0" layoutX="489.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="smalltable" fitHeight="22.0" fitWidth="40.0" layoutX="489.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/table.png" />
          </image>

@@ -17,7 +17,7 @@ import java.util.ResourceBundle;
 
 public class GrassPuzzleController {
     @FXML
-    ImageView roomba;
+    ImageView roombaz;
 
     @FXML
     AnchorPane mainPain;
@@ -29,11 +29,28 @@ public class GrassPuzzleController {
     int vx = 0;
     int vy = -1;
     int i = 0;
+    int amountOfMoves = 0;
     char[] moves = new char[100];
 
     void fakeListAdd(char c) {
         moves[i] = c;
         i++;
+    }
+
+    public void clear() {
+        amountOfMoves = moves.length;
+        moves = new char[100];
+        storedMovesLabel.setText(" ");
+    }
+
+    public void finish() throws IOException {
+        if (hasWon() && moves.length < 35) {
+            MenuApplication.magicLabel("Fedt! Du gjorde det squ! Det er fandme got klaret");
+            MenuApplication.changeScene("frontlawn.fxml", true);
+        } else {
+            MenuApplication.magicLabel("Øv! Du tabte, du er fandme for dårlig.");
+            MenuApplication.changeScene("frontlawn.fxml", true);
+        }
     }
 
     public void forward() {
@@ -47,7 +64,7 @@ public class GrassPuzzleController {
     }
 
     public void Left() {
-        fakeListAdd('A');
+        fakeListAdd('L');
         updateLabel();
     }
 
@@ -56,36 +73,35 @@ public class GrassPuzzleController {
         updateLabel();
     }
 
-    public void Start() {
+    public void Start() throws IOException {
         try {
             for (char character : moves) {
                 int temp;
                 switch (character) {
                     case 'W':
-                        move(15);
+                        move(14);
                         break;
                     case 'S':
-                        move(-15);
+                        move(-14);
                         break;
                     case 'L': //er for træt til at vide om dette virker, men burde rotere vectoren 90 grader til højre
                         temp = vy;
                         vy = -vx;
                         vx = temp;
-                        roomba.setRotate(roomba.getRotate() - 90);
+                        roombaz.setRotate(roombaz.getRotate() - 90);
                         break;
                     case 'R': //og venstre
                         temp = vx;
                         vx = -vy;
                         vy = temp;
-                        roomba.setRotate(roomba.getRotate() + 90);
+                        roombaz.setRotate(roombaz.getRotate() + 90);
                         break;
                 }
             }   
         }
         catch (Exception e) {
-
-        } 
-        
+            
+        }
     }
 
     void updateLabel() {
@@ -106,10 +122,31 @@ public class GrassPuzzleController {
         return null;
     }
 
+    boolean hasWon() {
+        var list = mainPain.getChildren();
+        String str = "abcde";
+        for (Node node : list) {
+            var id = node.getId();
+            try {
+                var img = (ImageView)node;
+                if (img.visibleProperty().get() && !id.equals("ac") && !id.equals("bd") && !id.contains("z")) {
+                    return false;
+                } else if (id.equals("ac") || node.getId().equals("bd")) {
+                    if (!img.visibleProperty().get()) {
+                        return false;
+                    }
+                }
+            } catch (Exception e) {
+                continue;
+            }
+        }
+        return true;
+    }
+
     void move(int factor) {
-        roomba.setLayoutX(roomba.getLayoutX() + vx * factor);
-        roomba.setLayoutY(roomba.getLayoutY() + vy * factor);
-        x -= vx;
+        roombaz.setLayoutX(roombaz.getLayoutX() + vx * factor);
+        roombaz.setLayoutY(roombaz.getLayoutY() + vy * factor);
+        y += vx;
         x -= vy;
         var grass = (ImageView)findGrass();
         if (grass != null) {

@@ -53,11 +53,6 @@ public class FrontlawnController implements Initializable {
     }
 
     @FXML
-    public void wittyCommentLeft(MouseEvent event) {
-        MenuApplication.magicLabel("Hey! Du behøver ikke kravle ind gennem vinduet - brug døren");
-    }
-
-    @FXML
     void wittyComment(MouseEvent event) {
         if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.magicLabel("Åh åh - en vindueskigger!");

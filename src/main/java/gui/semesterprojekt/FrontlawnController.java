@@ -25,6 +25,7 @@ public class FrontlawnController implements Initializable {
 
     @FXML
     private void goToHall(MouseEvent mouseEvent) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("hall.fxml", true);
     }
 
@@ -57,6 +58,7 @@ public class FrontlawnController implements Initializable {
 
     @FXML
     public void wittyCommentLeft(MouseEvent event){
+        if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.magicLabel("Hey! Du behøver ikke kravle ind gennem vinduet - brug døren");
     }
 
@@ -68,6 +70,7 @@ public class FrontlawnController implements Initializable {
 
     @FXML
     void wittyComment(MouseEvent event) {
+        if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.magicLabel("Åh åh - en vindueskigger!");
 
     }

@@ -43,16 +43,18 @@ public class HallController implements Initializable {
 
     @FXML
     private void goToFrontlawn(MouseEvent mouseEvent) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("frontlawn.fxml", true);
     }
 
     @FXML
     private void goToKitchen(MouseEvent mouseEvent) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("kitchen.fxml", false);
     }
 
     public void alarmActivate(MouseEvent event) throws IOException {
-
+        if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.changeScene("alarmpuzzle.fxml", false);
     }
 

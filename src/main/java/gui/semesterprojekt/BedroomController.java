@@ -52,21 +52,24 @@ public class BedroomController implements Initializable {
 
     @FXML
     void wittyCommentBed(MouseEvent event) {
+        if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.magicLabel("Træt? Så snup en lur");
     }
 
     @FXML
     void wittyCommentCloset(MouseEvent event) {
+        if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.magicLabel("Skal du have fint tøj på?");
 
     }
 
     @FXML
     private void goToLivingRoom(MouseEvent mouseEvent) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("livingroom.fxml", true);
     }
     public void smartPhoneActivate(MouseEvent event) throws IOException {
-
+        if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.changeScene("smartphonepuzzle.fxml", false);
     }
 

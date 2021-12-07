@@ -43,7 +43,8 @@ public class BathController implements Initializable {
     @FXML
     private ImageView wall;
     @FXML
-    private void goToKitchen(MouseEvent mouseEvent) throws IOException {
+    private void goToKitchen(MouseEvent mouseEvent) throws IOException { 
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("kitchen.fxml", true);
     }
 

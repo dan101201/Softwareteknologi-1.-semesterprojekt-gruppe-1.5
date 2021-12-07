@@ -59,27 +59,32 @@ public class LivingroomController implements Initializable {
 
     @FXML
     void wittyCommentFire(MouseEvent event) {
+        if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.magicLabel("Find kakaoen frem og hyg dig ved varmen");
     }
 
     @FXML
     void wittyCommentTable(MouseEvent event) {
+        if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.magicLabel("Diskodanser du på bordet? Sweet...");
     }
 
     @FXML
     void tvActivate(MouseEvent event) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.changeScene("tvpuzzle.fxml", false);
 
     }
 
     @FXML
     private void goToBedroom(MouseEvent mouseEvent) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("bedroom.fxml", true);
     }
 
     @FXML
     private void goToKitchen(MouseEvent mouseEvent) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("kitchen.fxml", true);
     }
 

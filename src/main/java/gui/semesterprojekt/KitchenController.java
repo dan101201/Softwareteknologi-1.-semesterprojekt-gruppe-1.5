@@ -59,27 +59,32 @@ public class KitchenController implements Initializable {
     private ImageView window;
 
     public void fridgeActivate(MouseEvent event) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(event))
 
         MenuApplication.changeScene("fridgepuzzle.fxml", false);
     }
 
     @FXML
     private void goToHall(MouseEvent mouseEvent) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("hall.fxml", true);
     }
 
     @FXML
     private void goToBathroom(MouseEvent mouseEvent) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("bath.fxml", true);
     }
 
     @FXML
     private void goToLivingroom(MouseEvent mouseEvent) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("livingroom.fxml", true);
     }
 
     @FXML
     private void goToOffice(MouseEvent mouseEvent) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("office.fxml", true);
     }
 

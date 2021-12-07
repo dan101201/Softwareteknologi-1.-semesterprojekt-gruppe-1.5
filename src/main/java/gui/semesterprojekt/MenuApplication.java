@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -74,6 +75,14 @@ public class MenuApplication extends Application {
 
     public static void magicLabel(String s){
         magicLabel.setText(s);
+    }
+
+    public static boolean closeEnoughToInteract(MouseEvent event) {
+        double maxDistance = 100;
+        int a = (int)(game.getPlayer().getX() + event.getX());
+        int b = (int)(game.getPlayer().getY() + event.getY());
+        var distance = Math.sqrt(a*a+b*b);
+        return distance <= maxDistance;
     }
 
 

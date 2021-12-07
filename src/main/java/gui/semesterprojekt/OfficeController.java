@@ -47,18 +47,21 @@ public class OfficeController implements Initializable {
 
     @FXML
     private void goToKitchen(MouseEvent mouseEvent) throws IOException {
+        if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("kitchen.fxml", true);
     }
 
 
     @FXML
     void wittyComment(MouseEvent event) {
+        if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.magicLabel("Av! Lad være med at løbe ind i væggen");
 
     }
 
     @FXML
     void wittyCommentBike(MouseEvent event) {
+        if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.magicLabel("Tid til at komme i form, KondiKarl!");
     }
 

@@ -63,6 +63,7 @@ public class SurveyBeforeController {
 
     @FXML
     private Label topLabel;
+
     @FXML
     void checkAnswers(ActionEvent event) throws IOException {
 
@@ -72,7 +73,6 @@ public class SurveyBeforeController {
         // Prøver at finde min fil
         Path path = Paths.get("SurveyBeforeAnswers.txt");
         MenuApplication.magicLabel(String.valueOf(path.toAbsolutePath()));
-
         MenuApplication.changeScene("frontlawn.fxml", true);
     }
 

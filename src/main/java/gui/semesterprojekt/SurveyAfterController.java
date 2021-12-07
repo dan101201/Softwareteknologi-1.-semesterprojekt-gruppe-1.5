@@ -8,6 +8,8 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class SurveyAfterController {
     @FXML
@@ -67,10 +69,10 @@ public class SurveyAfterController {
         String data = checkRadioGroup(group1);
         data += "\n" + checkRadioGroup(group2) + "\n";
         worldofzuul.Utility.writeToFile("SurveyAfterAnswers.txt", data);
-        //Prøver at finde min fil
-        //Path path = Paths.get("SurveyAfterAnswers.txt");
-        //MenuApplication.magicLabel(String.valueOf(path.toAbsolutePath()));
-
+        // Prøver at finde min fil
+        Path path = Paths.get("SurveyAfterAnswers.txt");
+        MenuApplication.magicLabel(String.valueOf(path.toAbsolutePath()));
+        MenuApplication.changeScene("frontlawn.fxml", true);
     }
 
     String checkRadioGroup(ToggleGroup group) {

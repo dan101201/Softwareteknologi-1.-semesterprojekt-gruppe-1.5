@@ -59,7 +59,7 @@ public class FrontlawnController implements Initializable {
     @FXML
     private void payBill(MouseEvent mouseEvent) throws IOException {
         double value = 1000;
-        if (MenuApplication.game.getBill() < value) {
+        if (MenuApplication.game.getBill()*1200 < value) {
             MenuApplication.changeScene("SurveyAfter.fxml", false);
 
         } else {

@@ -4,34 +4,29 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="kitchen" prefHeight="291.2" prefWidth="599.2" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.KitchenController">
+<AnchorPane fx:id="kitchen" prefHeight="291.2" prefWidth="599.2" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.KitchenController">
    <children>
       <ImageView fitHeight="291.2" fitWidth="599.2" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/greyfloorw599.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="291.2" fitWidth="599.2" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="wall" fitHeight="291.2" fitWidth="599.2" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/greywallw599.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="fridge" fitHeight="43.0" fitWidth="43.0" layoutX="284.0" layoutY="38.0" onMouseClicked="#fridgeActivate" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="fridge" fitHeight="43.0" fitWidth="43.0" layoutX="300.0" layoutY="39.0" onMouseClicked="#fridgeActivate" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../guiImages/fridge.png" />
+            <Image url="@../../guiImages/fridgelarge.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="stove" fitHeight="32.0" fitWidth="32.0" layoutX="123.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../guiImages/stove.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="bathroomdoor" fitHeight="43.0" fitWidth="32.0" layoutX="222.0" layoutY="38.0" onMouseClicked="#goToBathroom" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bathroomdoor" fitHeight="43.0" fitWidth="32.0" layoutX="78.0" layoutY="38.0" onMouseClicked="#goToBathroom" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/door16x16.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="officedoor" fitHeight="43.0" fitWidth="32.0" layoutX="384.0" layoutY="38.0" onMouseClicked="#goToOffice" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="officedoor" fitHeight="43.0" fitWidth="32.0" layoutX="423.0" layoutY="38.0" onMouseClicked="#goToOffice" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/door16x16.png" />
          </image>
@@ -46,14 +41,54 @@
             <Image url="@../../guiImages/door16x16.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="115.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="window" fitHeight="32.0" fitWidth="32.0" layoutX="473.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/window.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="284.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="337.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/microwave.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="desk" fitHeight="43.0" fitWidth="81.0" layoutX="211.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/disk.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dishwasher" fitHeight="40.0" fitWidth="32.0" layoutX="236.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/dishwasher.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="desk2" fitHeight="43.0" fitWidth="93.0" layoutX="283.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/disk.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bar" fitHeight="80.0" fitWidth="44.0" layoutX="543.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/bar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="19.0" fitWidth="16.0" layoutX="226.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/blender.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="169.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/fan.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stove" fitHeight="38.0" fitWidth="44.0" layoutX="175.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/stoveyellow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="353.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/pictureFrame.png" />
          </image>
       </ImageView>
    </children>

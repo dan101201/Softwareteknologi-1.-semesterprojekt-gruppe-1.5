@@ -38,10 +38,10 @@ public class FrontlawnController implements Initializable {
     private ImageView lawnmover;
 
     @FXML
-    private ImageView fenceleft;  //To do: make the fences solid
+    private ImageView fenceleft;
 
     @FXML
-    private ImageView fenceright;  //To do: make the fences solid
+    private ImageView fenceright;
 
     @FXML
     private ImageView dog;
@@ -50,7 +50,7 @@ public class FrontlawnController implements Initializable {
     private ImageView frontdoor;
 
     @FXML
-    private ImageView mailbox; //To do: create interact on mailbox
+    private ImageView mailbox;
 
     @FXML
     private ImageView leftwindow;

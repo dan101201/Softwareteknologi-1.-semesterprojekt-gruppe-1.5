@@ -78,10 +78,10 @@ public class MenuApplication extends Application {
     }
 
     public static boolean closeEnoughToInteract(MouseEvent event) {
-        double maxDistance = 10;
+        double maxDistance = 80;
         double temp = game.getPlayer().getX();
-        int a = (int)(temp - event.getSceneX());
-        int b = (int)(game.getPlayer().getY() - event.getSceneY());
+        int a = (int)(temp - ((ImageView)event.getTarget()).getLayoutX());
+        int b = (int)(game.getPlayer().getY() - ((ImageView)event.getTarget()).getLayoutY());
         var distance = Math.sqrt(a*a+b*b);
         return distance <= maxDistance;
     }

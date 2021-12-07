@@ -20,6 +20,9 @@ import java.util.ResourceBundle;
 public class BathController implements Initializable {
 
     @FXML
+    private ImageView player;
+
+    @FXML
     private ImageView backkitchendoor;
 
     @FXML

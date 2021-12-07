@@ -1,5 +1,7 @@
 package worldofzuul;
 
+import gui.semesterprojekt.MenuApplication;
+
 import java.awt.event.KeyEvent;
 
 public class Game {
@@ -41,6 +43,6 @@ public class Game {
     }
 
     public void theEnd() {
-        System.out.println("THE END IS HERE!");
+        MenuApplication.magicLabel("THE END IS HERE!");
     }
 }

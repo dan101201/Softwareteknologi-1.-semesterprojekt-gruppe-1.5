@@ -20,10 +20,11 @@ public class FridgepuzzleController {
 
     @FXML
     public void checkAnswer(ActionEvent event) throws IOException {
-
+        boolean completed = false;
         if(radiobuttonapp.isSelected()) {
             MenuApplication.magicLabel("Godt valg! Du sparer mest energi ved at holde køleskabet lukket mest muligt, så temperaturen er konstant ");
-            BasicFrameController.controller.decreaseEnergyBill();
+            if(!completed){BasicFrameController.controller.decreaseEnergyBill();}
+            completed = true;
             MenuApplication.changeScene("kitchen.fxml", true);
         } else {
             MenuApplication.magicLabel("Ikke det bedste valg. Vidste du? At du sparer mest energi ved at holde køleskabet lukket så meget som muligt, så temperaturen ikke ændres ");

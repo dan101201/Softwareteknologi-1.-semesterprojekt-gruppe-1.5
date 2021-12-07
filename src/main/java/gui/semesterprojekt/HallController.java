@@ -18,6 +18,9 @@ import java.util.ResourceBundle;
 public class HallController implements Initializable {
 
     @FXML
+    private ImageView player;
+
+    @FXML
     private AnchorPane hall;
 
     @FXML

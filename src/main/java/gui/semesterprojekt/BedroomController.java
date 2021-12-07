@@ -19,6 +19,10 @@ import java.util.ResourceBundle;
 
 public class BedroomController implements Initializable {
 
+
+    @FXML
+    private ImageView player;
+
     @FXML
     private ImageView bed;
 
@@ -71,6 +75,10 @@ public class BedroomController implements Initializable {
     public void smartPhoneActivate(MouseEvent event) throws IOException {
         if (MenuApplication.closeEnoughToInteract(event))
         MenuApplication.changeScene("smartphonepuzzle.fxml", false);
+    }
+    @FXML
+    public void wittyCommentPlant(MouseEvent event){
+        MenuApplication.magicLabel("Ja, det er en plante. Selvom den er fuld af energi er denne her altså ikke sat til stikkontakten. Teknologien er vidst ikke moden til det endnu..");
     }
 
     @Override

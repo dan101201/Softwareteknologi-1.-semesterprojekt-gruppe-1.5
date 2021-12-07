@@ -18,6 +18,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class OfficeController implements Initializable {
+
+    @FXML
+    private ImageView player;
+    
     @FXML
     AnchorPane office;
 

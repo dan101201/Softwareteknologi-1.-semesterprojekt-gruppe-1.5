@@ -19,11 +19,21 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class KitchenController implements Initializable {
+
+    @FXML
+    private ImageView player;
+
     @FXML
     private ImageView bathroomdoor;
 
     @FXML
     private ImageView fridge;
+
+    @FXML
+    private ImageView microwave;
+
+    @FXML
+    private ImageView mixer;
 
     @FXML
     private ImageView halldoor;
@@ -87,6 +97,25 @@ public class KitchenController implements Initializable {
         if (MenuApplication.closeEnoughToInteract(mouseEvent))
         MenuApplication.changeScene("office.fxml", true);
     }
+
+    @FXML
+    void wittyCommentMixer(MouseEvent event) {
+        MenuApplication.magicLabel("Rør mig ikke!");
+
+    }
+
+    @FXML
+    void wittyCommentMicrowave(MouseEvent event) {
+        MenuApplication.magicLabel("Du er nok for doven til at lave rigtig mad i dag, hva?");
+
+    }
+
+    @FXML
+    void wittyCommentOwn(MouseEvent event) {
+        MenuApplication.magicLabel("Fingrene væk fra kagen!");
+
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

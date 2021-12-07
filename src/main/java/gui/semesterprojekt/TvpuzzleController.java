@@ -47,9 +47,12 @@ public class TvpuzzleController implements Initializable {
 
     @FXML
     void answerQuestion(ActionEvent event) throws IOException {
+        boolean completed = false;
         if(theoutlet.isSelected()) {
             MenuApplication.magicLabel("Godt valg! Du sparer mest energi ved at slukke for strømmen på stikkontakten, så TV'et ikke bruger strøm på at stå Stand-by ");
-            BasicFrameController.controller.decreaseEnergyBill();
+            if(!completed)
+            {BasicFrameController.controller.decreaseEnergyBill();}
+            completed = true;
             MenuApplication.changeScene("livingroom.fxml", true);
         } else {
             MenuApplication.magicLabel("Ikke det bedste valg. TV'et står stadig på Stand-by og bruger strøm ");

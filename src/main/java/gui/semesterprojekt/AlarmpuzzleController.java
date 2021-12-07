@@ -49,13 +49,15 @@ public class AlarmpuzzleController implements Initializable {
 
     @FXML
     void checkAnswer(ActionEvent event) throws IOException {
+        boolean completed = false;
         if(digit1.equals(9) && digit2.equals(3) && digit3.equals(3) && digit4.equals(8)){
             MenuApplication.magicLabel("Sejt! Du klarede den! Du har sparet penge på din energibar ");
-            BasicFrameController.controller.decreaseEnergyBill();
+            if(!completed){
+            BasicFrameController.controller.decreaseEnergyBill();}
+            completed = true;
             MenuApplication.changeScene("hall.fxml", true);
 
         } else {
-            //MenuApplication.magicLabel("" + labeldig1 +" "+ labeldig2 +" "+ labeldig3 +" "+ labeldig4);
             MenuApplication.magicLabel("Forkert kombination - prøv igen. ");
             MenuApplication.changeScene("hall.fxml", true);
         }

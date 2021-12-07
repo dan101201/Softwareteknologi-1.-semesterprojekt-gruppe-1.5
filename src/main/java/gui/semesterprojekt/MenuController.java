@@ -19,7 +19,7 @@ public class MenuController {
 
     @FXML
     private void goToFrontlawn(MouseEvent mouseEvent) throws IOException {
-        MenuApplication.changeScene("SurveyBefore.fxml", true);
+        MenuApplication.changeScene("SurveyBefore.fxml", false);
     }
 
     // funktion til aktivering af surveyAfter

@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,6 +18,7 @@ public class SmartphonePuzzleController implements Initializable {
     int inputSMS;
     int inputEmail;
     int inputiCloud;
+    static boolean completed = false;
 
     @FXML
     private Button answer;
@@ -40,13 +40,14 @@ public class SmartphonePuzzleController implements Initializable {
 
     @FXML
     void checkAnswer(ActionEvent event) throws IOException {
-        boolean completed = false;
-        if(inputWifi < 50 && inputSMS < 50 && inputEmail >= 50 && inputiCloud >= 50){
-            MenuApplication.magicLabel("Sejt! Du klarede den! Du har sparet penge på din energibar ");
-            if(!completed){BasicFrameController.controller.decreaseEnergyBill();}
-            completed = true;
-            MenuApplication.changeScene("bedroom.fxml", true);
 
+        if (inputWifi < 50 && inputSMS < 50 && inputEmail >= 50 && inputiCloud >= 50) {
+            MenuApplication.magicLabel("Sejt! Du klarede den! Du har sparet penge på din energibar ");
+            if (!completed) {
+                BasicFrameController.controller.decreaseEnergyBill();
+                completed = true;
+            }
+            MenuApplication.changeScene("bedroom.fxml", true);
         } else {
             MenuApplication.magicLabel("Forkert kombination - prøv igen - tjek evt. hintet før du svarer ");
             MenuApplication.changeScene("bedroom.fxml", true);
@@ -55,7 +56,7 @@ public class SmartphonePuzzleController implements Initializable {
     }
 
     @FXML
-    public void showHint(ActionEvent event){
+    public void showHint(ActionEvent event) {
         MenuApplication.magicLabel("Energisparefunktionen på Smartphones deaktiverer bl.a. opdatering af fx mail og iCloud");
     }
 

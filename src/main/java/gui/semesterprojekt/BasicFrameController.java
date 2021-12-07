@@ -12,18 +12,15 @@ import java.util.ResourceBundle;
 
 public class BasicFrameController implements Initializable {
     public static BasicFrameController controller;
+    public static AnchorPane gameView;
     @FXML
     private Label changabletext;
-
     @FXML
-    private ProgressBar energibill;
-
+    private ProgressBar energybill;
     @FXML
     private Label amount;
-
     @FXML
     private AnchorPane gameview;
-    public static AnchorPane gameView;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -36,12 +33,14 @@ public class BasicFrameController implements Initializable {
             e.printStackTrace();
         }
 
-        energibill.setStyle("-fx-accent: yellow");
+        energybill.setStyle("-fx-accent: yellow");
     }
 
-    public void decreaseEnergyBill(){
+    public void decreaseEnergyBill() {
+
+
         MenuApplication.game.setBill(MenuApplication.game.getBill() + 0.20);
-        energibill.setProgress(MenuApplication.game.getBill());
-        amount.setText(""+(MenuApplication.game.getBill()*0));
+        energybill.setProgress(MenuApplication.game.getBill());
+        amount.setText("" + (Math.round((MenuApplication.game.getBill()) * 5)));
     }
 }

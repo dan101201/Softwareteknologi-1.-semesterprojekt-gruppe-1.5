@@ -50,7 +50,12 @@ public class AlarmpuzzleController implements Initializable {
     @FXML
     void checkAnswer(ActionEvent event) throws IOException {
         boolean completed = false;
-        if(digit1.equals(9) && digit2.equals(3) && digit3.equals(3) && digit4.equals(8)){
+        // Tester lige noget
+
+
+
+
+        if(digit1.getValue() == 9 && digit2.getValue() == 3 && digit3.getValue() == 3 && digit4.getValue() == 8){
             MenuApplication.magicLabel("Sejt! Du klarede den! Du har sparet penge på din energibar ");
             if(!completed){
             BasicFrameController.controller.decreaseEnergyBill();}

@@ -31,7 +31,7 @@ public class BasicFrameController implements Initializable {
         gameView = gameview;
         MenuApplication.magicLabel = changabletext;
         try {
-            MenuApplication.changeScene("SurveyBefore.fxml", false);
+            MenuApplication.changeScene("Alarmpuzzle.fxml", false);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -42,6 +42,6 @@ public class BasicFrameController implements Initializable {
     public void decreaseEnergyBill(){
         MenuApplication.game.setBill(MenuApplication.game.getBill() + 0.20);
         energibill.setProgress(MenuApplication.game.getBill());
-        amount.setText(""+(MenuApplication.game.getBill()*5));
+        amount.setText(""+(MenuApplication.game.getBill()*0));
     }
 }

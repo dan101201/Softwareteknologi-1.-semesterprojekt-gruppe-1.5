@@ -2,91 +2,145 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="256.0" prefWidth="256.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.GrassPuzzleController">
+<AnchorPane fx:id="mainPain" prefHeight="256.0" prefWidth="256.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.GrassPuzzleController">
    <children>
       <ImageView fitHeight="60.0" fitWidth="100.0" layoutX="80.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/grass.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="83.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="roomba" fitHeight="16.0" fitWidth="16.0" layoutX="83.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/robotlawn.png" />
          </image>
       </ImageView>
-      <Button layoutX="95.0" layoutY="211.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="49.0" text="Start" />
+      <Button layoutX="95.0" layoutY="211.0" mnemonicParsing="false" onAction="#Start" prefHeight="26.0" prefWidth="49.0" text="Start" />
       <Label layoutX="63.0" layoutY="15.0" text="Kod robotplæneklipperen" />
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="110.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ac" fitHeight="16.0" fitWidth="16.0" layoutX="110.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/flowers.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="123.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bd" fitHeight="16.0" fitWidth="16.0" layoutX="123.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/flowers.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="94.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ab" fitHeight="16.0" fitWidth="16.0" layoutX="94.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="108.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bc" fitHeight="16.0" fitWidth="16.0" layoutX="108.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="94.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bb" fitHeight="16.0" fitWidth="16.0" layoutX="94.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="81.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ba" fitHeight="16.0" fitWidth="16.0" layoutX="81.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="124.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ad" fitHeight="16.0" fitWidth="16.0" layoutX="124.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="108.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="cc" fitHeight="16.0" fitWidth="16.0" layoutX="108.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="94.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="db" fitHeight="16.0" fitWidth="16.0" layoutX="94.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="137.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="be" fitHeight="16.0" fitWidth="16.0" layoutX="137.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="138.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="de" fitHeight="16.0" fitWidth="16.0" layoutX="138.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="123.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="dd" fitHeight="16.0" fitWidth="16.0" layoutX="123.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/grasstop.png" />
          </image>
       </ImageView>
-      <TextField layoutX="50.0" layoutY="167.0" />
       <Label layoutX="24.0" layoutY="39.0" text="Spar på strømmen: Kod robotplæneklipperen til at køre den kortest mulige rute for at slå hele græsplæning. Brug pilene til at navigere med." textAlignment="CENTER">
          <font>
             <Font size="3.0" />
          </font>
       </Label>
+      <ImageView fx:id="ca" fitHeight="16.0" fitWidth="16.0" layoutX="81.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/grasstop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="da" fitHeight="16.0" fitWidth="16.0" layoutX="81.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/grasstop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cb" fitHeight="16.0" fitWidth="16.0" layoutX="94.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/grasstop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dc" fitHeight="16.0" fitWidth="16.0" layoutX="110.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/grasstop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cd" fitHeight="16.0" fitWidth="16.0" layoutX="122.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/grasstop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ce" fitHeight="16.0" fitWidth="16.0" layoutX="137.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/grasstop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ae" fitHeight="16.0" fitWidth="16.0" layoutX="138.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/grasstop.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="185.0" layoutY="82.0" onMouseClicked="#forward" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="183.0" layoutY="132.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../../guiImages/arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="162.0" layoutY="107.0" onMouseClicked="#Left" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/rotate.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="208.0" layoutY="107.0" onMouseClicked="#right" pickOnBounds="true" preserveRatio="true" scaleX="-1.0">
+         <image>
+            <Image url="@../../guiImages/rotate.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="storedMovesLabel" layoutX="43.0" layoutY="171.0" prefHeight="26.0" prefWidth="147.0" text="Label" />
    </children>
 </AnchorPane>

@@ -43,7 +43,8 @@ public class MenuApplication extends Application {
         AnchorPane pane = loader.load();
         BasicFrameController.gameView.getChildren().setAll(pane);
         if (needsPlayer) {
-            Player p = new Player(16,16,30,30);
+            Node n = findPlayer();
+            Player p = new Player(16,16, (int)n.getLayoutX(),(int)n.getLayoutY());
             game.SetPlayer(p);
             p.setCurrentRoom(sceneToRoom(pane));
         }
@@ -153,8 +154,7 @@ public class MenuApplication extends Application {
 
     }
 
-    private void updatePlayerPosition() {
-        worldofzuul.Player player = game.getPlayer();
+    public static Node findPlayer() {
         Node playerImage = null;
         var list = ((AnchorPane)BasicFrameController.gameView.getChildren().get(0)).getChildren();
         for (int i = 0; i < list.size(); i++) {
@@ -163,6 +163,12 @@ public class MenuApplication extends Application {
                 playerImage = list.get(i);
             }
         }
+        return playerImage;
+    }
+
+    private void updatePlayerPosition() {
+        worldofzuul.Player player = game.getPlayer();
+        var playerImage = findPlayer();
         playerImage.setLayoutX(player.getX());
         playerImage.setLayoutY(player.getY());
     }

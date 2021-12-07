@@ -17,6 +17,8 @@ import java.util.ResourceBundle;
 
 public class LivingroomController implements Initializable {
 
+    @FXML
+    private ImageView player;
 
     @FXML
     private ImageView bkitchendoor;

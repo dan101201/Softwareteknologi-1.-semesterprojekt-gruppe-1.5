@@ -46,7 +46,7 @@
             <Image url="@../../guiImages/window.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="337.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="microwave" fitHeight="16.0" fitWidth="16.0" layoutX="337.0" layoutY="131.0" onMouseClicked="#wittyCommentMicrowave" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/microwave.png" />
          </image>
@@ -71,7 +71,7 @@
             <Image url="@../../guiImages/bar.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="19.0" fitWidth="16.0" layoutX="226.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mixer" fitHeight="19.0" fitWidth="16.0" layoutX="226.0" layoutY="131.0" onMouseClicked="#wittyCommentMixer" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/blender.png" />
          </image>
@@ -81,7 +81,7 @@
             <Image url="@../../guiImages/fan.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="stove" fitHeight="38.0" fitWidth="44.0" layoutX="175.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="stove" fitHeight="38.0" fitWidth="44.0" layoutX="175.0" layoutY="49.0" onMouseClicked="#wittyCommentOwn" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/stoveyellow.png" />
          </image>
@@ -89,6 +89,11 @@
       <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="353.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/pictureFrame.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="player" fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/PlayerModel.png" />
          </image>
       </ImageView>
    </children>

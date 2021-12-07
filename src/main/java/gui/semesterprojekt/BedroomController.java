@@ -19,6 +19,10 @@ import java.util.ResourceBundle;
 
 public class BedroomController implements Initializable {
 
+
+    @FXML
+    private ImageView player;
+
     @FXML
     private ImageView bed;
 

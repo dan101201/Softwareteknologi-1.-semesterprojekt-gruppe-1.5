@@ -25,7 +25,7 @@ public class ConsoleUI {
                     game.printBoard();
                     game.checkBoard();
                     if (game.getGameOver()) {
-                        System.out.println("BattleShipGame.Game over!");
+                        System.out.println("Game over!");
                         game.revealBoard();
                         break;
                     } else if (game.getGameWon()) {

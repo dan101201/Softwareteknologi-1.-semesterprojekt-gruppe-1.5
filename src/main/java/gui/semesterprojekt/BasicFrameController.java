@@ -31,7 +31,7 @@ public class BasicFrameController implements Initializable {
         gameView = gameview;
         MenuApplication.magicLabel = changabletext;
         try {
-            MenuApplication.changeScene("SurveyBefore.fxml", true);
+            MenuApplication.changeScene("SurveyBefore.fxml", false);
         } catch (IOException e) {
             e.printStackTrace();
         }

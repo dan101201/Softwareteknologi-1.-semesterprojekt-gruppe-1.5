@@ -91,7 +91,7 @@
             <Image url="@../../guiImages/pictureFrame.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="player" fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="player" fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/PlayerModel.png" />
          </image>

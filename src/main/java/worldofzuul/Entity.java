@@ -25,7 +25,7 @@ public class Entity {
     }
 
     //Constructor for 2nd Iteration GUI without the description option
-    public Entity(int width, int height, int x, int y, boolean solid, boolean interactable, String path) {
+    public Entity(int width, int height, int x, int y, boolean solid, boolean interactable) {
         this.width = width;
         this.height = height;
         this.x = x;
@@ -34,13 +34,14 @@ public class Entity {
         this.interactable = interactable;
     }
 
-    public Entity(int width, int height, int x, int y, boolean solid, boolean interactable) {
+    public Entity(int width, int height, int x, int y, boolean solid, boolean interactable, String description) {
         this.width = width;
         this.height = height;
         this.x = x;
         this.y = y;
         this.solid = solid;
         this.interactable = interactable;
+        this.description = description;
     }
 
     public Entity(Room doorRoom) {

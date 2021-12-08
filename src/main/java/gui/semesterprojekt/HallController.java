@@ -53,7 +53,7 @@ public class HallController implements Initializable {
     @FXML
     private void goToKitchen(MouseEvent mouseEvent) throws IOException {
         if (MenuApplication.closeEnoughToInteract(mouseEvent))
-        MenuApplication.changeScene("kitchen.fxml", false);
+        MenuApplication.changeScene("kitchen.fxml", true);
     }
 
     public void alarmActivate(MouseEvent event) throws IOException {

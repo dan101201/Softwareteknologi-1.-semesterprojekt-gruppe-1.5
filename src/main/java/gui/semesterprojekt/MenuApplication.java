@@ -66,7 +66,7 @@ public class MenuApplication extends Application {
             catch (Exception e) {
                 solid = false;
             }
-            Entity e = new Entity( (int)((ImageView)node).getFitWidth() ,(int)((ImageView)node).getFitHeight(),(int)node.getLayoutX(),(int)node.getLayoutY(),solid,false);
+            Entity e = new Entity( (int)((ImageView)node).getFitWidth() ,(int)((ImageView)node).getFitHeight(),(int)node.getLayoutX(),(int)node.getLayoutY(),solid,false, node.getId());
             room.addEntity(e);
         }
 

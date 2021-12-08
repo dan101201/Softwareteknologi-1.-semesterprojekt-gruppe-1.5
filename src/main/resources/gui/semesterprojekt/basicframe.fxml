@@ -8,11 +8,11 @@
 
 <SplitPane dividerPositions="0.12098393574297191, 0.8664658634538153" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.BasicFrameController">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0">
          <children>
-            <Label fx:id="changabletext" layoutY="4.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Find enheder hvor du kan spare på strømmen" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="changabletext" layoutY="4.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="599.0" text="Find enheder hvor du kan spare på strømmen" textAlignment="CENTER" wrapText="true">
                <font>
-                  <Font size="18.0" />
+                  <Font size="14.0" />
                </font>
             </Label>
          </children></AnchorPane>

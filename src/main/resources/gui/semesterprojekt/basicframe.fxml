@@ -19,7 +19,7 @@
     <AnchorPane fx:id="gameview" minHeight="0.0" minWidth="0.0" />
       <AnchorPane maxHeight="104.0" prefHeight="104.0" prefWidth="599.0" style="-fx-background-color: green;">
          <children>
-            <Label layoutX="7.0" layoutY="13.0" prefHeight="27.0" prefWidth="104.0" text="Fremskridt:" textFill="#efebeb">
+            <Label layoutX="7.0" layoutY="13.0" prefHeight="27.0" prefWidth="104.0" text="Point:" textFill="#efebeb">
                <font>
                   <Font size="18.0" />
                </font>

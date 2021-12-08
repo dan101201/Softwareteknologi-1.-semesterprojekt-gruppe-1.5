@@ -1,6 +1,5 @@
 package gui.semesterprojekt;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
@@ -14,7 +13,7 @@ public class IntroanimationController {
 
     @FXML
     private void nextIntroAni(MouseEvent mouseEvent) throws IOException {
-       MenuApplication.changeScene("introanimationpart2.fxml", false);
+        MenuApplication.changeScene("introanimationpart2.fxml", false);
     }
 }
 

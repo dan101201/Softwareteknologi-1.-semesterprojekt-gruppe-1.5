@@ -15,12 +15,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AlarmpuzzleController implements Initializable {
+    static boolean completed = false;
     int currentValueDigit1;
     int currentValueDigit2;
     int currentValueDigit3;
     int currentValueDigit4;
-    static boolean completed = false;
-
     @FXML
     private Button answer;
 
@@ -54,12 +53,11 @@ public class AlarmpuzzleController implements Initializable {
         // Tester lige noget
 
 
-
-
-        if(digit1.getValue() == 9 && digit2.getValue() == 3 && digit3.getValue() == 3 && digit4.getValue() == 8){
-            MenuApplication.magicLabel("Sejt! Du klarede den! Du har sparet penge på din energibar ");
-            if(!completed){
-            BasicFrameController.controller.decreaseEnergyBill();}
+        if (digit1.getValue() == 9 && digit2.getValue() == 3 && digit3.getValue() == 3 && digit4.getValue() == 8) {
+            MenuApplication.magicLabel("Sejt! Du klarede den! Du har fået flere point ");
+            if (!completed) {
+                BasicFrameController.controller.decreaseEnergyBill();
+            }
             completed = true;
             MenuApplication.changeScene("hall.fxml", true);
 
@@ -74,7 +72,7 @@ public class AlarmpuzzleController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         //Handles the four spinners for the code and changes the label value underneath each spinner
-        SpinnerValueFactory<Integer> firstDigit = new SpinnerValueFactory.IntegerSpinnerValueFactory(1,9);
+        SpinnerValueFactory<Integer> firstDigit = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 9);
 
         firstDigit.setValue(1);
         digit1.setValueFactory(firstDigit);
@@ -89,7 +87,7 @@ public class AlarmpuzzleController implements Initializable {
             }
         });
 
-        SpinnerValueFactory<Integer> secondDigit = new SpinnerValueFactory.IntegerSpinnerValueFactory(1,9);
+        SpinnerValueFactory<Integer> secondDigit = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 9);
 
         firstDigit.setValue(1);
         digit2.setValueFactory(secondDigit);
@@ -104,7 +102,7 @@ public class AlarmpuzzleController implements Initializable {
             }
         });
 
-        SpinnerValueFactory<Integer> thirdDigit = new SpinnerValueFactory.IntegerSpinnerValueFactory(1,9);
+        SpinnerValueFactory<Integer> thirdDigit = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 9);
 
         firstDigit.setValue(1);
         digit3.setValueFactory(thirdDigit);
@@ -119,7 +117,7 @@ public class AlarmpuzzleController implements Initializable {
             }
         });
 
-        SpinnerValueFactory<Integer> fourthDigit = new SpinnerValueFactory.IntegerSpinnerValueFactory(1,9);
+        SpinnerValueFactory<Integer> fourthDigit = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 9);
 
         firstDigit.setValue(1);
         digit4.setValueFactory(fourthDigit);
@@ -133,9 +131,5 @@ public class AlarmpuzzleController implements Initializable {
                 labeldig4.setText(Integer.toString(currentValueDigit4));
             }
         });
-
-
-
-
     }
 }

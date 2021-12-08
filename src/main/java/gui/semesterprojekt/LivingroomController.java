@@ -1,15 +1,10 @@
 package gui.semesterprojekt;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -62,45 +57,45 @@ public class LivingroomController implements Initializable {
     @FXML
     void wittyCommentFire(MouseEvent event) {
         if (MenuApplication.closeEnoughToInteract(event))
-        MenuApplication.magicLabel("Find kakaoen frem og hyg dig ved varmen");
+            MenuApplication.magicLabel("Find kakaoen frem og hyg dig ved varmen");
     }
 
     @FXML
     void wittyCommentTable(MouseEvent event) {
         if (MenuApplication.closeEnoughToInteract(event))
-        MenuApplication.magicLabel("Diskodanser du på bordet? Sweet...");
+            MenuApplication.magicLabel("Diskodanser du på bordet? Sweet...");
     }
 
     @FXML
     void tvActivate(MouseEvent event) throws IOException {
         if (MenuApplication.closeEnoughToInteract(event))
-        MenuApplication.changeScene("tvpuzzle.fxml", false);
+            MenuApplication.changeScene("tvpuzzle.fxml", false);
 
     }
 
     @FXML
     private void goToBedroom(MouseEvent mouseEvent) throws IOException {
         if (MenuApplication.closeEnoughToInteract(mouseEvent))
-        MenuApplication.changeScene("bedroom.fxml", true);
+            MenuApplication.changeScene("bedroom.fxml", true);
     }
 
     @FXML
     private void goToKitchen(MouseEvent mouseEvent) throws IOException {
         if (MenuApplication.closeEnoughToInteract(mouseEvent))
-        MenuApplication.changeScene("kitchen.fxml", true);
+            MenuApplication.changeScene("kitchen.fxml", true);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        tv.getProperties().put("solid",true);
-        chair1.getProperties().put("solid",true);
-        chair2.getProperties().put("solid",true);
-        chair3.getProperties().put("solid",true);
-        chair4.getProperties().put("solid",true);
+        tv.getProperties().put("solid", true);
+        chair1.getProperties().put("solid", true);
+        chair2.getProperties().put("solid", true);
+        chair3.getProperties().put("solid", true);
+        chair4.getProperties().put("solid", true);
 //        wall.getProperties().put("solid",true);
 //        fireplace.getProperties().put("solid",true);
-        smalltable.getProperties().put("solid",true);
-        diningtable.getProperties().put("solid",true);
-        couch.getProperties().put("solid",true);
+        smalltable.getProperties().put("solid", true);
+        diningtable.getProperties().put("solid", true);
+        couch.getProperties().put("solid", true);
     }
 }

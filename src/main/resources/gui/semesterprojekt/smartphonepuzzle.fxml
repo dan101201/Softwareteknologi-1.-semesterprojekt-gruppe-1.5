@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.SmartphonePuzzleController">
+<AnchorPane prefHeight="288.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.SmartphonePuzzleController">
    <children>
       <Label layoutX="50.0" layoutY="6.0" text="Energisparefunktionen" textAlignment="CENTER">
          <font>
@@ -36,5 +36,10 @@
          </image>
       </ImageView>
       <Label layoutX="125.0" layoutY="105.0" text="ON / OFF" />
+      <ImageView fitHeight="128.0" fitWidth="323.0" layoutX="196.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../guiImages/textsmartphonepuzzle.PNG" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

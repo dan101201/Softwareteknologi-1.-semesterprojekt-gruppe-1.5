@@ -42,7 +42,7 @@ public class SmartphonePuzzleController implements Initializable {
     void checkAnswer(ActionEvent event) throws IOException {
 
         if (inputWifi < 50 && inputSMS < 50 && inputEmail >= 50 && inputiCloud >= 50) {
-            MenuApplication.magicLabel("Sejt! Du klarede den! Du har sparet penge på din energibar ");
+            MenuApplication.magicLabel("Sejt! Du klarede den! Point +1! ");
             if (!completed) {
                 BasicFrameController.controller.decreaseEnergyBill();
                 completed = true;

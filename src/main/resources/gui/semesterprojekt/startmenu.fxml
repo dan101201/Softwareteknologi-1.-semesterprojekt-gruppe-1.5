@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.image.Image?>
@@ -8,31 +9,115 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="menuRoot" prefHeight="291.2" prefWidth="599.2" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.MenuController">
+<AnchorPane fx:id="menuRoot" prefHeight="291.2" prefWidth="599.2" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.semesterprojekt.MenuController">
    <children>
       <ImageView fitHeight="291.0" fitWidth="599.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guiImages/yellowfloorw599.png" />
          </image>
       </ImageView>
-      <TabPane prefHeight="30.0" prefWidth="599.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane prefHeight="291.0" prefWidth="599.2" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Hjælp" />
-          <Tab text="Om spillet">
+          <Tab text="Start">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="playerObj" fitHeight="86.0" fitWidth="122.0" layoutX="106.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../guiImages/PlayerModel.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="startbutton" accessibleText="Start spillet" layoutX="192.0" layoutY="72.0" mnemonicParsing="false" onMouseClicked="#goToFrontlawn" prefHeight="100.0" prefWidth="215.0" text="Start">
+                           <font>
+                              <Font size="38.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
             </content>
           </Tab>
+          <Tab text="Sådan spiller du">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="11.0" layoutY="5.0" style="-fx-background-color: white;" text="Bevægelse:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="27.0" style="-fx-background-color: white;" text="Brug tasterne: W A S D til at bevæge dig rundt i husets rum.  " />
+                        <Label layoutX="11.0" layoutY="56.0" style="-fx-background-color: white;" text="Interager med genstandene:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="79.0" prefHeight="18.0" prefWidth="155.0" style="-fx-background-color: white;" text="Klik med venstre museknap" />
+                        <Label layoutX="12.0" layoutY="99.0" style="-fx-background-color: white;" text="Obs. Nogle genstande kan du først interagere med, når spilleren står ved dem." />
+                        <Label layoutX="12.0" layoutY="119.0" style="-fx-background-color: white;" text="Du skifter mellem husenes rum ved at stå ved siden af døren og klikke på den. " />
+                        <Label layoutX="12.0" layoutY="149.0" style="-fx-background-color: white;" text="Hvad skal jeg?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="171.0" style="-fx-background-color: white;" text="Bevæg dig rundt i huset og led efter IoT-enheder, hvor du kan lære om at spare strøm på smarte måder." wrapText="true" />
+                        <Label layoutX="12.0" layoutY="204.0" style="-fx-background-color: white;" text="Hvordan afslutter jeg spillet?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="239.0" style="-fx-background-color: white;" text="Når den gule bar der viser dine fremskridt er helt fyldt op, går du ud til postkassen og klikker på den." wrapText="true" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="FAQ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" style="-fx-background-color: white;" text="Er der enheder i alle rum?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="38.0" style="-fx-background-color: white;" text="Måske, måske ikke. Det må du undersøge i rummene. " />
+                        <Label layoutX="14.0" layoutY="71.0" style="-fx-background-color: white;" text="Hvad er Internet of Things-enheder?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="95.0" style="-fx-background-color: white;" text="Det er elektriske apparater, som kan kobles på netværk fx wifi. Nogle af disse enheder kan fx. styres fra en app på en Smartphone." wrapText="true" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Om spillet">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="14.0" style="-fx-background-color: white;" text="Spillet er udviklet af projektgruppen:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="39.0" style="-fx-background-color: white;" text="Bjørn Lundin, Daniel Kongsgaard, Nikolaj Thomassen og Sisse Olesen" />
+                        <Label layoutX="12.0" layoutY="210.0" style="-fx-background-color: white;" text="Grafik:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="230.0" style="-fx-background-color: white;" text="Opengameart.org samt projektgruppens egne produktioner." />
+                        <Label layoutX="12.0" layoutY="67.0" style="-fx-background-color: white;" text="Formål:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="138.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="28.0" prefWidth="500.0" style="-fx-background-color: white;" text="Spillet er et læringsspil, som er produktet i faget Udvikling af softwareprogram på " wrapText="true" />
+                        <Label layoutX="12.0" layoutY="166.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="28.0" prefWidth="500.0" style="-fx-background-color: white;" text="1. semester af Diplomingeniøruddannelsen i Softwareteknologi på Syddansk Universitet." wrapText="true" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
         </tabs>
       </TabPane>
-      <Button fx:id="startbutton" accessibleText="Start spillet" layoutX="182.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#goToFrontlawn" prefHeight="100.0" prefWidth="215.0" text="Start">
-         <font>
-            <Font size="38.0" />
-         </font></Button>
-      <ImageView fx:id="playerObj" fitHeight="86.0" fitWidth="122.0" layoutX="103.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../guiImages/PlayerModel.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

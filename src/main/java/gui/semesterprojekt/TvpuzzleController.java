@@ -20,6 +20,7 @@ public class TvpuzzleController implements Initializable {
     private File file;
     private Media media;
     private MediaPlayer mediaPlayer;
+    static boolean completed = false;
 
     @FXML
     private MediaView view;

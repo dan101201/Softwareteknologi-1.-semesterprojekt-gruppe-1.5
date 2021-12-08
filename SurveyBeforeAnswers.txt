@@ -10,7 +10,25 @@ Slet ikke
 Slet ikke
 Slet ikke
 Slet ikke
+<<<<<<< HEAD
 I høj grad
+Nogen grad
+=======
+>>>>>>> main
+Slet ikke
+Slet ikke
+Slet ikke
+Slet ikke
+Slet ikke
+<<<<<<< HEAD
+Slet ikke
+Slet ikke
+Slet ikke
+=======
+Lille grad
+Lille grad
+Slet ikke
+Nogen grad
 Nogen grad
 Slet ikke
 Slet ikke
@@ -19,4 +37,5 @@ Slet ikke
 Slet ikke
 Slet ikke
 Slet ikke
-Slet ikke
+Nogen grad
+>>>>>>> main

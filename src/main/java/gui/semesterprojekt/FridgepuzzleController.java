@@ -8,7 +8,7 @@ import javafx.scene.control.ToggleGroup;
 import java.io.IOException;
 
 public class FridgepuzzleController {
-
+   static boolean completed = false;
     @FXML
     private ToggleGroup quiz;
 
@@ -20,7 +20,7 @@ public class FridgepuzzleController {
 
     @FXML
     public void checkAnswer(ActionEvent event) throws IOException {
-        boolean completed = false;
+
         if(radiobuttonapp.isSelected()) {
             MenuApplication.magicLabel("Godt valg! Du sparer mest energi ved at holde køleskabet lukket mest muligt, så temperaturen er konstant ");
             if(!completed){BasicFrameController.controller.decreaseEnergyBill();}

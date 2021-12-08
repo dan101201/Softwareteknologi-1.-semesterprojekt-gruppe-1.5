@@ -61,12 +61,12 @@ public class FrontlawnController implements Initializable {
 
     @FXML
     private void payBill(MouseEvent mouseEvent) throws IOException {
-        double value = 1000;
-        if (MenuApplication.game.getBill()*1200 < value) {
+        double minValue = 0.6;
+        if (MenuApplication.game.getBill() > minValue) {
             MenuApplication.changeScene("SurveyAfter.fxml", false);
-
+            MenuApplication.magicLabel("Godt klaret!");
         } else {
-            MenuApplication.magicLabel("Du er nødt til lige at komme rundt i huset og klare nogle puzzles, så din elregning falder. Prøv at trykke på nogle apparater i huset.");
+            MenuApplication.magicLabel("Du er nødt til lige at komme rundt i huset og klare nogle puzzles, så dit fremskridt stiger. Prøv at gå rundt og trykke på nogle apparater i huset.");
 
         }
 

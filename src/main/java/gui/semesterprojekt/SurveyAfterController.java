@@ -70,8 +70,8 @@ public class SurveyAfterController {
         data += "\n" + checkRadioGroup(group2) + "\n";
         worldofzuul.Utility.writeToFile("SurveyAfterAnswers.txt", data);
         // Prøver at finde min fil
-        Path path = Paths.get("SurveyAfterAnswers.txt");
-        MenuApplication.magicLabel(String.valueOf(path.toAbsolutePath()));
+        //Path path = Paths.get("SurveyAfterAnswers.txt");
+       // MenuApplication.magicLabel(String.valueOf(path.toAbsolutePath()));
         MenuApplication.changeScene("outroanimation.fxml", false);
     }
 

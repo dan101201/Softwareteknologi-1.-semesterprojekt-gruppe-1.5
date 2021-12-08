@@ -71,8 +71,8 @@ public class SurveyBeforeController {
         data += "\n" + checkRadioGroup(group2) + "\n";
         worldofzuul.Utility.writeToFile("SurveyBeforeAnswers.txt", data);
         // Prøver at finde min fil
-        Path path = Paths.get("SurveyBeforeAnswers.txt");
-        MenuApplication.magicLabel(String.valueOf(path.toAbsolutePath()));
+        //Path path = Paths.get("SurveyBeforeAnswers.txt");
+        //MenuApplication.magicLabel(String.valueOf(path.toAbsolutePath()));
         MenuApplication.changeScene("frontlawn.fxml", true);
     }
 

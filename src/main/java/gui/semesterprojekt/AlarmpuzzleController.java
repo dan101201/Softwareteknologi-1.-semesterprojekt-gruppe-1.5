@@ -19,6 +19,7 @@ public class AlarmpuzzleController implements Initializable {
     int currentValueDigit2;
     int currentValueDigit3;
     int currentValueDigit4;
+    static boolean completed = false;
 
     @FXML
     private Button answer;
@@ -49,7 +50,7 @@ public class AlarmpuzzleController implements Initializable {
 
     @FXML
     void checkAnswer(ActionEvent event) throws IOException {
-        boolean completed = false;
+
         // Tester lige noget
 
 

@@ -119,17 +119,15 @@ public class KitchenController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        wall.getProperties().put("solid",true);
-        dishwasher.getProperties().put("solid",true);
+//        dishwasher.getProperties().put("solid",true);
         bar.getProperties().put("solid",true);
         desk.getProperties().put("solid",true);
-        desk2.getProperties().put("solid",true);
-        stove.getProperties().put("solid",true);
-        wall.getProperties().put("solid",true);
-        fridge.getProperties().put("solid",true);
-        bathroomdoor.getProperties().put("solid",true);
-        livingroomdoor.getProperties().put("solid",true);
-        officedoor.getProperties().put("solid",true);
-        halldoor.getProperties().put("solid",true);
+//        desk2.getProperties().put("solid",true);
+//        stove.getProperties().put("solid",true);
+//        fridge.getProperties().put("solid",true);
+//        bathroomdoor.getProperties().put("solid",true);
+//        livingroomdoor.getProperties().put("solid",true);
+//        officedoor.getProperties().put("solid",true);
+//        halldoor.getProperties().put("solid",true);
     }
 }

@@ -64,11 +64,11 @@ public class HallController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        wall.getProperties().put("solid",true);
+
         table.getProperties().put("solid",true);
         lamp.getProperties().put("solid",true);
         eggchair.getProperties().put("solid",true);
-        kitchendoor.getProperties().put("solid",true);
-        frontdoor.getProperties().put("solid",true);
+//        kitchendoor.getProperties().put("solid",true);
+//        frontdoor.getProperties().put("solid",true);
     }
 }

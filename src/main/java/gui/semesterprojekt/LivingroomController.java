@@ -97,8 +97,8 @@ public class LivingroomController implements Initializable {
         chair2.getProperties().put("solid",true);
         chair3.getProperties().put("solid",true);
         chair4.getProperties().put("solid",true);
-        wall.getProperties().put("solid",true);
-        fireplace.getProperties().put("solid",true);
+//        wall.getProperties().put("solid",true);
+//        fireplace.getProperties().put("solid",true);
         smalltable.getProperties().put("solid",true);
         diningtable.getProperties().put("solid",true);
         couch.getProperties().put("solid",true);

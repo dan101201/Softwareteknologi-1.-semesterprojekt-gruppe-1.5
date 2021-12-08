@@ -83,12 +83,12 @@ public class BedroomController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        wall.getProperties().put("solid",true);
+//        wall.getProperties().put("solid",true);
         closet.getProperties().put("solid",true);
         lamp.getProperties().put("solid",true);
         rockingchair.getProperties().put("solid",true);
         mirror.getProperties().put("solid",true);
         littletable.getProperties().put("solid",true);
-        blivingroomdoor.getProperties().put("solid",true);
+//        blivingroomdoor.getProperties().put("solid",true);
     }
 }

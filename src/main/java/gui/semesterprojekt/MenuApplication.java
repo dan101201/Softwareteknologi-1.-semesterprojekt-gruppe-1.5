@@ -97,7 +97,6 @@ public class MenuApplication extends Application {
 
         scene.setOnKeyPressed(event -> {
             String codeString = event.getCode().toString();
-            magicLabel(codeString);
             if (codeString == "A") {
                 game.movePlayer("left");
                 updatePlayerPosition();

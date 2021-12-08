@@ -64,7 +64,7 @@ public class FrontlawnController implements Initializable {
         double minValue = 0.6;
         if (MenuApplication.game.getBill() > minValue) {
             MenuApplication.changeScene("SurveyAfter.fxml", false);
-
+            MenuApplication.magicLabel("Godt klaret!");
         } else {
             MenuApplication.magicLabel("Du er nødt til lige at komme rundt i huset og klare nogle puzzles, så dit fremskridt stiger. Prøv at gå rundt og trykke på nogle apparater i huset.");
 

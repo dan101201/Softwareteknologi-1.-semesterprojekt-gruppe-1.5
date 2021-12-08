@@ -57,7 +57,7 @@ public class AlarmpuzzleController implements Initializable {
 
 
         if(digit1.getValue() == 9 && digit2.getValue() == 3 && digit3.getValue() == 3 && digit4.getValue() == 8){
-            MenuApplication.magicLabel("Sejt! Du klarede den! Du har sparet penge på din energibar ");
+            MenuApplication.magicLabel("Sejt! Du klarede den! Du har fået et point!");
             if(!completed){
             BasicFrameController.controller.decreaseEnergyBill();}
             completed = true;
